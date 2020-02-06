@@ -8,6 +8,7 @@ namespace RootMotion.Demos {
 	public class AnimatorIKDemo : MonoBehaviour {
 
 		public Transform leftHandIKTarget;
+		public Transform rightHandIKTarget;
 
 		private Animator animator;
 
@@ -16,8 +17,15 @@ namespace RootMotion.Demos {
 		}
 
 		void OnAnimatorIK(int layer) {
+			Debug.Log("Called");
+
 			animator.SetIKPosition(AvatarIKGoal.LeftHand, leftHandIKTarget.position);
 			animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1f);
+			
+			animator.SetIKPosition(AvatarIKGoal.RightHand, rightHandIKTarget.position);
+			animator.SetIKPositionWeight(AvatarIKGoal.RightHand, 1f);
 		}
+		
+
 	}
 }
