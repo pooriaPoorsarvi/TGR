@@ -76,7 +76,7 @@ public class GrabDetector : MonoBehaviour
         {
             connectTo.currentProp = prop;
             rigidbody.useGravity = true;
-        }
+        } 
     }
     
     private PropMuscle connectTo {
