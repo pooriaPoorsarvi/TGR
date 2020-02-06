@@ -81,6 +81,14 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""KillSwitch"",
+                    ""type"": ""Button"",
+                    ""id"": ""2264b1a1-ca38-4bc0-9aa0-a0fed590ea4d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -171,6 +179,17 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""action"": ""DownButton"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e3f26c49-69e7-4a1a-b59e-d99ffa23ea30"",
+                    ""path"": ""<XInputController>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KillSwitch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -187,6 +206,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_PlayerAction_LS = m_PlayerAction.FindAction("LS", throwIfNotFound: true);
         m_PlayerAction_UpButton = m_PlayerAction.FindAction("UpButton", throwIfNotFound: true);
         m_PlayerAction_DownButton = m_PlayerAction.FindAction("DownButton", throwIfNotFound: true);
+        m_PlayerAction_KillSwitch = m_PlayerAction.FindAction("KillSwitch", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -244,6 +264,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerAction_LS;
     private readonly InputAction m_PlayerAction_UpButton;
     private readonly InputAction m_PlayerAction_DownButton;
+    private readonly InputAction m_PlayerAction_KillSwitch;
     public struct PlayerActionActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -256,6 +277,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         public InputAction @LS => m_Wrapper.m_PlayerAction_LS;
         public InputAction @UpButton => m_Wrapper.m_PlayerAction_UpButton;
         public InputAction @DownButton => m_Wrapper.m_PlayerAction_DownButton;
+        public InputAction @KillSwitch => m_Wrapper.m_PlayerAction_KillSwitch;
         public InputActionMap Get() { return m_Wrapper.m_PlayerAction; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -289,6 +311,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @DownButton.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnDownButton;
                 @DownButton.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnDownButton;
                 @DownButton.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnDownButton;
+                @KillSwitch.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnKillSwitch;
+                @KillSwitch.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnKillSwitch;
+                @KillSwitch.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnKillSwitch;
             }
             m_Wrapper.m_PlayerActionActionsCallbackInterface = instance;
             if (instance != null)
@@ -317,6 +342,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @DownButton.started += instance.OnDownButton;
                 @DownButton.performed += instance.OnDownButton;
                 @DownButton.canceled += instance.OnDownButton;
+                @KillSwitch.started += instance.OnKillSwitch;
+                @KillSwitch.performed += instance.OnKillSwitch;
+                @KillSwitch.canceled += instance.OnKillSwitch;
             }
         }
     }
@@ -331,5 +359,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         void OnLS(InputAction.CallbackContext context);
         void OnUpButton(InputAction.CallbackContext context);
         void OnDownButton(InputAction.CallbackContext context);
+        void OnKillSwitch(InputAction.CallbackContext context);
     }
 }

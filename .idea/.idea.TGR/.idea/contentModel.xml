@@ -34,6 +34,7 @@
         <e p="Grabber.cs" t="Include" />
         <e p="GrabDetector.cs" t="Include" />
         <e p="HandContorller.cs" t="Include" />
+        <e p="KillPlayer.cs" t="Include" />
         <e p="MovementAdjuster.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="RootMotion" t="Include">
