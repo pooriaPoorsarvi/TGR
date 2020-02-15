@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using DesertCity;
 using UnityEngine.UI;
 
 public class SliderMenu : ButtonManager
