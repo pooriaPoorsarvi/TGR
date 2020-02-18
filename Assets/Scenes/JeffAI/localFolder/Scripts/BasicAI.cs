@@ -127,10 +127,25 @@ namespace JeffAI{
 	    void Update(){
 	    	if(isMoving){
 	            float dist = Vector3.Distance(transform.position, curGoal.position);
-	            if(dist <= repathDist){
-	                isMoving = false;
-	                waitTimer = WaitAndProceed();
-	                StartCoroutine(waitTimer);
+                
+                float distLeft = dist - gameObject.GetComponent<NavMeshAgent>().stoppingDistance * 2f;
+                
+                if(wantsToEscape){
+                	Debug.Log("distance left to escape the level is " + distLeft);
+                }
+
+	            if(distLeft <= repathDist){
+	            
+	            	if(!wantsToEscape){
+	                    isMoving = false;
+	                    waitTimer = WaitAndProceed();
+	                    StartCoroutine(waitTimer);
+	                }
+	                else{
+	                	// npc that was trying to escape the map has reached its goal, make player lose the game
+	                	GameplayManager.LoseGame();
+	                }
+
 	            }
 	        }
 	    }
