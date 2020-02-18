@@ -18,7 +18,7 @@ namespace JeffAI{
         public Transform RequestEscapeWaypoint(){
             if(escapeWaypoints.Length != 0){
             	System.Random random = new System.Random();
-                return escapeWaypoints[random.Next(0, waypoints.Length)];
+                return escapeWaypoints[random.Next(0, escapeWaypoints.Length)];
             }
             else{
             	// return random waypoint if escape waypoint is undefined
