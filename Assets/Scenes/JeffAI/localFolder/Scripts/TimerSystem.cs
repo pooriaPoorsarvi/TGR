@@ -14,6 +14,12 @@ public class TimerSystem : MonoBehaviour
     // text in the User interface that will display the amount of time left
     public Text timerText;
 
+    public ScoringSystem scoringSystem;
+
+    // event that will be raised when timer ends
+    public delegate void TimerEndedEventHandler();
+    public static event TimerEndedEventHandler TimerEnded;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +31,12 @@ public class TimerSystem : MonoBehaviour
 
     // for declaring behavior when timer ends
     private void EndTimer(){
-
+    	// make scoring system calculate and save the score
+        
+        if (TimerEnded != null){
+        	// check if there are subscribers
+            TimerEnded();
+        }
     }
 
     IEnumerator Timer(int mins)
