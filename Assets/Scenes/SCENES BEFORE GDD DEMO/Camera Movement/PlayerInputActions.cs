@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Scenes/Camera Movement/PlayerInputActions.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scenes/SCENES BEFORE GDD DEMO/Camera Movement/PlayerInputActions.inputactions'
 
 using System;
 using System.Collections;
