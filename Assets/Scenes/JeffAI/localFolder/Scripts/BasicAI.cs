@@ -29,19 +29,65 @@ namespace JeffAI{
         
 
         // number of seconds for which npc remains scared
-        public float scaredSecPeriod;
+        public int scaredMinPeriod;
         private IEnumerator scaredTimer;
         public GameObject scaredIndicator;
 
 
-        // a timer for those who have become witnesses
-        IEnumerator WaitAndBecomeUnscared()
-	    {   
-	    	yield return new WaitForSeconds(scaredSecPeriod);
-	    	// enough time has elapsed, witness needs to calm down
-	    	CalmDown();
+        // how much time is left
+        private String timerText;
 
-	    }  
+        public String GetTimerText(){
+        	return timerText;
+        }
+
+
+        IEnumerator WaitAndBecomeUnscared(int mins)
+        {
+	    	int counter = mins;
+	        while(true){
+	            yield return new WaitForSeconds(1f);
+	            counter--;
+
+	            String hourText = "";
+	            String minText = "";
+	            String secText = "";
+
+	            int hoursTimer = mins / 60;
+	            int minTimer = mins - hoursTimer * 60;
+	            int secTimer = counter;
+
+	            if(hoursTimer >= 10){
+	                hourText = hoursTimer.ToString();
+	            }
+	            else{
+	                hourText = "0" + hoursTimer.ToString();
+	            }
+	            if(minTimer >= 10){
+	                minText = minTimer.ToString();
+	            }
+	            else{
+	                minText = "0" + minTimer.ToString();
+	            }
+	            if(secTimer >= 10){
+	                secText = secTimer.ToString();
+	            }
+	            else{
+	                secText = "0" + secTimer.ToString();
+	            }   
+	            timerText = hourText + ":" + minText + ":" + secText; 
+
+	            if(mins == 0 && counter == 0){
+	                CalmDown();
+	                break;
+	            }
+
+	            if(counter == 0){
+	                mins -= 1;
+	                counter = 60;
+	            }            
+            }
+        } 
 
         // transition back into normal routine after being scared
 	    private void CalmDown(){
@@ -58,6 +104,15 @@ namespace JeffAI{
         	isFreaky = true;
         	scaredIndicator.active = true;
     		gameObject.GetComponent<NavMeshAgent>().speed += speedBoost;
+ 
+            if(scaredTimer != null){
+                StopCoroutine(scaredTimer);
+            }
+
+            // start scared timer
+            scaredTimer = WaitAndBecomeUnscared(scaredMinPeriod);
+            StartCoroutine(scaredTimer);
+
     		if(waitTimer != null){
     			StopCoroutine(waitTimer);
     			NextGoal();
