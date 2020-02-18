@@ -13,8 +13,9 @@ public class ScoringSystem : MonoBehaviour
         return 0; // for simplicity
     }
 
+    // added score for the current level
     private void SaveScore(){
-
+  
         int curScore = CalculateScore();
         PlayerPrefs.SetInt("level" + levelIndex, curScore);
 	    PlayerPrefs.Save();
