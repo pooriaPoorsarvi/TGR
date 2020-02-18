@@ -2,242 +2,262 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Code\Unity\TGR" t="IncludeRecursive">
-      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
-      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="AssetStoreOriginals" t="Include">
-          <e p="_SNAPS_PrototypingAssets" t="Include">
-            <e p="About" t="Include">
+        <e p="CameraContainerMover.cs" t="Include" />
+        <e p="Movement.cs" t="Include" />
+        <e p="Scenes" t="Include">
+          <e p="JeffAI" t="Include">
+            <e p="localFolder" t="Include">
               <e p="Scripts" t="Include">
-                <e p="Editor" t="Include">
-                  <e p="ReadmeEditor.cs" t="Include" />
-                </e>
-                <e p="Readme.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Scripts" t="Include">
-              <e p="Editor" t="Include">
-                <e p="PackageChecker" t="Include">
-                  <e p="PackageChecker.cs" t="Include" />
-                  <e p="PackageImportList.txt" t="Include" />
-                </e>
+                <e p="AbstractViewer.cs" t="Include" />
+                <e p="BasicAI.cs" t="Include" />
+                <e p="CivilianViewer.cs" t="Include" />
+                <e p="NavmeshWaypoint.cs" t="Include" />
+                <e p="PatrolArea.cs" t="Include" />
+                <e p="playerMovement.cs" t="Include" />
               </e>
             </e>
           </e>
+          <e p="SCENES BEFORE GDD DEMO" t="Include">
+            <e p="Camera Movement" t="Include">
+              <e p="PlayerInputActions.cs" t="Include" />
+            </e>
+          </e>
         </e>
-        <e p="CameraMovement.cs" t="Include" />
-        <e p="CustomIKAnimator.cs" t="Include" />
-        <e p="CustomMovement.cs" t="Include" />
-        <e p="DummyScript.cs" t="Include" />
-        <e p="Grabber.cs" t="Include" />
-        <e p="GrabDetector.cs" t="Include" />
-        <e p="HandContorller.cs" t="Include" />
-        <e p="KillPlayer.cs" t="Include" />
-        <e p="MovementAdjuster.cs" t="Include" />
-        <e p="Plugins" t="Include">
-          <e p="RootMotion" t="Include">
-            <e p="Baker" t="Include">
-              <e p="_DEMOS" t="Include">
+        <e p="TargetedCameraMovement.cs" t="Include" />
+        <e p="TargetMovement.cs" t="Include" />
+        <e p="TOOLS" t="Include">
+          <e p="GLOBAL PLUGINS" t="Include">
+            <e p="AssetStoreOriginals" t="Include">
+              <e p="_SNAPS_PrototypingAssets" t="Include">
+                <e p="About" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Editor" t="Include">
+                      <e p="ReadmeEditor.cs" t="Include" />
+                    </e>
+                    <e p="Readme.cs" t="Include" />
+                  </e>
+                </e>
                 <e p="Scripts" t="Include">
-                  <e p="FKOffset.cs" t="Include" />
+                  <e p="Editor" t="Include">
+                    <e p="PackageChecker" t="Include">
+                      <e p="PackageChecker.cs" t="Include" />
+                      <e p="PackageImportList.txt" t="Include" />
+                    </e>
+                  </e>
                 </e>
-              </e>
-              <e p="Scripts" t="Include">
-                <e p="Baker.cs" t="Include" />
-                <e p="GenericBaker.cs" t="Include" />
-                <e p="Helpers" t="Include">
-                  <e p="AvatarUtility.cs" t="Include" />
-                  <e p="BakerUtilities.cs" t="Include" />
-                </e>
-                <e p="HumanoidBaker.cs" t="Include" />
               </e>
             </e>
-            <e p="Editor" t="Include">
+            <e p="RootMotion" t="Include">
               <e p="Baker" t="Include">
-                <e p="BakerInspector.cs" t="Include" />
-                <e p="GenericBakerInspector.cs" t="Include" />
-                <e p="Helpers" t="Include">
-                  <e p="AnimationUtilityExtended.cs" t="Include" />
-                  <e p="SaveClipFolderPanel.cs" t="Include" />
+                <e p="_DEMOS" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="FKOffset.cs" t="Include" />
+                  </e>
                 </e>
-                <e p="HumanoidBakerInspector.cs" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="Baker.cs" t="Include" />
+                  <e p="GenericBaker.cs" t="Include" />
+                  <e p="Helpers" t="Include">
+                    <e p="AvatarUtility.cs" t="Include" />
+                    <e p="BakerUtilities.cs" t="Include" />
+                  </e>
+                  <e p="HumanoidBaker.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Editor" t="Include">
+                <e p="Baker" t="Include">
+                  <e p="BakerInspector.cs" t="Include" />
+                  <e p="GenericBakerInspector.cs" t="Include" />
+                  <e p="Helpers" t="Include">
+                    <e p="AnimationUtilityExtended.cs" t="Include" />
+                    <e p="SaveClipFolderPanel.cs" t="Include" />
+                  </e>
+                  <e p="HumanoidBakerInspector.cs" t="Include" />
+                </e>
+                <e p="PuppetMaster" t="Include">
+                  <e p="_DEMOS" t="Include">
+                    <e p="CharacterMeleeDemoInspector.cs" t="Include" />
+                    <e p="CharacterPuppetInspector.cs" t="Include" />
+                  </e>
+                  <e p="BehaviourPuppetMasterPropsDrawer.cs" t="Include" />
+                  <e p="PropMuscleInspector.cs" t="Include" />
+                  <e p="PuppetMasterHumanoidConfigInspector.cs" t="Include" />
+                  <e p="PuppetMasterInspector.cs" t="Include" />
+                  <e p="PuppetMasterPropInspector.cs" t="Include" />
+                  <e p="WeightDrawer.cs" t="Include" />
+                </e>
+                <e p="RagdollManager" t="Include">
+                  <e p="BipedRagdollCreatorInspector.cs" t="Include" />
+                  <e p="CharacterJointInspector.cs" t="Include" />
+                  <e p="ColliderTools.cs" t="Include" />
+                  <e p="ConfigurableJointInspector.cs" t="Include" />
+                  <e p="ConvertToConfigurableJoints.cs" t="Include" />
+                  <e p="JointInspector.cs" t="Include" />
+                  <e p="JointTools.cs" t="Include" />
+                  <e p="RagdollEditorInspector.cs" t="Include" />
+                  <e p="SymmetryTools.cs" t="Include" />
+                </e>
+                <e p="Shared Demo Scripts" t="Include">
+                  <e p="CameraControllerInspector.cs" t="Include" />
+                </e>
+                <e p="Shared Scripts" t="Include">
+                  <e p="BipedReferencesInspector.cs" t="Include" />
+                  <e p="CommentsInspector.cs" t="Include" />
+                  <e p="Inspector.cs" t="Include" />
+                  <e p="InspectorCommentDrawer.cs" t="Include" />
+                  <e p="LargeHeaderDrawer.cs" t="Include" />
+                  <e p="SerializedContent.cs" t="Include" />
+                </e>
               </e>
               <e p="PuppetMaster" t="Include">
                 <e p="_DEMOS" t="Include">
-                  <e p="CharacterMeleeDemoInspector.cs" t="Include" />
-                  <e p="CharacterPuppetInspector.cs" t="Include" />
+                  <e p="Assets" t="Include">
+                    <e p="Scripts" t="Include">
+                      <e p="AnimatorIKDemo.cs" t="Include" />
+                      <e p="BallShooter.cs" t="Include" />
+                      <e p="BoardController.cs" t="Include" />
+                      <e p="CharacterAnimationMeleeDemo.cs" t="Include" />
+                      <e p="CharacterMeleeDemo.cs" t="Include" />
+                      <e p="CharacterPuppet.cs" t="Include" />
+                      <e p="CreatePuppetInRuntime.cs" t="Include" />
+                      <e p="CreateRagdollInRuntime.cs" t="Include" />
+                      <e p="DeathBaker.cs" t="Include" />
+                      <e p="Destructor.cs" t="Include" />
+                      <e p="Dying.cs" t="Include" />
+                      <e p="FXCollisionBlood.cs" t="Include" />
+                      <e p="Grab.cs" t="Include" />
+                      <e p="InitialVelocity.cs" t="Include" />
+                      <e p="Killing.cs" t="Include" />
+                      <e p="LayerSetup.cs" t="Include" />
+                      <e p="NavMeshPuppet.cs" t="Include" />
+                      <e p="Planet.cs" t="Include" />
+                      <e p="PlanetaryGravity.cs" t="Include" />
+                      <e p="PropDemo.cs" t="Include" />
+                      <e p="PropMelee.cs" t="Include" />
+                      <e p="PropPickUpTrigger.cs" t="Include" />
+                      <e p="PuppetBoard.cs" t="Include" />
+                      <e p="PuppetMasterPropMelee.cs" t="Include" />
+                      <e p="PuppetScaling.cs" t="Include" />
+                      <e p="RaycastShooter.cs" t="Include" />
+                      <e p="Respawning.cs" t="Include" />
+                      <e p="RotateShoulderToTarget.cs" t="Include" />
+                      <e p="Skeleton.cs" t="Include" />
+                      <e p="SkeletonDisconnector.cs" t="Include" />
+                      <e p="SkeletonShooter.cs" t="Include" />
+                      <e p="UserControlAIMelee.cs" t="Include" />
+                      <e p="UserControlMelee.cs" t="Include" />
+                    </e>
+                  </e>
                 </e>
-                <e p="BehaviourPuppetMasterPropsDrawer.cs" t="Include" />
-                <e p="PropMuscleInspector.cs" t="Include" />
-                <e p="PuppetMasterHumanoidConfigInspector.cs" t="Include" />
-                <e p="PuppetMasterInspector.cs" t="Include" />
-                <e p="PuppetMasterPropInspector.cs" t="Include" />
-                <e p="WeightDrawer.cs" t="Include" />
+                <e p="DoxygenManualPuppetMaster.cs" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="AnimationBlocker.cs" t="Include" />
+                  <e p="Behaviours" t="Include">
+                    <e p="BehaviourBase.cs" t="Include" />
+                    <e p="BehaviourFall.cs" t="Include" />
+                    <e p="BehaviourPuppet.cs" t="Include" />
+                    <e p="BehaviourPuppetBoosting.cs" t="Include" />
+                    <e p="BehaviourPuppetDamage.cs" t="Include" />
+                    <e p="BehaviourPuppetHelpers.cs" t="Include" />
+                    <e p="BehaviourPuppetStateSwitching.cs" t="Include" />
+                    <e p="BehaviourTemplate.cs" t="Include" />
+                    <e p="SubBehaviours" t="Include">
+                      <e p="SubBehaviourBalancer.cs" t="Include" />
+                      <e p="SubBehaviourBase.cs" t="Include" />
+                      <e p="SubBehaviourCOM.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Booster.cs" t="Include" />
+                  <e p="JointBreakBroadcaster.cs" t="Include" />
+                  <e p="Muscle.cs" t="Include" />
+                  <e p="MuscleCollisionBroadcaster.cs" t="Include" />
+                  <e p="PhysXTools.cs" t="Include" />
+                  <e p="PressureSensor.cs" t="Include" />
+                  <e p="Prop.cs" t="Include" />
+                  <e p="PropMuscle.cs" t="Include" />
+                  <e p="PropRoot.cs" t="Include" />
+                  <e p="PropTemplate.cs" t="Include" />
+                  <e p="PuppetMaster.cs" t="Include" />
+                  <e p="PuppetMasterHierarchyAPI.cs" t="Include" />
+                  <e p="PuppetMasterHumanoidConfig.cs" t="Include" />
+                  <e p="PuppetMasterModes.cs" t="Include" />
+                  <e p="PuppetMasterMuscleAPI.cs" t="Include" />
+                  <e p="PuppetMasterProp.cs" t="Include" />
+                  <e p="PuppetMasterSettings.cs" t="Include" />
+                  <e p="PuppetMasterSetup.cs" t="Include" />
+                  <e p="PuppetMasterStates.cs" t="Include" />
+                  <e p="PuppetMasterTargetMappedState.cs" t="Include" />
+                  <e p="PuppetMasterTools.cs" t="Include" />
+                  <e p="PuppetMasterValidation.cs" t="Include" />
+                  <e p="Weight.cs" t="Include" />
+                </e>
               </e>
               <e p="RagdollManager" t="Include">
-                <e p="BipedRagdollCreatorInspector.cs" t="Include" />
-                <e p="CharacterJointInspector.cs" t="Include" />
-                <e p="ColliderTools.cs" t="Include" />
-                <e p="ConfigurableJointInspector.cs" t="Include" />
-                <e p="ConvertToConfigurableJoints.cs" t="Include" />
-                <e p="JointInspector.cs" t="Include" />
-                <e p="JointTools.cs" t="Include" />
-                <e p="RagdollEditorInspector.cs" t="Include" />
-                <e p="SymmetryTools.cs" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="BipedRagdollCreator.cs" t="Include" />
+                  <e p="BipedRagdollReferences.cs" t="Include" />
+                  <e p="JointConverter.cs" t="Include" />
+                  <e p="RagdollCreator.cs" t="Include" />
+                  <e p="RagdollEditor.cs" t="Include" />
+                </e>
               </e>
-              <e p="Shared Demo Scripts" t="Include">
-                <e p="CameraControllerInspector.cs" t="Include" />
+              <e p="Shared Demo Assets" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="Camera Controllers" t="Include">
+                    <e p="CameraController.cs" t="Include" />
+                    <e p="CameraControllerFPS.cs" t="Include" />
+                  </e>
+                  <e p="Character Controllers" t="Include">
+                    <e p="CharacterAnimationBase.cs" t="Include" />
+                    <e p="CharacterAnimationSimple.cs" t="Include" />
+                    <e p="CharacterAnimationThirdPerson.cs" t="Include" />
+                    <e p="CharacterBase.cs" t="Include" />
+                    <e p="CharacterThirdPerson.cs" t="Include" />
+                    <e p="SimpleLocomotion.cs" t="Include" />
+                    <e p="UserControlAI.cs" t="Include" />
+                    <e p="UserControlThirdPerson.cs" t="Include" />
+                  </e>
+                  <e p="Misc" t="Include">
+                    <e p="ApplicationQuit.cs" t="Include" />
+                    <e p="SlowMo.cs" t="Include" />
+                  </e>
+                </e>
               </e>
               <e p="Shared Scripts" t="Include">
-                <e p="BipedReferencesInspector.cs" t="Include" />
-                <e p="CommentsInspector.cs" t="Include" />
-                <e p="Inspector.cs" t="Include" />
-                <e p="InspectorCommentDrawer.cs" t="Include" />
-                <e p="LargeHeaderDrawer.cs" t="Include" />
-                <e p="SerializedContent.cs" t="Include" />
+                <e p="AxisTools.cs" t="Include" />
+                <e p="BipedLimbOrientations.cs" t="Include" />
+                <e p="BipedNaming.cs" t="Include" />
+                <e p="BipedReferences.cs" t="Include" />
+                <e p="Comments.cs" t="Include" />
+                <e p="DemoGUIMessage.cs" t="Include" />
+                <e p="Hierarchy.cs" t="Include" />
+                <e p="InspectorComment.cs" t="Include" />
+                <e p="Interp.cs" t="Include" />
+                <e p="LargeHeader.cs" t="Include" />
+                <e p="LayerMaskExtensions.cs" t="Include" />
+                <e p="Navigator.cs" t="Include" />
+                <e p="QuaTools.cs" t="Include" />
+                <e p="Singleton.cs" t="Include" />
+                <e p="SolverManager.cs" t="Include" />
+                <e p="TriggerEventBroadcaster.cs" t="Include" />
+                <e p="V3Tools.cs" t="Include" />
+                <e p="Warning.cs" t="Include" />
               </e>
-            </e>
-            <e p="PuppetMaster" t="Include">
-              <e p="_DEMOS" t="Include">
-                <e p="Assets" t="Include">
-                  <e p="Scripts" t="Include">
-                    <e p="AnimatorIKDemo.cs" t="Include" />
-                    <e p="BallShooter.cs" t="Include" />
-                    <e p="BoardController.cs" t="Include" />
-                    <e p="CharacterAnimationMeleeDemo.cs" t="Include" />
-                    <e p="CharacterMeleeDemo.cs" t="Include" />
-                    <e p="CharacterPuppet.cs" t="Include" />
-                    <e p="CreatePuppetInRuntime.cs" t="Include" />
-                    <e p="CreateRagdollInRuntime.cs" t="Include" />
-                    <e p="DeathBaker.cs" t="Include" />
-                    <e p="Destructor.cs" t="Include" />
-                    <e p="Dying.cs" t="Include" />
-                    <e p="FXCollisionBlood.cs" t="Include" />
-                    <e p="Grab.cs" t="Include" />
-                    <e p="InitialVelocity.cs" t="Include" />
-                    <e p="Killing.cs" t="Include" />
-                    <e p="LayerSetup.cs" t="Include" />
-                    <e p="NavMeshPuppet.cs" t="Include" />
-                    <e p="Planet.cs" t="Include" />
-                    <e p="PlanetaryGravity.cs" t="Include" />
-                    <e p="PropDemo.cs" t="Include" />
-                    <e p="PropMelee.cs" t="Include" />
-                    <e p="PropPickUpTrigger.cs" t="Include" />
-                    <e p="PuppetBoard.cs" t="Include" />
-                    <e p="PuppetMasterPropMelee.cs" t="Include" />
-                    <e p="PuppetScaling.cs" t="Include" />
-                    <e p="RaycastShooter.cs" t="Include" />
-                    <e p="Respawning.cs" t="Include" />
-                    <e p="RotateShoulderToTarget.cs" t="Include" />
-                    <e p="Skeleton.cs" t="Include" />
-                    <e p="SkeletonDisconnector.cs" t="Include" />
-                    <e p="SkeletonShooter.cs" t="Include" />
-                    <e p="UserControlAIMelee.cs" t="Include" />
-                    <e p="UserControlMelee.cs" t="Include" />
-                  </e>
-                </e>
-              </e>
-              <e p="DoxygenManualPuppetMaster.cs" t="Include" />
-              <e p="Scripts" t="Include">
-                <e p="AnimationBlocker.cs" t="Include" />
-                <e p="Behaviours" t="Include">
-                  <e p="BehaviourBase.cs" t="Include" />
-                  <e p="BehaviourFall.cs" t="Include" />
-                  <e p="BehaviourPuppet.cs" t="Include" />
-                  <e p="BehaviourPuppetBoosting.cs" t="Include" />
-                  <e p="BehaviourPuppetDamage.cs" t="Include" />
-                  <e p="BehaviourPuppetHelpers.cs" t="Include" />
-                  <e p="BehaviourPuppetStateSwitching.cs" t="Include" />
-                  <e p="BehaviourTemplate.cs" t="Include" />
-                  <e p="SubBehaviours" t="Include">
-                    <e p="SubBehaviourBalancer.cs" t="Include" />
-                    <e p="SubBehaviourBase.cs" t="Include" />
-                    <e p="SubBehaviourCOM.cs" t="Include" />
-                  </e>
-                </e>
-                <e p="Booster.cs" t="Include" />
-                <e p="JointBreakBroadcaster.cs" t="Include" />
-                <e p="Muscle.cs" t="Include" />
-                <e p="MuscleCollisionBroadcaster.cs" t="Include" />
-                <e p="PhysXTools.cs" t="Include" />
-                <e p="PressureSensor.cs" t="Include" />
-                <e p="Prop.cs" t="Include" />
-                <e p="PropMuscle.cs" t="Include" />
-                <e p="PropRoot.cs" t="Include" />
-                <e p="PropTemplate.cs" t="Include" />
-                <e p="PuppetMaster.cs" t="Include" />
-                <e p="PuppetMasterHierarchyAPI.cs" t="Include" />
-                <e p="PuppetMasterHumanoidConfig.cs" t="Include" />
-                <e p="PuppetMasterModes.cs" t="Include" />
-                <e p="PuppetMasterMuscleAPI.cs" t="Include" />
-                <e p="PuppetMasterProp.cs" t="Include" />
-                <e p="PuppetMasterSettings.cs" t="Include" />
-                <e p="PuppetMasterSetup.cs" t="Include" />
-                <e p="PuppetMasterStates.cs" t="Include" />
-                <e p="PuppetMasterTargetMappedState.cs" t="Include" />
-                <e p="PuppetMasterTools.cs" t="Include" />
-                <e p="PuppetMasterValidation.cs" t="Include" />
-                <e p="Weight.cs" t="Include" />
-              </e>
-            </e>
-            <e p="RagdollManager" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="BipedRagdollCreator.cs" t="Include" />
-                <e p="BipedRagdollReferences.cs" t="Include" />
-                <e p="JointConverter.cs" t="Include" />
-                <e p="RagdollCreator.cs" t="Include" />
-                <e p="RagdollEditor.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Shared Demo Assets" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="Camera Controllers" t="Include">
-                  <e p="CameraController.cs" t="Include" />
-                  <e p="CameraControllerFPS.cs" t="Include" />
-                </e>
-                <e p="Character Controllers" t="Include">
-                  <e p="CharacterAnimationBase.cs" t="Include" />
-                  <e p="CharacterAnimationSimple.cs" t="Include" />
-                  <e p="CharacterAnimationThirdPerson.cs" t="Include" />
-                  <e p="CharacterBase.cs" t="Include" />
-                  <e p="CharacterThirdPerson.cs" t="Include" />
-                  <e p="SimpleLocomotion.cs" t="Include" />
-                  <e p="UserControlAI.cs" t="Include" />
-                  <e p="UserControlThirdPerson.cs" t="Include" />
-                </e>
-                <e p="Misc" t="Include">
-                  <e p="ApplicationQuit.cs" t="Include" />
-                  <e p="SlowMo.cs" t="Include" />
-                </e>
-              </e>
-            </e>
-            <e p="Shared Scripts" t="Include">
-              <e p="AxisTools.cs" t="Include" />
-              <e p="BipedLimbOrientations.cs" t="Include" />
-              <e p="BipedNaming.cs" t="Include" />
-              <e p="BipedReferences.cs" t="Include" />
-              <e p="Comments.cs" t="Include" />
-              <e p="DemoGUIMessage.cs" t="Include" />
-              <e p="Hierarchy.cs" t="Include" />
-              <e p="InspectorComment.cs" t="Include" />
-              <e p="Interp.cs" t="Include" />
-              <e p="LargeHeader.cs" t="Include" />
-              <e p="LayerMaskExtensions.cs" t="Include" />
-              <e p="Navigator.cs" t="Include" />
-              <e p="QuaTools.cs" t="Include" />
-              <e p="Singleton.cs" t="Include" />
-              <e p="SolverManager.cs" t="Include" />
-              <e p="TriggerEventBroadcaster.cs" t="Include" />
-              <e p="V3Tools.cs" t="Include" />
-              <e p="Warning.cs" t="Include" />
             </e>
           </e>
-        </e>
-        <e p="Scenes" t="Include">
-          <e p="Camera Movement" t="Include">
-            <e p="PlayerInputActions.cs" t="Include" />
+          <e p="GLOBAL SCRIPTS" t="Include">
+            <e p="CameraMovement.cs" t="Include" />
+            <e p="CustomIKAnimator.cs" t="Include" />
+            <e p="CustomMovement.cs" t="Include" />
+            <e p="DummyScript.cs" t="Include" />
+            <e p="Grabber.cs" t="Include" />
+            <e p="GrabDetector.cs" t="Include" />
+            <e p="HandContorller.cs" t="Include" />
+            <e p="KillPlayer.cs" t="Include" />
+            <e p="MovementAdjuster.cs" t="Include" />
           </e>
         </e>
       </e>
