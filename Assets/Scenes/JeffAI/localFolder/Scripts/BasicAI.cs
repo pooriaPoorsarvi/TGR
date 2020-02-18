@@ -18,11 +18,37 @@ namespace JeffAI{
 	    public int curWaypointIndex = 0;
 	    public bool loop = false;
 	    public bool pingPong = false;
+	    
+	    // Period of time for which npc stops at the waypoint
 	    public float waitTime;
 	    public String animationControllerRoutineName;
+	    
 	    private IEnumerator waitTimer;
 	    public bool isFreaky = false;
 	    public float speedBoost;
+        
+
+        // number of seconds for which npc remains scared
+        public float scaredSecPeriod;
+        private IEnumerator scaredTimer;
+        private GameObject scaredIndicator;
+
+
+        // a timer for those who have become witnesses
+        IEnumerator WaitAndBecomeUnscared()
+	    {   
+	    	yield return new WaitForSeconds(scaredSecPeriod);
+	    	// enough time has elapsed, witness needs to calm down
+	    	CalmDown();
+
+	    }  
+
+        // transition back into normal routine after being scared
+	    private void CalmDown(){
+            isFreaky = false;
+            scaredIndicator.active = false;
+            gameObject.GetComponent<NavMeshAgent>().speed -= speedBoost;
+	    }
 
 
         public void BecomeScared(){
@@ -30,6 +56,7 @@ namespace JeffAI{
         		return;
         	}
         	isFreaky = true;
+        	scaredIndicator.active = true;
     		gameObject.GetComponent<NavMeshAgent>().speed += speedBoost;
     		if(waitTimer != null){
     			StopCoroutine(waitTimer);
