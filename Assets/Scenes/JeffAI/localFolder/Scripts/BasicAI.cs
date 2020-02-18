@@ -31,7 +31,7 @@ namespace JeffAI{
         // number of seconds for which npc remains scared
         public float scaredSecPeriod;
         private IEnumerator scaredTimer;
-        private GameObject scaredIndicator;
+        public GameObject scaredIndicator;
 
 
         // a timer for those who have become witnesses
