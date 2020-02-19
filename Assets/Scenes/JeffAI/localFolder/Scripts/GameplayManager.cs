@@ -14,7 +14,7 @@ public class GameplayManager : MonoBehaviour
 
     // restart the game after player has lost
     public void Retry(){
-    
+        Application.LoadLevel(Application.loadedLevel);
     }
 
     void Start(){

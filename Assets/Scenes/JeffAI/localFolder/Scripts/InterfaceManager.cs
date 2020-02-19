@@ -26,6 +26,9 @@ public class InterfaceManager : MonoBehaviour
             newPanel.transform.parent = mainCanvas.transform;
             newPanel.active = true;
 
+            // set sibling index of the panel to 0, so that it doesn't overlap with other ui elements
+            newPanel.transform.SetSiblingIndex(0);
+
             newPanel.transform.position = sampleNpcUi.transform.position;
             newPanel.transform.localScale = sampleNpcUi.transform.localScale;
             newPanel.transform.rotation = sampleNpcUi.transform.rotation;
