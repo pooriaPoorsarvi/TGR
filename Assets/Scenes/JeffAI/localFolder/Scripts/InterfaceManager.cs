@@ -40,7 +40,6 @@ public class InterfaceManager : MonoBehaviour
     }
 
     void Update(){
-        
         if(setup){
 	        for(int i = 0; i < npcs.Count; i++){
 	            uiPanels[i].GetComponent<RectTransform>().localPosition = 
@@ -54,7 +53,6 @@ public class InterfaceManager : MonoBehaviour
 
 	        }
         }
-
     }
 
     // Get canvas position of Vector3, which is the world position
