@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 
 public class TargetMovement : MonoBehaviour
 {
@@ -12,10 +13,20 @@ public class TargetMovement : MonoBehaviour
     public Transform target;
 
 
+    public Animator animator;
+
+    public float damping = .125f;
+
+
     private PlayerInputActions playerInputActions;
     private Vector2 move;
     private bool moving = false;
     private float _remainingTimer = 0f;
+
+
+
+    public Transform charachterTarget;
+
 
     private void Awake()
     {
@@ -70,6 +81,7 @@ public class TargetMovement : MonoBehaviour
             {
                 transform.position = newPosition;
             }
+            
         }
     }
 

@@ -9,7 +9,7 @@ namespace RootMotion.Demos {
 		public Vector3 euler;
 
 		void OnPuppetMasterRead() {
-			shoulder.rotation = Quaternion.Euler(euler) * shoulder.rotation;
+			// shoulder.rotation = Quaternion.Euler(euler) * shoulder.rotation;
 		}
 	}
 }
