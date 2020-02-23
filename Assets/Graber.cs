@@ -11,6 +11,8 @@ public class Graber : MonoBehaviour
     public PuppetMaster puppetMaster;
     public BehaviourPuppet behaviourPuppet;
 
+    public Rigidbody third_puppet_part;
+
 
     private Rigidbody rb;
     private PlayerInputActions playerInputActions;
@@ -18,6 +20,8 @@ public class Graber : MonoBehaviour
     private bool holding = false;
     private FixedJoint currentJoint = null;
     private float prev_pin_weight;
+
+    private bool hanging = false;
 
 
     private void Awake()
@@ -46,8 +50,14 @@ public class Graber : MonoBehaviour
         {
             Destroy(currentJoint);
             currentJoint = null;
-            puppetMaster.pinWeight = prev_pin_weight;
-            behaviourPuppet.canGetUp = true;
+            if (hanging)
+            {
+                // puppetMaster.pinWeight = prev_pin_weight;
+                // behaviourPuppet.enabled = true;
+                behaviourPuppet.unpinnedMuscleKnockout = true;
+                third_puppet_part.constraints = RigidbodyConstraints.FreezeRotation;
+                hanging = false;
+            }
         }
     }
 
@@ -76,13 +86,19 @@ public class Graber : MonoBehaviour
             currentJoint = other.gameObject.AddComponent<FixedJoint>();
             Rigidbody other_rb = other.gameObject.GetComponent<Rigidbody>();
 
-            if (other_rb.mass >= unmovable_limit)
+            if (other_rb.mass >= unmovable_limit || other_rb.isKinematic)
             {
-                behaviourPuppet.canGetUp = false;
-                prev_pin_weight = puppetMaster.pinWeight;
-                puppetMaster.pinWeight = 0;
+                // prev_pin_weight = puppetMaster.pinWeight;
+                // puppetMaster.pinWeight = 0;
+                behaviourPuppet.unpinnedMuscleKnockout = false;
+                third_puppet_part.constraints = RigidbodyConstraints.FreezeAll;
+                hanging = true;
             }
-            
+            else
+            {
+                hanging = false;
+            }
+
             currentJoint.connectedBody = rb;
             // currentJoint.breakForce = 1000;
             currentJoint.enablePreprocessing = false;

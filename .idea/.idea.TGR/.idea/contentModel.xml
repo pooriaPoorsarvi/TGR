@@ -10,6 +10,7 @@
         <e p="CharacterRotator.cs" t="Include" />
         <e p="Graber.cs" t="Include" />
         <e p="HandManager.cs" t="Include" />
+        <e p="headRemover.cs" t="Include" />
         <e p="LookEnabler.cs" t="Include" />
         <e p="Movement.cs" t="Include" />
         <e p="RSMovementImitator.cs" t="Include" />
@@ -20,9 +21,15 @@
                 <e p="AbstractViewer.cs" t="Include" />
                 <e p="BasicAI.cs" t="Include" />
                 <e p="CivilianViewer.cs" t="Include" />
+                <e p="GameplayManager.cs" t="Include" />
+                <e p="InteractableObject.cs" t="Include" />
+                <e p="InteractableObjectManager.cs" t="Include" />
+                <e p="InterfaceManager.cs" t="Include" />
                 <e p="NavmeshWaypoint.cs" t="Include" />
                 <e p="PatrolArea.cs" t="Include" />
                 <e p="playerMovement.cs" t="Include" />
+                <e p="ScoringSystem.cs" t="Include" />
+                <e p="TimerSystem.cs" t="Include" />
               </e>
             </e>
           </e>
