@@ -2,21 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraContainerMover : MonoBehaviour
+public class LookEnabler : MonoBehaviour
 {
-    public Transform target;
-
-    private Vector3 initialDistance;
-
     // Start is called before the first frame update
+    public CameraLooker cameraLooker;
     void Start()
     {
-        initialDistance = transform.position - target.position;
+        cameraLooker.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = initialDistance + target.position;
+        
     }
 }

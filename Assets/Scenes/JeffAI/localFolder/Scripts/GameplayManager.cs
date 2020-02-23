@@ -9,4 +9,22 @@ public class GameplayManager : MonoBehaviour
     public delegate void GameOverEventHandler();
     public static event GameOverEventHandler GameOver;
 
+    // ui element that represents the game over screen
+    public static GameObject gameOverScreen;
+
+    // restart the game after player has lost
+    public void Retry(){
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
+    void Start(){
+        gameOverScreen = GameObject.FindGameObjectWithTag("GameOverScreen");
+        gameOverScreen.active = false;
+    }
+
+    public static void LoseGame(){
+    	Debug.Log("game over");
+        gameOverScreen.active = true;
+    }
+
 }

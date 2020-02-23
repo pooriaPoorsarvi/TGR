@@ -12,7 +12,7 @@ namespace RootMotion.Demos
         public Skeleton skeleton;
         public MuscleDisconnectMode disconnectMuscleMode;
         public LayerMask layers;
-        public float unpin = 10f;
+        public float  unpin = 10f;
         public float force = 10f;
         public ParticleSystem particles;
 
