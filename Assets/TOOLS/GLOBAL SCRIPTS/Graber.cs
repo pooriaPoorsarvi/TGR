@@ -10,12 +10,16 @@ public class Graber : MonoBehaviour
     public float unmovable_limit = 1000f;
     public PuppetMaster puppetMaster;
     public BehaviourPuppet behaviourPuppet;
+    public int max_use = 4;
+    
 
     public Rigidbody third_puppet_part;
 
 
+
     private Rigidbody rb;
     private PlayerInputActions playerInputActions;
+
 
     private bool holding = false;
     private FixedJoint currentJoint = null;
@@ -23,6 +27,8 @@ public class Graber : MonoBehaviour
 
     private bool hanging = false;
 
+
+    private MuscleCollisionBroadcaster muscle;
 
     private void Awake()
     {
@@ -46,6 +52,11 @@ public class Graber : MonoBehaviour
     private void UpdateHandState(bool holding)
     {
         this.holding = holding;
+        CheckJointAndExit();
+    }
+
+    private void CheckJointAndExit()
+    {
         if (holding == false && currentJoint != null)
         {
             Destroy(currentJoint);
@@ -66,17 +77,27 @@ public class Graber : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         prev_pin_weight = puppetMaster.pinWeight;
+        muscle = GetComponent<MuscleCollisionBroadcaster>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (max_use <= 0)
+        {
+            if (muscle != null)
+            {
+                CheckJointAndExit();
+                muscle.puppetMaster.DisconnectMuscleRecursive(muscle.muscleIndex, MuscleDisconnectMode.Explode);
+                muscle.Hit(10f, muscle.gameObject.transform.up * 10f, muscle.gameObject.transform.position);
+            }
+        }
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (holding == false || currentJoint != null)
+        if (holding == false || currentJoint != null|| max_use < 0)
         {
             return;
         }
@@ -99,6 +120,8 @@ public class Graber : MonoBehaviour
                 hanging = false;
             }
 
+            max_use -= 1;
+            
             currentJoint.connectedBody = rb;
             // currentJoint.breakForce = 1000;
             currentJoint.enablePreprocessing = false;
