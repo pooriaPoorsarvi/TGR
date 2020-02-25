@@ -4823,6 +4823,11 @@ PrefabInstance:
       propertyPath: InitialModule.startRotation.scalar
       value: 0.026529005
       objectReference: {fileID: 0}
+    - target: {fileID: 864272445712229643, guid: f8eaff2b1892004418e31712eb381eca,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     - target: {fileID: 864272445712229647, guid: f8eaff2b1892004418e31712eb381eca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5695,7 +5700,7 @@ MonoBehaviour:
   animationControllerRoutineName: 
   isFreaky: 0
   speedBoost: 300
-  scaredMinPeriod: 0.9
+  scaredMinPeriod: 0.2
   scaredIndicator: {fileID: 1785760625}
   wantsToEscape: 0
 --- !u!54 &1798226172

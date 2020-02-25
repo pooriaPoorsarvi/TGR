@@ -26,7 +26,8 @@ namespace JeffAI{
 	    private IEnumerator waitTimer;
 	    public bool isFreaky = false;
 	    public float speedBoost;
-        
+
+	    private bool noAction = false;        
 
         // number of seconds for which npc remains scared
         public float scaredMinPeriod;
@@ -48,6 +49,15 @@ namespace JeffAI{
         	return timerText;
         }
 
+        // stop trying to escape when player grabs
+        void StopEscaping(){
+            noAction = true;
+        }
+
+        // continue trying to escape
+        void ContinueEscaping(){
+            noAction = false;
+        }
 
         IEnumerator WaitAndBecomeUnscared(float mins)
         {
@@ -69,10 +79,7 @@ namespace JeffAI{
 
 	        while(true){
 	            yield return new WaitForSeconds(1f);
-
-
-
-	            
+           
 	            if(secs > 0){
 	            	secs--;
 
@@ -194,10 +201,10 @@ namespace JeffAI{
 
 	    private void NextGoal(){
 	    	Transform newGoal;
-	    	if(!isFreaky){
+	    	if(!isFreaky && !noAction){
 	            newGoal = patrolArea.RequestWaypoint(curWaypointIndex);
 	        }
-	        else{
+	        else if(!noAction){
 	        	if(!wantsToEscape){
 	        	    // if ai wants to escape, pick a random waypoint where it should be going
 	        	    newGoal = patrolArea.RequestRandomWaypoint();
@@ -207,6 +214,11 @@ namespace JeffAI{
 	        		newGoal = patrolArea.RequestEscapeWaypoint();
 	        	}
 	        }
+	        else{
+	        	// quit the function if player grabbed the npc
+	        	return;
+	        }
+
 	        if(newGoal != null){
 	        	curGoal = newGoal;
 	        	curWaypointIndex++;
