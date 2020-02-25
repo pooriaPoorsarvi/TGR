@@ -17,7 +17,7 @@ namespace RootMotion.Demos {
 		}
 
 		void OnAnimatorIK(int layer) {
-			Debug.Log("Called");
+			Debug.Log("Called"); 	
 
 			animator.SetIKPosition(AvatarIKGoal.LeftHand, leftHandIKTarget.position);
 			animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1f);
