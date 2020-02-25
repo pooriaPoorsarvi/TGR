@@ -26,70 +26,109 @@ namespace JeffAI{
 	    private IEnumerator waitTimer;
 	    public bool isFreaky = false;
 	    public float speedBoost;
-        
+
+	    private bool noAction = false;        
 
         // number of seconds for which npc remains scared
-        public int scaredMinPeriod;
+        public float scaredMinPeriod;
         private IEnumerator scaredTimer;
         public GameObject scaredIndicator;
 
         // variable that indicates whether npc wants to escape from the level
         public bool wantsToEscape = false;
 
+        public ParticleSystem bloodParticles;
 
         // how much time is left
         private String timerText;
+
+        public bool IsFreaky(){
+        	return isFreaky;
+        }
 
         public String GetTimerText(){
         	return timerText;
         }
 
+        // stop trying to escape when player grabs
+        public void StopEscaping(){
+            noAction = true;
+        }
 
-        IEnumerator WaitAndBecomeUnscared(int mins)
+        // continue trying to escape
+        public void ContinueEscaping(){
+            noAction = false;
+        }
+
+        public void Hurt(){
+        	bloodParticles.Play();
+        }
+
+        public void Die(){
+            bloodParticles.Play();
+            noAction = true;
+        }
+
+        IEnumerator WaitAndBecomeUnscared(float mins)
         {
-	    	int counter = mins;
+	    	float counter = mins;
+
+            int hours = (int)(mins / 60);
+            int minutes = (int)(mins - hours * 60); 
+            float secs = (mins - (int)mins) * 60;
+
+            Debug.Log("hours " + hours);
+            Debug.Log("minutes " + minutes);
+            Debug.Log("secs " + secs);
+
+
+            String hourText = "";
+            String minText = "";
+            String secText = "";
+
+
 	        while(true){
 	            yield return new WaitForSeconds(1f);
-	            counter--;
+           
+	            if(secs > 0){
+	            	secs--;
 
-	            String hourText = "";
-	            String minText = "";
-	            String secText = "";
+	            }
+	            else if(minutes > 0){
+	            	secs = 59;
+	            	minutes--;
+	            }
+	            else if(hours > 0){
+	            	minutes += 59;
+	            	hours--;
+                    secs = 59;
+	            }
 
-	            int hoursTimer = mins / 60;
-	            int minTimer = mins - hoursTimer * 60;
-	            int secTimer = counter;
-
-	            if(hoursTimer >= 10){
-	                hourText = hoursTimer.ToString();
+	            if(hours >= 10){
+	                hourText = hours.ToString();
 	            }
 	            else{
-	                hourText = "0" + hoursTimer.ToString();
+	                hourText = "0" + hours.ToString();
 	            }
-	            if(minTimer >= 10){
-	                minText = minTimer.ToString();
-	            }
-	            else{
-	                minText = "0" + minTimer.ToString();
-	            }
-	            if(secTimer >= 10){
-	                secText = secTimer.ToString();
+	            if(minutes >= 10){
+	                minText = minutes.ToString();
 	            }
 	            else{
-	                secText = "0" + secTimer.ToString();
+	                minText = "0" + minutes.ToString();
+	            }
+	            if(secs >= 10){
+	                secText = secs.ToString();
+	            }
+	            else{
+	                secText = "0" + secs.ToString();
 	            }   
 	            timerText = hourText + ":" + minText + ":" + secText; 
 
-	            if(mins == 0 && counter == 0){
-	                CalmDown();
+	            if(hours == 0 && minutes == 0 && secs == 0){
+	            	CalmDown();
 	                break;
 	            }
-
-	            if(counter == 0){
-	                mins -= 1;
-	                counter = 60;
-	            }            
-            }
+	        }    
         } 
 
         // transition back into normal routine after being scared
@@ -120,7 +159,7 @@ namespace JeffAI{
     			StopCoroutine(waitTimer);
     			NextGoal();
     		}
-    		Debug.Log("one civilian got scared.");
+    		//Debug.Log("one civilian got scared.");
         }
 
 
@@ -131,7 +170,7 @@ namespace JeffAI{
                 float distLeft = dist - gameObject.GetComponent<NavMeshAgent>().stoppingDistance * 2f;
                 
                 if(wantsToEscape){
-                	Debug.Log("distance left to escape the level is " + distLeft);
+                	//Debug.Log("distance left to escape the level is " + distLeft);
                 }
 
 	            if(distLeft <= repathDist){
@@ -172,10 +211,10 @@ namespace JeffAI{
 
 	    private void NextGoal(){
 	    	Transform newGoal;
-	    	if(!isFreaky){
+	    	if(!isFreaky && !noAction){
 	            newGoal = patrolArea.RequestWaypoint(curWaypointIndex);
 	        }
-	        else{
+	        else if(!noAction){
 	        	if(!wantsToEscape){
 	        	    // if ai wants to escape, pick a random waypoint where it should be going
 	        	    newGoal = patrolArea.RequestRandomWaypoint();
@@ -185,6 +224,11 @@ namespace JeffAI{
 	        		newGoal = patrolArea.RequestEscapeWaypoint();
 	        	}
 	        }
+	        else{
+	        	// quit the function if player grabbed the npc
+	        	return;
+	        }
+
 	        if(newGoal != null){
 	        	curGoal = newGoal;
 	        	curWaypointIndex++;
