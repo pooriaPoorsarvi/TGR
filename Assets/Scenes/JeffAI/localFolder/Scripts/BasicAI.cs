@@ -37,6 +37,7 @@ namespace JeffAI{
         // variable that indicates whether npc wants to escape from the level
         public bool wantsToEscape = false;
 
+        public ParticleSystem bloodParticles;
 
         // how much time is left
         private String timerText;
@@ -50,13 +51,22 @@ namespace JeffAI{
         }
 
         // stop trying to escape when player grabs
-        void StopEscaping(){
+        public void StopEscaping(){
             noAction = true;
         }
 
         // continue trying to escape
-        void ContinueEscaping(){
+        public void ContinueEscaping(){
             noAction = false;
+        }
+
+        public void Hurt(){
+        	bloodParticles.Play();
+        }
+
+        public void Die(){
+            bloodParticles.Play();
+            noAction = true;
         }
 
         IEnumerator WaitAndBecomeUnscared(float mins)
