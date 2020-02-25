@@ -42,13 +42,26 @@ public class InterfaceManager : MonoBehaviour
     void Update(){
         if(setup){
 	        for(int i = 0; i < npcs.Count; i++){
-	            uiPanels[i].GetComponent<RectTransform>().localPosition = 
-	            GetCanvasPosition(mainCanvas.GetComponent<RectTransform>(), Camera.main, npcs[i].transform.position);
+                
+                if(npcs[i].GetComponent<BasicAI>().IsFreaky()){
 
-                foreach(Transform child in uiPanels[i].transform){
-                    if(child.gameObject.name == "TimeText"){
-                        child.gameObject.GetComponent<Text>().text = npcs[i].GetComponent<BasicAI>().GetTimerText();
+                    uiPanels[i].active = true;
+
+    	            uiPanels[i].GetComponent<RectTransform>().localPosition = 
+    	            GetCanvasPosition(mainCanvas.GetComponent<RectTransform>(), Camera.main, npcs[i].transform.position);
+
+                    foreach(Transform child in uiPanels[i].transform){
+                        if(child.gameObject.name == "TimeText"){
+                            child.gameObject.GetComponent<Text>().text = npcs[i].GetComponent<BasicAI>().GetTimerText();
+                        }
                     }
+
+                }
+
+                else{
+
+                    uiPanels[i].active = false;
+
                 }
 
 	        }
