@@ -30,6 +30,9 @@ public class Graber : MonoBehaviour
 
     private MuscleCollisionBroadcaster muscle;
 
+    private NPCHandler npcHandler;
+    
+
     private void Awake()
     {
         playerInputActions = new PlayerInputActions();
@@ -61,6 +64,11 @@ public class Graber : MonoBehaviour
         {
             Destroy(currentJoint);
             currentJoint = null;
+            if (npcHandler!=null)
+            {
+                npcHandler.GetBack();
+            }
+            
             if (hanging)
             {
                 // puppetMaster.pinWeight = prev_pin_weight;
@@ -93,24 +101,38 @@ public class Graber : MonoBehaviour
             }
         }
     }
-
+    
+    
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        // if (other.gameObject.GetComponent<MuscleCollisionBroadcaster>())
+        // OnTriggerEnter(other.collider);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
+        
+        
         if (holding == false || currentJoint != null|| max_use < 0)
         {
             return;
         }
-
+        
+        
         if (other.gameObject.CompareTag("Grabable"))
         {
             currentJoint = other.gameObject.AddComponent<FixedJoint>();
             Rigidbody other_rb = other.gameObject.GetComponent<Rigidbody>();
-
-            if (other_rb.mass >= unmovable_limit || other_rb.isKinematic)
+            
+            npcHandler  = other.GetComponent<NPCHandler>();
+            if (npcHandler != null)
             {
-                // prev_pin_weight = puppetMaster.pinWeight;
-                // puppetMaster.pinWeight = 0;
+                npcHandler.LetGo();
+            }
+            
+            if (other_rb.mass >= unmovable_limit || other_rb.isKinematic)
+            {    
                 behaviourPuppet.unpinnedMuscleKnockout = false;
                 third_puppet_part.constraints = RigidbodyConstraints.FreezeAll;
                 hanging = true;
