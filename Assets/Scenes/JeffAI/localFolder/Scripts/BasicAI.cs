@@ -40,6 +40,10 @@ namespace JeffAI{
         // how much time is left
         private String timerText;
 
+        public bool IsFreaky(){
+        	return isFreaky;
+        }
+
         public String GetTimerText(){
         	return timerText;
         }
