@@ -8178,7 +8178,7 @@ MonoBehaviour:
   waitTime: 1
   animationControllerRoutineName: 
   isFreaky: 0
-  speedBoost: 30
+  speedBoost: 5
   scaredMinPeriod: 5
   scaredIndicator: {fileID: 1066314291}
   wantsToEscape: 0
@@ -16348,7 +16348,7 @@ MonoBehaviour:
   waitTime: 10
   animationControllerRoutineName: 
   isFreaky: 0
-  speedBoost: 30
+  speedBoost: 5
   scaredMinPeriod: 5
   scaredIndicator: {fileID: 197013553}
   wantsToEscape: 1
@@ -26877,7 +26877,7 @@ MonoBehaviour:
   waitTime: 5
   animationControllerRoutineName: 
   isFreaky: 0
-  speedBoost: 30
+  speedBoost: 5
   scaredMinPeriod: 0.2
   scaredIndicator: {fileID: 1785760625}
   wantsToEscape: 0
@@ -29351,7 +29351,7 @@ MonoBehaviour:
   waitTime: 2
   animationControllerRoutineName: 
   isFreaky: 0
-  speedBoost: 30
+  speedBoost: 5
   scaredMinPeriod: 5
   scaredIndicator: {fileID: 171769050494756007}
   wantsToEscape: 0
