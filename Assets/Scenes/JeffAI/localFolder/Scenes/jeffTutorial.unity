@@ -8182,7 +8182,8 @@ MonoBehaviour:
   scaredMinPeriod: 5
   scaredIndicator: {fileID: 1066314291}
   wantsToEscape: 0
-  bloodParticles: {fileID: 0}
+  bloodParticles: {fileID: 691994451}
+  aiBridge: {fileID: 2036538018}
 --- !u!195 &604498984
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8935,6 +8936,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aef7c887e1f419b45b3e480ff017b110, type: 3}
+--- !u!198 &691994451 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 864272445712229643, guid: f8eaff2b1892004418e31712eb381eca,
+    type: 3}
+  m_PrefabInstance: {fileID: 504468363}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &695988609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11928,6 +11935,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98ed76314c8d820429b556f5a446e393, type: 3}
+--- !u!198 &904529411 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 864272445712229643, guid: f8eaff2b1892004418e31712eb381eca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1465238631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &904619741 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4381973011225120, guid: 238ac8785f3f5b947941aa4fd6e0ce86,
@@ -16317,7 +16330,8 @@ MonoBehaviour:
   scaredMinPeriod: 5
   scaredIndicator: {fileID: 197013553}
   wantsToEscape: 1
-  bloodParticles: {fileID: 0}
+  bloodParticles: {fileID: 1925700099}
+  aiBridge: {fileID: 2091191754}
 --- !u!195 &1167282996
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -24817,6 +24831,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98ed76314c8d820429b556f5a446e393, type: 3}
+--- !u!198 &1632086713 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 864272445712229643, guid: f8eaff2b1892004418e31712eb381eca,
+    type: 3}
+  m_PrefabInstance: {fileID: 779138264}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1637358138
 GameObject:
   m_ObjectHideFlags: 0
@@ -26839,7 +26859,8 @@ MonoBehaviour:
   scaredMinPeriod: 0.2
   scaredIndicator: {fileID: 1785760625}
   wantsToEscape: 0
-  bloodParticles: {fileID: 0}
+  bloodParticles: {fileID: 1632086713}
+  aiBridge: {fileID: 70262222}
 --- !u!54 &1798226172
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28706,6 +28727,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1627411741}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &1925700099 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 864272445712229643, guid: f8eaff2b1892004418e31712eb381eca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1467005173}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1927181823 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4322541131246098, guid: 98ed76314c8d820429b556f5a446e393,
@@ -29306,7 +29333,8 @@ MonoBehaviour:
   scaredMinPeriod: 5
   scaredIndicator: {fileID: 171769050494756007}
   wantsToEscape: 0
-  bloodParticles: {fileID: 0}
+  bloodParticles: {fileID: 904529411}
+  aiBridge: {fileID: 1569440968}
 --- !u!195 &1961615528
 NavMeshAgent:
   m_ObjectHideFlags: 0

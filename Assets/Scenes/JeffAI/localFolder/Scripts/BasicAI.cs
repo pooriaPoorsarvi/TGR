@@ -42,6 +42,8 @@ namespace JeffAI{
         // how much time is left
         private String timerText;
 
+        public AIbridge aiBridge;
+
         public bool IsFreaky(){
         	return isFreaky;
         }
@@ -53,11 +55,13 @@ namespace JeffAI{
         // stop trying to escape when player grabs
         public void StopEscaping(){
             noAction = true;
+            aiBridge.enabled = false;
         }
 
         // continue trying to escape
         public void ContinueEscaping(){
             noAction = false;
+            aiBridge.enabled = true;
         }
 
         public void Hurt(){
