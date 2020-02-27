@@ -1218,7 +1218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npc: {fileID: 1798226165}
   offsetY: 10
-  animGaud: {fileID: 958917894}
+  animGaud: {fileID: 371365303}
   maxDistance: 15
   lastDistance: 1.5
   lastGoodPos: {x: 0, y: 0, z: 0}
@@ -1374,12 +1374,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4322541131246098, guid: 98ed76314c8d820429b556f5a446e393,
     type: 3}
   m_PrefabInstance: {fileID: 327817319}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &78004193 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 825094044410303125, guid: 6745b84d7d4adde419880fed16e6970a,
-    type: 3}
-  m_PrefabInstance: {fileID: 2036538016}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &79026534
 PrefabInstance:
@@ -4583,12 +4577,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1266582865}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &343208415 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 825094044410303125, guid: 6745b84d7d4adde419880fed16e6970a,
-    type: 3}
-  m_PrefabInstance: {fileID: 2091191752}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &347544442
 GameObject:
   m_ObjectHideFlags: 0
@@ -4859,6 +4847,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &371365303 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2846660442359053193, guid: 6745b84d7d4adde419880fed16e6970a,
+    type: 3}
+  m_PrefabInstance: {fileID: 156236750}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &381608249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6542,6 +6536,12 @@ Transform:
   m_Father: {fileID: 1968869752}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &479261188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2846660442359053193, guid: 6745b84d7d4adde419880fed16e6970a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2091191752}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &487086061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12133,6 +12133,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98ed76314c8d820429b556f5a446e393, type: 3}
+--- !u!1 &915079057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2846660442359053193, guid: 6745b84d7d4adde419880fed16e6970a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2036538016}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &921430971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12620,12 +12626,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4322541131246098, guid: 98ed76314c8d820429b556f5a446e393,
     type: 3}
   m_PrefabInstance: {fileID: 199901136}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &958917894 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 825094044410303125, guid: 6745b84d7d4adde419880fed16e6970a,
-    type: 3}
-  m_PrefabInstance: {fileID: 156236750}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &964016499 stripped
 Transform:
@@ -17198,6 +17198,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4381973011225120, guid: 238ac8785f3f5b947941aa4fd6e0ce86,
     type: 3}
   m_PrefabInstance: {fileID: 1216442112}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1229327149 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2846660442359053193, guid: 6745b84d7d4adde419880fed16e6970a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1569440966}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1230711251
 GameObject:
@@ -23745,7 +23751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npc: {fileID: 1961615524}
   offsetY: 10
-  animGaud: {fileID: 1778295135}
+  animGaud: {fileID: 1229327149}
   maxDistance: 15
   lastDistance: 1.5
   lastGoodPos: {x: 0, y: 0, z: 0}
@@ -26386,12 +26392,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4657047982645578, guid: aef7c887e1f419b45b3e480ff017b110,
     type: 3}
   m_PrefabInstance: {fileID: 1223944348}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1778295135 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 825094044410303125, guid: 6745b84d7d4adde419880fed16e6970a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1569440966}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1785574736
 PrefabInstance:
@@ -30934,7 +30934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npc: {fileID: 604498980}
   offsetY: 10
-  animGaud: {fileID: 78004193}
+  animGaud: {fileID: 915079057}
   maxDistance: 15
   lastDistance: 1.5
   lastGoodPos: {x: 0, y: 0, z: 0}
@@ -31838,7 +31838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npc: {fileID: 1167282992}
   offsetY: 10
-  animGaud: {fileID: 343208415}
+  animGaud: {fileID: 479261188}
   maxDistance: 15
   lastDistance: 1.5
   lastGoodPos: {x: 0, y: 0, z: 0}
