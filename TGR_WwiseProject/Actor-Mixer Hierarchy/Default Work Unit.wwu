@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}" SchemaVersion="97">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="footstep_carpet" ID="{21A381BC-5876-4798-BBF6-36CE1BCA88F2}" ShortID="112317570">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>30</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{02D16BE0-80F3-4EC0-AE7D-CE4721AFA295}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="OutputBusVolume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{26D8B999-3951-4A9A-9C00-AF78D14BE300}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="500"/>
+											<Property Name="Min" Type="Real64" Value="-500"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{73EE20B0-B0F9-40B5-9438-8581E4402E92}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{668A3DE7-8973-446B-8999-BF9AEDE40BA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="footstep_carpet" ID="{A140B6C6-83D0-4834-9594-1579B7807E80}">
+							<Language>SFX</Language>
+							<AudioFile>footstep_carpet.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="866688018"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="footstep_carpet" ID="{A140B6C6-83D0-4834-9594-1579B7807E80}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
