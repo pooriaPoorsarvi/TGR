@@ -14,7 +14,24 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID FOOTSTEP = 1866025847U;
+        static const AkUniqueID TRASHCAN = 3431057813U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace COLLIDECAN
+        {
+            static const AkUniqueID GROUP = 2997257021U;
+
+            namespace STATE
+            {
+                static const AkUniqueID COLLIDE = 3176465873U;
+                static const AkUniqueID IDLE = 1874288895U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace COLLIDECAN
+
+    } // namespace STATES
 
     namespace BANKS
     {

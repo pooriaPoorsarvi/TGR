@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{C0B5B92D-45B5-423C-A6ED-D03708CAA95B}" SchemaVersion="97">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{C0B5B92D-45B5-423C-A6ED-D03708CAA95B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{C0B5B92D-45B5-423C-A6ED-D03708CAA95B}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="collideCan" ID="{02F44FC2-4438-413D-919B-9EBF95EB0634}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{17CBE5CA-49E8-4321-809E-7BAD8BCD409D}"/>
+						<State Name="idle" ID="{7E4236CF-DFDD-43C8-AA28-DE83541F4EA6}"/>
+						<State Name="collide" ID="{2720B24C-5257-41C4-BEE4-0FD9EB6E5050}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

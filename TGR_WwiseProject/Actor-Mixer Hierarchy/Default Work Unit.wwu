@@ -60,6 +60,56 @@
 						<ActiveSource Name="footstep_carpet" ID="{A140B6C6-83D0-4834-9594-1579B7807E80}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="trashcan hit" ID="{03A05723-1515-4445-92C4-261E4F2CEBD6}" ShortID="59928652">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-20</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{73EE20B0-B0F9-40B5-9438-8581E4402E92}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{668A3DE7-8973-446B-8999-BF9AEDE40BA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="trashcan hit" ID="{141E95CB-0C12-496B-AACF-30BA198A6876}">
+							<Language>SFX</Language>
+							<AudioFile>trashcan hit.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="547845227"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="collideCan" ID="{02F44FC2-4438-413D-919B-9EBF95EB0634}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="collide" ID="{2720B24C-5257-41C4-BEE4-0FD9EB6E5050}"/>
+								<CustomState Name="" ID="{2F7407C8-3527-4C3F-994A-F3D824645BF4}" ShortID="396874303"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="idle" ID="{7E4236CF-DFDD-43C8-AA28-DE83541F4EA6}"/>
+								<CustomState Name="" ID="{CA64A733-0CBE-4017-AD81-DA23DA43D0B6}" ShortID="705483943">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="trashcan hit" ID="{141E95CB-0C12-496B-AACF-30BA198A6876}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
