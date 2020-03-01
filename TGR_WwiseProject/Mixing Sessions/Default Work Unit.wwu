@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{258BA58D-3BBA-4EF9-AEA9-11590801F198}" SchemaVersion="97">
 	<MixingSessions>
-		<WorkUnit Name="Default Work Unit" ID="{258BA58D-3BBA-4EF9-AEA9-11590801F198}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{258BA58D-3BBA-4EF9-AEA9-11590801F198}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="New Mixing Session" ID="{A2B56285-E623-4914-9B44-41B8C840054A}">
+					<ObjectList>
+						<ObjectRef Name="trashcan hit" ID="{03A05723-1515-4445-92C4-261E4F2CEBD6}" WorkUnitID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}"/>
+					</ObjectList>
+				</MixingSession>
+			</ChildrenList>
+		</WorkUnit>
 	</MixingSessions>
 </WwiseDocument>

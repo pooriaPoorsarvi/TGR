@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{78ED0355-30FC-4396-86DF-D1A3C6B9C4E2}" SchemaVersion="97">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{78ED0355-30FC-4396-86DF-D1A3C6B9C4E2}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{78ED0355-30FC-4396-86DF-D1A3C6B9C4E2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="can_volume" ID="{DC26F7A9-FC0C-4522-910B-78FAEFF00DF3}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f0839f3eaa4e8e47805e8f9d0c51be19
     GuidInternal: 
-    m_lastTime: -8586185694819064734
+    m_lastTime: -8586185216489937370
     List:
     - name: main
       guid: 8ea249e8d6b5e34abbcd45794a5b5bf4
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 5b25de65f729434faf75d6960b6cb617
     GuidInternal: 
-    m_lastTime: -8586185694819140929
+    m_lastTime: -8586185194810852683
     List:
     - name: footstep
       guid: 887cda970d97904eafa6417126e952cd
@@ -87,14 +87,23 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f98f3f8ac27e6344bb50b1ad108251f4
     GuidInternal: 
-    m_lastTime: -8586187002931226411
-    List: []
+    m_lastTime: -8586185173833421050
+    List:
+    - name: Speed
+      guid: 771b3b6f9b3ab24c8c7bdf3c1a1354d3
+      id: 640949982
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Speed
+        ObjectType: 13
+      Path: Default Work Unit\Speed
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 2db9b5c0b5453c42a6edd03708caa95b
     GuidInternal: 
-    m_lastTime: -8586187002930410453
+    m_lastTime: -8586185188196673113
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu

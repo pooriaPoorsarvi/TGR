@@ -17,7 +17,7 @@
 						</Property>
 						<Property Name="OutputBusVolume" Type="Real64">
 							<ValueList>
-								<Value>4</Value>
+								<Value>12</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Pitch" Type="int32">
@@ -62,10 +62,69 @@
 				</Sound>
 				<Sound Name="trashcan hit" ID="{03A05723-1515-4445-92C4-261E4F2CEBD6}" ShortID="59928652">
 					<PropertyList>
+						<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+						<Property Name="BypassEffect" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-20</Value>
+								<Value>-12</Value>
 							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{3BEC9536-2CDD-4492-86F8-E593F7B936E4}" ShortID="827806977">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Speed" ID="{6F3B1B77-3A9B-4CB2-8C7B-DF3C1A1354D3}" WorkUnitID="{8A3F8FF9-7EC2-4463-BB50-B1AD108251F4}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{2B45039C-9EB1-4B78-B2BC-1D7B66C82399}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>0.94118</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>1.60784</XPos>
+												<YPos>-13.6994</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>5.52941</XPos>
+												<YPos>-6.96734</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>10</XPos>
+												<YPos>-6.50779</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
@@ -85,27 +144,6 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
-					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="collideCan" ID="{02F44FC2-4438-413D-919B-9EBF95EB0634}"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="collide" ID="{2720B24C-5257-41C4-BEE4-0FD9EB6E5050}"/>
-								<CustomState Name="" ID="{2F7407C8-3527-4C3F-994A-F3D824645BF4}" ShortID="396874303"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="idle" ID="{7E4236CF-DFDD-43C8-AA28-DE83541F4EA6}"/>
-								<CustomState Name="" ID="{CA64A733-0CBE-4017-AD81-DA23DA43D0B6}" ShortID="705483943">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-108"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-						</CustomStateList>
-					</StateInfo>
 					<ActiveSourceList>
 						<ActiveSource Name="trashcan hit" ID="{141E95CB-0C12-496B-AACF-30BA198A6876}" Platform="Linked"/>
 					</ActiveSourceList>

@@ -17,21 +17,10 @@ namespace AK
         static const AkUniqueID TRASHCAN = 3431057813U;
     } // namespace EVENTS
 
-    namespace STATES
+    namespace GAME_PARAMETERS
     {
-        namespace COLLIDECAN
-        {
-            static const AkUniqueID GROUP = 2997257021U;
-
-            namespace STATE
-            {
-                static const AkUniqueID COLLIDE = 3176465873U;
-                static const AkUniqueID IDLE = 1874288895U;
-                static const AkUniqueID NONE = 748895195U;
-            } // namespace STATE
-        } // namespace COLLIDECAN
-
-    } // namespace STATES
+        static const AkUniqueID SPEED = 640949982U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
