@@ -494,7 +494,6 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 6933038173b66914395a6e9af7a22b34,
       type: 2}
-  timeLeft: 0
 --- !u!114 &2089264581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,6 +733,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 744264419750526416, guid: 755879ba7cdbdd742ad51e0d83098719,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.0879
+      objectReference: {fileID: 0}
+    - target: {fileID: 744264419750526416, guid: 755879ba7cdbdd742ad51e0d83098719,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.532
+      objectReference: {fileID: 0}
+    - target: {fileID: 744264419696117608, guid: 755879ba7cdbdd742ad51e0d83098719,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.584
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 755879ba7cdbdd742ad51e0d83098719, type: 3}
