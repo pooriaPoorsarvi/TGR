@@ -17,7 +17,7 @@
 						</Property>
 						<Property Name="OutputBusVolume" Type="Real64">
 							<ValueList>
-								<Value>4</Value>
+								<Value>12</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Pitch" Type="int32">
@@ -58,6 +58,94 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="footstep_carpet" ID="{A140B6C6-83D0-4834-9594-1579B7807E80}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="trashcan hit" ID="{03A05723-1515-4445-92C4-261E4F2CEBD6}" ShortID="59928652">
+					<PropertyList>
+						<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+						<Property Name="BypassEffect" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{3BEC9536-2CDD-4492-86F8-E593F7B936E4}" ShortID="827806977">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Speed" ID="{6F3B1B77-3A9B-4CB2-8C7B-DF3C1A1354D3}" WorkUnitID="{8A3F8FF9-7EC2-4463-BB50-B1AD108251F4}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{2B45039C-9EB1-4B78-B2BC-1D7B66C82399}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>0.94118</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>1.60784</XPos>
+												<YPos>-13.6994</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>5.52941</XPos>
+												<YPos>-6.96734</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>10</XPos>
+												<YPos>-6.50779</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{73EE20B0-B0F9-40B5-9438-8581E4402E92}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{668A3DE7-8973-446B-8999-BF9AEDE40BA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="trashcan hit" ID="{141E95CB-0C12-496B-AACF-30BA198A6876}">
+							<Language>SFX</Language>
+							<AudioFile>trashcan hit.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="547845227"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="trashcan hit" ID="{141E95CB-0C12-496B-AACF-30BA198A6876}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

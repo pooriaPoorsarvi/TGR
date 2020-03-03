@@ -17,14 +17,14 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: dd44b7a84c10bc4fabc2b86bffa4a0c3
     GuidInternal: 
-    m_lastTime: -8586187426292089328
+    m_lastTime: -8586187002930350634
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: e73d8a6673896b448999bf9aede40ba8
     GuidInternal: 
-    m_lastTime: -8586187426292727815
+    m_lastTime: -8586187002931206464
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f0839f3eaa4e8e47805e8f9d0c51be19
     GuidInternal: 
-    m_lastTime: -8586187407483936082
+    m_lastTime: -8586185216489937370
     List:
     - name: main
       guid: 8ea249e8d6b5e34abbcd45794a5b5bf4
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 5b25de65f729434faf75d6960b6cb617
     GuidInternal: 
-    m_lastTime: -8586187407483873846
+    m_lastTime: -8586185194810852683
     List:
     - name: footstep
       guid: 887cda970d97904eafa6417126e952cd
@@ -70,35 +70,58 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.415223
       minDuration: 0.233036
+    - name: trashCan
+      guid: 4bfc84e810a53145a86b2282c4150cec
+      id: 3431057813
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: trashCan
+        ObjectType: 3
+      Path: Default Work Unit\trashCan
+      maxAttenuation: 0
+      maxDuration: 1.62101
+      minDuration: 1.62101
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: f98f3f8ac27e6344bb50b1ad108251f4
     GuidInternal: 
-    m_lastTime: -8586187426292627878
-    List: []
+    m_lastTime: -8586185173833421050
+    List:
+    - name: Speed
+      guid: 771b3b6f9b3ab24c8c7bdf3c1a1354d3
+      id: 640949982
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Speed
+        ObjectType: 13
+      Path: Default Work Unit\Speed
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 2db9b5c0b5453c42a6edd03708caa95b
     GuidInternal: 
-    m_lastTime: -8586187426291989573
+    m_lastTime: -8586185188196673113
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 5df3cd2344dd2d4e8ced9857a21d5c21
     GuidInternal: 
-    m_lastTime: -8586187426292777687
+    m_lastTime: -8586187002930370563
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 6232553a26ae8a4a84c19dc0bb594e5e
     GuidInternal: 
-    m_lastTime: -8586187426292398705
+    m_lastTime: -8586187002930350634
     List: []
   ExpandedItems:
   - /TGR_WwiseProject
+  - /TGR_WwiseProject/Events
+  - /TGR_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

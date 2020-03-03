@@ -1,6 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1866025847	footstep			\Default Work Unit\footstep	
+	3431057813	trashCan			\Default Work Unit\trashCan	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	640949982	Speed			\Default Work Unit\Speed	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	547845227	trashcan hit	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\trashcan hit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\trashcan hit		311296
 	866688018	footstep_carpet	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\footstep_carpet_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\footstep_carpet		54936
 
