@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f0839f3eaa4e8e47805e8f9d0c51be19
     GuidInternal: 
-    m_lastTime: -8586185216489937370
+    m_lastTime: -8586183189888580884
     List:
     - name: main
       guid: 8ea249e8d6b5e34abbcd45794a5b5bf4
@@ -56,8 +56,44 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 5b25de65f729434faf75d6960b6cb617
     GuidInternal: 
-    m_lastTime: -8586185194810852683
+    m_lastTime: -8586183189888680603
     List:
+    - name: basicImpact
+      guid: 9ab13f8d0a6eb647948c242dee8ee4fb
+      id: 2789408655
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: basicImpact
+        ObjectType: 3
+      Path: Default Work Unit\basicImpact
+      maxAttenuation: 0
+      maxDuration: 1.224667
+      minDuration: 1.224667
+    - name: chair
+      guid: 10f8d02f185d594aa9e113e3364024a6
+      id: 48383104
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: chair
+        ObjectType: 3
+      Path: Default Work Unit\chair
+      maxAttenuation: 0
+      maxDuration: 0.978447
+      minDuration: 0.871697
+    - name: fall
+      guid: c71e7c6629177242bd6ccaf10d8bc3e5
+      id: 2512384458
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: fall
+        ObjectType: 3
+      Path: Default Work Unit\fall
+      maxAttenuation: 0
+      maxDuration: 0.594626
+      minDuration: 0.594626
     - name: footstep
       guid: 887cda970d97904eafa6417126e952cd
       id: 1866025847
@@ -80,14 +116,38 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\trashCan
       maxAttenuation: 0
-      maxDuration: 1.62101
-      minDuration: 1.62101
+      maxDuration: 1.66851
+      minDuration: 1.574863
+    - name: tree
+      guid: b8d4ea08182dc249aecdaab94d5c2007
+      id: 3322072369
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: tree
+        ObjectType: 3
+      Path: Default Work Unit\tree
+      maxAttenuation: 0
+      maxDuration: 0.662176
+      minDuration: 0.330356
+    - name: waterTank
+      guid: 1e678fe0b01b3848bbb07a97f1135905
+      id: 578603970
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: waterTank
+        ObjectType: 3
+      Path: Default Work Unit\waterTank
+      maxAttenuation: 0
+      maxDuration: 2.549479
+      minDuration: 2.549479
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: f98f3f8ac27e6344bb50b1ad108251f4
     GuidInternal: 
-    m_lastTime: -8586185173833421050
+    m_lastTime: -8586183300695510163
     List:
     - name: Speed
       guid: 771b3b6f9b3ab24c8c7bdf3c1a1354d3

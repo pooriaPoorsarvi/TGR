@@ -1,11 +1,23 @@
 Event	ID	Name			Wwise Object Path	Notes
+	48383104	chair			\Default Work Unit\chair	
+	578603970	waterTank			\Default Work Unit\waterTank	
 	1866025847	footstep			\Default Work Unit\footstep	
+	2512384458	fall			\Default Work Unit\fall	
+	2789408655	basicImpact			\Default Work Unit\basicImpact	
+	3322072369	tree			\Default Work Unit\tree	
 	3431057813	trashCan			\Default Work Unit\trashCan	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	640949982	Speed			\Default Work Unit\Speed	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	18268718	tree 2	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\tree 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\tree\tree 2		67264
+	190556111	Watertank 0	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\Watertank 0_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Watertank 0		360064
+	259725984	Watertank 1	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\Watertank 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Watertank 1		112496
 	547845227	trashcan hit	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\trashcan hit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\trashcan hit		311296
+	553365686	fall	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\12. Ahhhh2_Low_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\fall		52510
+	831028345	chair	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\chair_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\chair		177380
 	866688018	footstep_carpet	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\footstep_carpet_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\footstep_carpet		54936
+	878778269	Boink	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\Boink_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boink		235200
+	904281105	tree 3	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\tree 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\tree\tree 3		120064
 

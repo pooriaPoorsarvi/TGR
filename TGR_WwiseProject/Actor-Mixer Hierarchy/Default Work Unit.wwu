@@ -71,7 +71,7 @@
 						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="Lowpass" Type="int16">
 							<ValueList>
-								<Value>6</Value>
+								<Value>21</Value>
 							</ValueList>
 						</Property>
 						<Property Name="MaxSoundPerInstance" Type="int16">
@@ -80,18 +80,31 @@
 							</ValueList>
 						</Property>
 						<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{11FE03E8-6E75-4DF0-8ED1-E291F4448693}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-50"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-12</Value>
+								<Value>-4</Value>
 							</ValueList>
 							<RTPCList>
-								<RTPC Name="" ID="{3BEC9536-2CDD-4492-86F8-E593F7B936E4}" ShortID="827806977">
+								<RTPC Name="" ID="{819321A7-3760-4287-B645-7BDE6A43EE2E}" ShortID="379464530">
 									<ReferenceList>
 										<Reference Name="ControlInput">
 											<ObjectRef Name="Speed" ID="{6F3B1B77-3A9B-4CB2-8C7B-DF3C1A1354D3}" WorkUnitID="{8A3F8FF9-7EC2-4463-BB50-B1AD108251F4}"/>
 										</Reference>
 									</ReferenceList>
-									<Curve Name="" ID="{2B45039C-9EB1-4B78-B2BC-1D7B66C82399}">
+									<Curve Name="" ID="{458F21A3-BA35-4B8B-87CE-29A0C185D4DE}">
 										<PropertyList>
 											<Property Name="Flags" Type="int32" Value="3"/>
 										</PropertyList>
@@ -102,23 +115,23 @@
 												<Flags>5</Flags>
 											</Point>
 											<Point>
-												<XPos>0.94118</XPos>
+												<XPos>0.65359</XPos>
 												<YPos>-200</YPos>
 												<Flags>0</Flags>
 											</Point>
 											<Point>
-												<XPos>1.60784</XPos>
-												<YPos>-13.6994</YPos>
+												<XPos>0.65459</XPos>
+												<YPos>-8.95711</YPos>
 												<Flags>0</Flags>
 											</Point>
 											<Point>
-												<XPos>5.52941</XPos>
-												<YPos>-6.96734</YPos>
+												<XPos>3.88236</XPos>
+												<YPos>-5.85074</YPos>
 												<Flags>0</Flags>
 											</Point>
 											<Point>
 												<XPos>10</XPos>
-												<YPos>-6.50779</YPos>
+												<YPos>-3.44323</YPos>
 												<Flags>37</Flags>
 											</Point>
 										</PointList>
@@ -146,6 +159,550 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="trashcan hit" ID="{141E95CB-0C12-496B-AACF-30BA198A6876}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="tree" ID="{0CB101FB-81B1-4977-A0D7-E257108C3018}" ShortID="750568986">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{680805E0-A276-4880-B6C5-36BCB1DC0EAB}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{024AA02D-2821-4880-9C58-65AEF3FD83C2}" ShortID="424739666">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Speed" ID="{6F3B1B77-3A9B-4CB2-8C7B-DF3C1A1354D3}" WorkUnitID="{8A3F8FF9-7EC2-4463-BB50-B1AD108251F4}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{988A8CB7-712E-410A-96A1-8BDCB20B2D90}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>0.79739</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>0.79839</XPos>
+												<YPos>-0.16228</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>10</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{73EE20B0-B0F9-40B5-9438-8581E4402E92}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{668A3DE7-8973-446B-8999-BF9AEDE40BA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="tree 2" ID="{72EB2721-2CD4-4640-BA28-90C116B1BF61}" ShortID="661811773">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{6C97BAF1-9E83-4D9E-8CD1-59DC0C42BB88}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{73EE20B0-B0F9-40B5-9438-8581E4402E92}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{668A3DE7-8973-446B-8999-BF9AEDE40BA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="tree 2" ID="{DFEF7193-9C61-4411-B634-DEAF0EC1F415}">
+									<Language>SFX</Language>
+									<AudioFile>tree 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="18268718"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="tree 2" ID="{DFEF7193-9C61-4411-B634-DEAF0EC1F415}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="tree 3" ID="{97700E87-74A7-4D03-94B5-9C46AE462EC7}" ShortID="369262510">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0F80E86D-2B3D-418B-A3E5-097E9FF32F8D}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{73EE20B0-B0F9-40B5-9438-8581E4402E92}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{668A3DE7-8973-446B-8999-BF9AEDE40BA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="tree 3" ID="{1BB1D366-47D3-44A7-AD2E-ED59EC5B2AC1}">
+									<Language>SFX</Language>
+									<AudioFile>tree 3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="904281105"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="tree 3" ID="{1BB1D366-47D3-44A7-AD2E-ED59EC5B2AC1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<Sound Name="trashcan" ID="{2E550983-CA69-4728-952B-9DDBC0E14D31}" ShortID="479922298">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{77B1289B-D014-4E1A-98E2-A3C179146C27}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-50"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{2773BB4D-848C-450D-8AB3-1783F54174ED}" ShortID="775853156">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Speed" ID="{6F3B1B77-3A9B-4CB2-8C7B-DF3C1A1354D3}" WorkUnitID="{8A3F8FF9-7EC2-4463-BB50-B1AD108251F4}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{A51F9434-3E90-4DB5-8969-2CE969190094}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>0.65359</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>0.65459</XPos>
+												<YPos>-8.95711</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>3.88236</XPos>
+												<YPos>-5.85074</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>10</XPos>
+												<YPos>-3.44323</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{73EE20B0-B0F9-40B5-9438-8581E4402E92}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{668A3DE7-8973-446B-8999-BF9AEDE40BA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="trashcan" ID="{D0393F32-0052-4317-9C93-B9CFE5B0AB2F}">
+							<Language>SFX</Language>
+							<AudioFile>trashcan.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="129552176"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="trashcan" ID="{D0393F32-0052-4317-9C93-B9CFE5B0AB2F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Watertank 0" ID="{CA4EE984-A643-4350-B194-453063FFDF5A}" ShortID="731936713">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{5D441364-36B0-465C-A94F-CFFA2D12CC7B}" ShortID="827315256">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Speed" ID="{6F3B1B77-3A9B-4CB2-8C7B-DF3C1A1354D3}" WorkUnitID="{8A3F8FF9-7EC2-4463-BB50-B1AD108251F4}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{5A62F2C1-67AC-48E3-A588-26C01B9103E9}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>0.48265</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>0.48365</XPos>
+												<YPos>-0.1748</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>4</XPos>
+												<YPos>-0.15938</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>4.001</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>10</XPos>
+												<YPos>-200</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{73EE20B0-B0F9-40B5-9438-8581E4402E92}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{668A3DE7-8973-446B-8999-BF9AEDE40BA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Watertank 0" ID="{05F696DB-CF68-4B3C-8065-7746F4F4D512}">
+							<Language>SFX</Language>
+							<AudioFile>Watertank 0.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="190556111"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Watertank 0" ID="{05F696DB-CF68-4B3C-8065-7746F4F4D512}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Watertank 1" ID="{BDC9AA2A-EEF9-4ACD-87E4-4E55E4FEACA6}" ShortID="577799937">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{85F508C0-A792-4B7A-9A01-7F72149EE5E5}" ShortID="79598953">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Speed" ID="{6F3B1B77-3A9B-4CB2-8C7B-DF3C1A1354D3}" WorkUnitID="{8A3F8FF9-7EC2-4463-BB50-B1AD108251F4}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{B359F97F-2BF8-434D-AF7B-1E870F543DE7}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>3.999</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>4</XPos>
+												<YPos>-0</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>10</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{73EE20B0-B0F9-40B5-9438-8581E4402E92}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{668A3DE7-8973-446B-8999-BF9AEDE40BA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Watertank 1" ID="{DB8FC4BF-9AC3-4BCF-816F-2DB73B2D7D9B}">
+							<Language>SFX</Language>
+							<AudioFile>Watertank 1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="259725984"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Watertank 1" ID="{DB8FC4BF-9AC3-4BCF-816F-2DB73B2D7D9B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Cartoon impact 0" ID="{22DC1747-29AA-4EBD-AEFD-23199CB75A0E}" ShortID="126530435">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{FD659DE8-5204-4F0B-AE49-539941F39D30}" ShortID="1065314973">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Speed" ID="{6F3B1B77-3A9B-4CB2-8C7B-DF3C1A1354D3}" WorkUnitID="{8A3F8FF9-7EC2-4463-BB50-B1AD108251F4}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{3C11CEB5-94EB-4638-897F-8D1BB3742478}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>0.44445</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>0.45852</XPos>
+												<YPos>-0.10488</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>10</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{73EE20B0-B0F9-40B5-9438-8581E4402E92}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{668A3DE7-8973-446B-8999-BF9AEDE40BA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Cartoon impact 0" ID="{03C4F572-C657-4254-BA9B-59744767F0E8}">
+							<Language>SFX</Language>
+							<AudioFile>Cartoon impact 0.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="949423246"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Cartoon impact 0" ID="{03C4F572-C657-4254-BA9B-59744767F0E8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="fall" ID="{C9995CBE-FFBA-4752-A361-D320F8F0CA52}" ShortID="442590006">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{73EE20B0-B0F9-40B5-9438-8581E4402E92}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{668A3DE7-8973-446B-8999-BF9AEDE40BA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="12_ Ahhhh2_Low" ID="{47E73319-277E-421B-AD2D-41232FACA4B4}">
+							<Language>SFX</Language>
+							<AudioFile>12. Ahhhh2_Low.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="553365686"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="12_ Ahhhh2_Low" ID="{47E73319-277E-421B-AD2D-41232FACA4B4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Boink" ID="{104949BE-EF57-47DB-BE2A-F3347FDD0BA7}" ShortID="317466866">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{73EE20B0-B0F9-40B5-9438-8581E4402E92}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{668A3DE7-8973-446B-8999-BF9AEDE40BA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Boink" ID="{D202FB11-627E-4B65-86AE-1C6BF46CF120}">
+							<Language>SFX</Language>
+							<AudioFile>Boink.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="878778269"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Boink" ID="{D202FB11-627E-4B65-86AE-1C6BF46CF120}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="chair" ID="{40871789-A24E-4F19-9EFD-70ADCB0BBA68}" ShortID="82230604">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{BB4BFED1-A70F-4562-A876-02C7CA117477}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-11</Value>
+							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{9241D575-E832-4185-89A1-78D5D6080D4E}" ShortID="500391804">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Speed" ID="{6F3B1B77-3A9B-4CB2-8C7B-DF3C1A1354D3}" WorkUnitID="{8A3F8FF9-7EC2-4463-BB50-B1AD108251F4}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{EB8D9480-4972-4FAC-8479-DA5899EAAEB4}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>0.78431</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>1.04575</XPos>
+												<YPos>-7.40893</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>2.184</XPos>
+												<YPos>-1.34613</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>10</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{73EE20B0-B0F9-40B5-9438-8581E4402E92}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{668A3DE7-8973-446B-8999-BF9AEDE40BA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="chair" ID="{FE60E875-DC2E-4093-B540-58ABAB96D1CC}">
+							<Language>SFX</Language>
+							<AudioFile>chair.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="831028345"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="chair" ID="{FE60E875-DC2E-4093-B540-58ABAB96D1CC}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>
