@@ -13,8 +13,13 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BASICIMPACT = 2789408655U;
+        static const AkUniqueID CHAIR = 48383104U;
+        static const AkUniqueID FALL = 2512384458U;
         static const AkUniqueID FOOTSTEP = 1866025847U;
         static const AkUniqueID TRASHCAN = 3431057813U;
+        static const AkUniqueID TREE = 3322072369U;
+        static const AkUniqueID WATERTANK = 578603970U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

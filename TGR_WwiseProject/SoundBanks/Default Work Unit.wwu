@@ -5,7 +5,12 @@
 			<ChildrenList>
 				<SoundBank Name="main" ID="{E849A28E-B5D6-4AE3-BBCD-45794A5B5BF4}">
 					<ObjectInclusionList>
+						<ObjectRef Name="fall" ID="{667C1EC7-1729-4272-BD6C-CAF10D8BC3E5}" WorkUnitID="{65DE255B-29F7-4F43-AF75-D6960B6CB617}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="trashCan" ID="{E884FC4B-A510-4531-A86B-2282C4150CEC}" WorkUnitID="{65DE255B-29F7-4F43-AF75-D6960B6CB617}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="basicImpact" ID="{8D3FB19A-6E0A-47B6-948C-242DEE8EE4FB}" WorkUnitID="{65DE255B-29F7-4F43-AF75-D6960B6CB617}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="waterTank" ID="{E08F671E-1BB0-4838-BBB0-7A97F1135905}" WorkUnitID="{65DE255B-29F7-4F43-AF75-D6960B6CB617}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="tree" ID="{08EAD4B8-2D18-49C2-AECD-AAB94D5C2007}" WorkUnitID="{65DE255B-29F7-4F43-AF75-D6960B6CB617}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="chair" ID="{2FD0F810-5D18-4A59-A9E1-13E3364024A6}" WorkUnitID="{65DE255B-29F7-4F43-AF75-D6960B6CB617}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="footstep" ID="{97DA7C88-970D-4E90-AFA6-417126E952CD}" WorkUnitID="{65DE255B-29F7-4F43-AF75-D6960B6CB617}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

@@ -16,10 +16,72 @@
 				</Event>
 				<Event Name="trashCan" ID="{E884FC4B-A510-4531-A86B-2282C4150CEC}">
 					<ChildrenList>
-						<Action Name="" ID="{6A47FEC5-9224-417B-8299-838C23C125FD}" ShortID="785933405">
+						<Action Name="" ID="{6F96AB43-91A7-472C-AE3A-72CF3C3A50D9}" ShortID="127695112">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="trashcan hit" ID="{03A05723-1515-4445-92C4-261E4F2CEBD6}" WorkUnitID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="tree" ID="{08EAD4B8-2D18-49C2-AECD-AAB94D5C2007}">
+					<ChildrenList>
+						<Action Name="" ID="{4B0068C3-56C8-43C7-A8D8-DDB50695C199}" ShortID="945590976">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="tree" ID="{0CB101FB-81B1-4977-A0D7-E257108C3018}" WorkUnitID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="waterTank" ID="{E08F671E-1BB0-4838-BBB0-7A97F1135905}">
+					<ChildrenList>
+						<Action Name="" ID="{1DBAE855-4F61-4289-8727-91476B51CC0B}" ShortID="745903424">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Watertank 0" ID="{CA4EE984-A643-4350-B194-453063FFDF5A}" WorkUnitID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CDBC0BDF-BDF4-444C-AEF1-12817E03F786}" ShortID="65562744">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Watertank 1" ID="{BDC9AA2A-EEF9-4ACD-87E4-4E55E4FEACA6}" WorkUnitID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="basicImpact" ID="{8D3FB19A-6E0A-47B6-948C-242DEE8EE4FB}">
+					<ChildrenList>
+						<Action Name="" ID="{31F98B9E-D4BA-4CB2-8D38-DF08E8FA07AB}" ShortID="157102559">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Boink" ID="{104949BE-EF57-47DB-BE2A-F3347FDD0BA7}" WorkUnitID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="fall" ID="{667C1EC7-1729-4272-BD6C-CAF10D8BC3E5}">
+					<ChildrenList>
+						<Action Name="" ID="{1FA649CF-1621-4A1B-9956-F2A399B3984E}" ShortID="507927740">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fall" ID="{C9995CBE-FFBA-4752-A361-D320F8F0CA52}" WorkUnitID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="chair" ID="{2FD0F810-5D18-4A59-A9E1-13E3364024A6}">
+					<ChildrenList>
+						<Action Name="" ID="{7EC0E3DD-EB0D-4F89-B691-5243F2CE0DDE}" ShortID="426944762">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="chair" ID="{40871789-A24E-4F19-9EFD-70ADCB0BBA68}" WorkUnitID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
