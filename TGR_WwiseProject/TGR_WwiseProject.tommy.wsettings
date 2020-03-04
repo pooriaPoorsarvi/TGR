@@ -33,7 +33,7 @@
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="HY2AvedjWEGMa4O4L2aSGdfjmyl/FEpDjEECubCKPVE="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="jqJJ6Na140q7zUV5Sltb9A=="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="Geju6fbKlEqD5WoroBa50AF8Ykz/////6N+X2FWsska1m9cDdj1cVAF8Ykz/////"/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="Geju6fbKlEqD5WoroBa50AF8FvX/////6N+X2FWsska1m9cDdj1cVAF8FvX/////"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
 				<Property Name="MeterView\MeterMode1Viewpoint0" Type="int32" Value="1"/>
@@ -67,14 +67,14 @@
 				<Property Name="ProjectExplorer\x64_Expanded_1_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_20_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="4mqlo+UPiUC81SReMuicQ8V4r3uuEqtJqjCXSlRA0DQ="/>
+				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="+wGxDLGBd0mg1+JXEIwwGMV4r3uuEqtJqjCXSlRA0DQ="/>
 				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="WyXeZfcpQ0+vddaWC2y2Fw=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value="Lbm1wLVFPEKm7dA3CMqpWw=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value="8IOfPqpOjkeAXo+dDFG+GQ=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_7_1" Type="string" Value="+Y8/isJ+Y0S7ULGtEIJR9A=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_8_1" Type="string" Value=""/>
-				<Property Name="RTPC\GameParameterSimValue\{6F3B1B77-3A9B-4CB2-8C7B-DF3C1A1354D3}" Type="Real64" Value="3.54248366013072"/>
+				<Property Name="RTPC\GameParameterSimValue\{6F3B1B77-3A9B-4CB2-8C7B-DF3C1A1354D3}" Type="Real64" Value="1.55555555555556"/>
 				<Property Name="SoundBank Manager\x64_Expand States" Type="string" Value="8IOfPqpOjkeAXo+dDFG+GQ=="/>
 				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks\"/>
 				<Property Name="SoundBankPaths" Type="string">
