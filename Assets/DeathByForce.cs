@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class DeathByForce : MonoBehaviour
 {
+
+    public GameObject objectToBeKilled; 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,13 @@ public class DeathByForce : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        // Debug.Log(other.relativeVelocity.magnitude);
+        if (other.collider.CompareTag("Grabable"))
+        {
+            if (other.relativeVelocity.magnitude > 10f)
+            {
+                Destroy(objectToBeKilled);
+            }
+        }
     }
+    
 }

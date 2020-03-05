@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameplayManager : MonoBehaviour
 {
@@ -40,8 +41,10 @@ public class GameplayManager : MonoBehaviour
     }
 
     public static void LoseGame(){
+        
     	Debug.Log("game over");
-        gameOverScreen.active = true;
+        SceneManager.LoadScene(0);
+        // gameOverScreen.active = true;
     }
 
 }

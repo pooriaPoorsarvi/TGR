@@ -9,6 +9,7 @@
         <e p="collision.cs" t="Include" />
         <e p="DeathByForce.cs" t="Include" />
         <e p="DeathTimer.cs" t="Include" />
+        <e p="NPCGrabbed.cs" t="Include" />
         <e p="NPCHandler.cs" t="Include" />
         <e p="PlayerFinder.cs" t="Include" />
         <e p="PlayerObserver.cs" t="Include" />

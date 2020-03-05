@@ -75,6 +75,7 @@ namespace JeffAI
         {
             wantsToEscape = false;
             scaredIndicator.active = false;
+            NextGoal();
         }
 
         float getNonAnimationSpeed()
@@ -93,9 +94,9 @@ namespace JeffAI
             {
                 return;
             }
-
             wantsToEscape = true;
             scaredIndicator.active = true;
+            NextGoal();
         }
 
         public Transform agent;
@@ -193,6 +194,10 @@ namespace JeffAI
             }
         }
 
+        public bool SetNoAction(bool noAction)
+        {
+           return this.noAction = noAction;
+        }
         private void NextGoal()
         {
             Transform newGoal;
@@ -202,7 +207,7 @@ namespace JeffAI
             }
             else if (!noAction)
             {
-                newGoal = patrolArea.RequestRandomWaypoint();
+                newGoal = patrolArea.RequestEscapeWaypoint();
             }
             else
             {
@@ -235,6 +240,7 @@ namespace JeffAI
 
         void Start()
         {
+            animator.speed = 1.25f;
             playerFinder.NoticedPlayer += BecomeScared;
             playerFinder.StopScarce += CalmDown;
             navAgent = GetComponent<NavMeshAgent>();

@@ -11,10 +11,9 @@ public class Graber : MonoBehaviour
     public PuppetMaster puppetMaster;
     public BehaviourPuppet behaviourPuppet;
     public int max_use = 4;
-    
+
 
     public Rigidbody third_puppet_part;
-
 
 
     private Rigidbody rb;
@@ -30,8 +29,8 @@ public class Graber : MonoBehaviour
 
     private MuscleCollisionBroadcaster muscle;
 
-    private NPCHandler npcHandler;
-    
+    // private NPCHandler npcHandler;
+    private NPCGrabbed nPCGrabbed = null;
 
     private void Awake()
     {
@@ -50,7 +49,7 @@ public class Graber : MonoBehaviour
             playerInputActions.PlayerAction.LT.canceled += ctx => UpdateHandState(false);
         }
     }
-    
+
 
     private void UpdateHandState(bool holding)
     {
@@ -64,9 +63,14 @@ public class Graber : MonoBehaviour
         {
             Destroy(currentJoint);
             currentJoint = null;
-            if (npcHandler!=null)
+            // if (npcHandler != null)
+            // {
+            //     npcHandler.GetBack();
+            // }
+            if (nPCGrabbed != null)
             {
-                npcHandler.GetBack();
+                nPCGrabbed.Released();
+                nPCGrabbed = null;
             }
             
             if (hanging)
@@ -101,38 +105,39 @@ public class Graber : MonoBehaviour
             }
         }
     }
-    
-    
-    
+
+
     private void OnCollisionEnter(Collision other)
     {
-        // if (other.gameObject.GetComponent<MuscleCollisionBroadcaster>())
-        // OnTriggerEnter(other.collider);
+        OnTriggerEnter(other.collider);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        
-        if (holding == false || currentJoint != null|| max_use < 0)
+        if (holding == false || currentJoint != null || max_use < 0)
         {
             return;
         }
-        
-        
-        if (other.gameObject.CompareTag("Grabable"))
+
+
+        if (other.gameObject.CompareTag("Grabable")||other.gameObject.CompareTag("NPCGrabable"))
         {
             currentJoint = other.gameObject.AddComponent<FixedJoint>();
             Rigidbody other_rb = other.gameObject.GetComponent<Rigidbody>();
-            
-            npcHandler  = other.GetComponent<NPCHandler>();
-            if (npcHandler != null)
+
+            nPCGrabbed = other.GetComponent<NPCGrabbed>();
+            if (nPCGrabbed != null)
             {
-                npcHandler.LetGo();
+                nPCGrabbed.Grabed();
             }
-            
+            // npcHandler  = other.GetComponent<NPCHandler>();
+            // if (npcHandler != null)
+            // {
+            //     npcHandler.LetGo();
+            // }
+
             if (other_rb.mass >= unmovable_limit || other_rb.isKinematic)
-            {    
+            {
                 behaviourPuppet.unpinnedMuscleKnockout = false;
                 third_puppet_part.constraints = RigidbodyConstraints.FreezeAll;
                 hanging = true;
@@ -143,7 +148,7 @@ public class Graber : MonoBehaviour
             }
 
             max_use -= 1;
-            
+
             currentJoint.connectedBody = rb;
             // currentJoint.breakForce = 1000;
             currentJoint.enablePreprocessing = false;
