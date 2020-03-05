@@ -72,6 +72,14 @@ public class MainMenu : MonoBehaviour
         	mousePointer.transform.position += new Vector3(0f, -20f, 0f);
         }
 
+        if(Input.GetKeyDown(KeyCode.A)){
+        	mousePointer.transform.position += new Vector3(-20f, 0f, 0f);
+        }
+
+        if(Input.GetKeyDown(KeyCode.D)){
+        	mousePointer.transform.position += new Vector3(20f, 0f, 0f);
+        }        
+
         for(int i = 0; i < buttonActions.Length; i++){
         	if(Overlaps(buttonActions[i].button, mousePointer)){
 
