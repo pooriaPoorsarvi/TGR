@@ -57,6 +57,7 @@ public class MainMenu : MonoBehaviour
     void ProcessMovement(Vector2 currMovement)
     {
         move = new Vector3(currMovement.x * speedX, currMovement.y * speedY, 0);
+        Debug.Log("curMovement is " + currMovement);
     }
 
     void Update()
