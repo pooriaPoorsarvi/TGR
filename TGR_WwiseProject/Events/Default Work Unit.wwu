@@ -87,6 +87,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="bgm" ID="{6F4099F1-0C2B-4887-B46B-823D65D51997}">
+					<ChildrenList>
+						<Action Name="" ID="{974CBE89-BF17-4A0B-95A7-19F5660A5D78}" ShortID="514438337">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Office_bgm" ID="{2132F1E4-B44E-4350-82A3-C28A8C2AC09C}" WorkUnitID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
