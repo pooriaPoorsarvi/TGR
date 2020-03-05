@@ -54,7 +54,7 @@ public class MainMenu : MonoBehaviour
 	    	new Rect(rectTr2.localPosition.x, rectTr2.localPosition.y, rectTr2.rect.width, rectTr2.rect.height));
 	}    
     
-    void ProcessMovement(Vector2 currMovement)
+    public void ProcessMovement(Vector2 currMovement)
     {
         move = new Vector3(currMovement.x * speedX, currMovement.y * speedY, 0);
         Debug.Log("curMovement is " + currMovement);
@@ -63,6 +63,7 @@ public class MainMenu : MonoBehaviour
     void Update()
     {
         mousePointer.transform.position += move;
+        //mousePointer.transform.Translate(move);
 
         if(Input.GetKeyDown(KeyCode.W)){
         	mousePointer.transform.position += new Vector3(0f, 20f, 0f);
