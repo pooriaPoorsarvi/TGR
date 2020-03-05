@@ -61,7 +61,7 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
-        mousePointer.GetComponent<RectTransform>().position += move;
+        mousePointer.transform.position += move;
 
         for(int i = 0; i < buttonActions.Length; i++){
         	if(Overlaps(buttonActions[i].button, mousePointer)){
