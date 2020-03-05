@@ -65,10 +65,18 @@ public class MainMenu : MonoBehaviour
 
         for(int i = 0; i < buttonActions.Length; i++){
         	if(Overlaps(buttonActions[i].button, mousePointer)){
+
+        		buttonActions[i].button.GetComponent<Image>().enabled = true;
+
         		print("Overlaps");
         		if(ok){
                     buttonActions[i].invokeMethod.Invoke();
         		} 
+        	}
+
+        	else{
+
+        		buttonActions[i].button.GetComponent<Image>().enabled = false;
         	}
         }
 
