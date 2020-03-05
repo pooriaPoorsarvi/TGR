@@ -4,257 +4,242 @@ using UnityEngine;
 using UnityEngine.AI;
 using System;
 using System.Linq;
+using UnityEngine.Serialization;
 
-namespace JeffAI{
+namespace JeffAI
+{
+    public class BasicAI : MonoBehaviour
+    {
+        [Header("Setting Up Animation")] public bool animationBased = true;
+        public Animator animator;
+        public float damping = 0.15f;
 
-	public class BasicAI : MonoBehaviour
-	{
 
-	    public Transform curGoal;
-	    public float repathDist;
-	    public PatrolArea patrolArea;
+        [Header("Vision")] public PlayerFinder playerFinder;
 
-	    private bool isMoving = false;
-	    public int curWaypointIndex = 0;
-	    public bool loop = false;
-	    public bool pingPong = false;
-	    
-	    // Period of time for which npc stops at the waypoint
-	    public float waitTime;
-	    public String animationControllerRoutineName;
-	    
-	    private IEnumerator waitTimer;
-	    public bool isFreaky = false;
-	    public float speedBoost;
 
-	    private bool noAction = false;        
+        [Header("Movement For Non Animation Movement")]
+        public float baseSpeed = 10f;
+
+        public float speedBoost = 10f;
+
 
         // number of seconds for which npc remains scared
-        public float scaredMinPeriod;
-        private IEnumerator scaredTimer;
-        public GameObject scaredIndicator;
-
-        // variable that indicates whether npc wants to escape from the level
-        public bool wantsToEscape = false;
-
+        [Header("NPC Objects")] public GameObject scaredIndicator;
         public ParticleSystem bloodParticles;
 
-        // how much time is left
+        [Header("Moving Between WayPoints")] [FormerlySerializedAs("loop")]
+        public bool doesLoopBeetweenWayPoints = false;
+
+        [FormerlySerializedAs("pingPong")] public bool loopBackInWayPoints = false;
+
+        [Header("Patrolling Properties")] [FormerlySerializedAs("repathDist")]
+        public float distanceBeforeStopping;
+
+        public PatrolArea patrolArea;
+
+        private readonly int m_hor = Animator.StringToHash("Horizontal");
+        private readonly int m_ver = Animator.StringToHash("Vertical");
+        private bool isMoving = false;
+        private NavMeshAgent navAgent;
         private String timerText;
 
-        public AIbridge aiBridge;
+        private int curWaypointIndex = 0;
+        private Transform curGoal;
 
-        public bool IsFreaky(){
-        	return isFreaky;
+        private bool noAction = false;
+
+        // variable that indicates whether npc wants to escape from the level
+        private bool wantsToEscape = false;
+
+        public String GetTimerText()
+        {
+            return timerText;
         }
 
-        public String GetTimerText(){
-        	return timerText;
+
+        public void Hurt()
+        {
+            bloodParticles.Play();
         }
 
-        // stop trying to escape when player grabs
-        public void StopEscaping(){
-            noAction = true;
-            aiBridge.enabled = false;
-        }
-
-        // continue trying to escape
-        public void ContinueEscaping(){
-            noAction = false;
-            aiBridge.enabled = true;
-        }
-
-        public void Hurt(){
-        	bloodParticles.Play();
-        }
-
-        public void Die(){
+        public void Die()
+        {
             bloodParticles.Play();
             noAction = true;
         }
 
-        IEnumerator WaitAndBecomeUnscared(float mins)
-        {
-	    	float counter = mins;
-
-            int hours = (int)(mins / 60);
-            int minutes = (int)(mins - hours * 60); 
-            float secs = (mins - (int)mins) * 60;
-
-            Debug.Log("hours " + hours);
-            Debug.Log("minutes " + minutes);
-            Debug.Log("secs " + secs);
-
-
-            String hourText = "";
-            String minText = "";
-            String secText = "";
-
-
-	        while(true){
-	            yield return new WaitForSeconds(1f);
-           
-	            if(secs > 0){
-	            	secs--;
-
-	            }
-	            else if(minutes > 0){
-	            	secs = 59;
-	            	minutes--;
-	            }
-	            else if(hours > 0){
-	            	minutes += 59;
-	            	hours--;
-                    secs = 59;
-	            }
-
-	            if(hours >= 10){
-	                hourText = hours.ToString();
-	            }
-	            else{
-	                hourText = "0" + hours.ToString();
-	            }
-	            if(minutes >= 10){
-	                minText = minutes.ToString();
-	            }
-	            else{
-	                minText = "0" + minutes.ToString();
-	            }
-	            if(secs >= 10){
-	                secText = secs.ToString();
-	            }
-	            else{
-	                secText = "0" + secs.ToString();
-	            }   
-	            timerText = hourText + ":" + minText + ":" + secText; 
-
-	            if(hours == 0 && minutes == 0 && secs == 0){
-	            	CalmDown();
-	                break;
-	            }
-	        }    
-        } 
 
         // transition back into normal routine after being scared
-	    private void CalmDown(){
-            isFreaky = false;
+        private void CalmDown()
+        {
+            wantsToEscape = false;
             scaredIndicator.active = false;
-            gameObject.GetComponent<NavMeshAgent>().speed -= speedBoost;
-	    }
+        }
 
+        float getNonAnimationSpeed()
+        {
+            return wantsToEscape ? baseSpeed + speedBoost : baseSpeed;
+        }
 
-        public void BecomeScared(){
-        	if(isFreaky){
-        		return;
-        	}
-        	isFreaky = true;
-        	scaredIndicator.active = true;
-    		gameObject.GetComponent<NavMeshAgent>().speed += speedBoost;
- 
-            if(scaredTimer != null){
-                StopCoroutine(scaredTimer);
+        float getAnimationSpeed()
+        {
+            return wantsToEscape ? 1f : .707f;
+        }
+
+        public void BecomeScared()
+        {
+            if (wantsToEscape)
+            {
+                return;
             }
 
-            // start scared timer
-            scaredTimer = WaitAndBecomeUnscared(scaredMinPeriod);
-            StartCoroutine(scaredTimer);
+            wantsToEscape = true;
+            scaredIndicator.active = true;
+        }
 
-    		if(waitTimer != null){
-    			StopCoroutine(waitTimer);
-    			NextGoal();
-    		}
-    		//Debug.Log("one civilian got scared.");
+        public Transform agent;
+
+        void Update()
+        {
+            navAgent.SetDestination(curGoal.transform.position);
+            if (isMoving)
+            {
+                float dist = Vector3.Distance(transform.position, curGoal.position);
+
+                CheckRemainderOfPath(dist);
+                Move();
+            }
+        }
+
+        private void CheckRemainderOfPath(float distLeft)
+        {
+            if (distLeft <= distanceBeforeStopping)
+            {
+                animator.SetFloat(m_hor, 0, damping, Time.deltaTime);
+                animator.SetFloat(m_ver, 0, damping, Time.deltaTime);
+                if (!wantsToEscape)
+                {
+                    NextGoal();
+                }
+                else
+                {
+                    // npc that was trying to escape the map has reached its goal, make player lose the game
+                    GameplayManager.LoseGame();
+                }
+            }
         }
 
 
-	    void Update(){
-	    	if(isMoving){
-	            float dist = Vector3.Distance(transform.position, curGoal.position);
-                
-                float distLeft = dist - gameObject.GetComponent<NavMeshAgent>().stoppingDistance * 2f;
-                
-                if(wantsToEscape){
-                	//Debug.Log("distance left to escape the level is " + distLeft);
+        private void Move()
+        {
+            if (curGoal != null)
+            {
+                NavMeshPath path = navAgent.path;
+                if (path.corners.Length < 2)
+                {
+                    return;
                 }
 
-	            if(distLeft <= repathDist){
-	            
-	            	if(!wantsToEscape){
-	                    isMoving = false;
-	                    waitTimer = WaitAndProceed();
-	                    StartCoroutine(waitTimer);
-	                }
-	                else{
-	                	// npc that was trying to escape the map has reached its goal, make player lose the game
-	                	GameplayManager.LoseGame();
-	                }
+                Vector3 target = path.corners[1];
+                target.y = transform.position.y;
+                if (animationBased)
+                {
+                    Vector3 playerP = transform.InverseTransformPoint(transform.position);
+                    Vector3 targetP = transform.InverseTransformPoint(target);
+                    animator.SetFloat(m_hor,
+                        getAnimationSpeed() * computeAnimatorValue(playerP.x,
+                            targetP.x), damping, Time.deltaTime);
+                    animator.SetFloat(m_ver,
+                        getAnimationSpeed() * computeAnimatorValue(playerP.z,
+                            targetP.z), damping, Time.deltaTime);
+                }
+                else
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, target,
+                        getNonAnimationSpeed() * Time.deltaTime);
+                }
 
-	            }
-	        }
-	    }
+                isMoving = true;
+            }
+        }
+
+        public virtual void OnDrawGizmos()
+        {
+            Gizmos.color = Color.green;
+            if (navAgent == null)
+            {
+                return;
+            }
+
+            NavMeshPath path = navAgent.path;
+            for (int z = 0; z < path.corners.Length - 1; z++)
+                Gizmos.DrawLine(path.corners[z], path.corners[z + 1]);
+        }
+
+        private float computeAnimatorValue(float playerTransformMember, float targetTransformMember)
+        {
+            if (playerTransformMember > targetTransformMember)
+            {
+                return -1;
+            }
+            else if (playerTransformMember == targetTransformMember)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+
+        private void NextGoal()
+        {
+            Transform newGoal;
+            if (!wantsToEscape && !noAction)
+            {
+                newGoal = patrolArea.RequestWaypoint(curWaypointIndex);
+            }
+            else if (!noAction)
+            {
+                newGoal = patrolArea.RequestRandomWaypoint();
+            }
+            else
+            {
+                // quit the function if player grabbed the npc
+                return;
+            }
+
+            if (newGoal != null)
+            {
+                curGoal = newGoal;
+                curWaypointIndex++;
+            }
+            else if (doesLoopBeetweenWayPoints && patrolArea.GetWaypointCount() > 0)
+            {
+                curWaypointIndex = 0;
+                NextGoal();
+            }
+            else if (curWaypointIndex > 0 && loopBackInWayPoints)
+            {
+                curWaypointIndex--;
+                NextGoal();
+            }
+        }
 
 
-	    private void BeginMovement(){
-	    	if(curGoal != null){
-	    		gameObject.GetComponent<NavMeshAgent>().SetDestination(curGoal.transform.position);
-	    		isMoving = true;
-	    	}
-	    }
+        public bool PlayerWantsToEscape()
+        {
+            return wantsToEscape;
+        }
 
-
-	    IEnumerator WaitAndProceed()
-	    {   
-	    	if(!isFreaky){
-	    		// npc isnt' scared, stop for a break and play some animation
-	    		// waiting for character models to be completed to call some actions on the animation controller
-	            yield return new WaitForSeconds(waitTime);
-	        }
-	        NextGoal();
-	    }          
-
-
-	    private void NextGoal(){
-	    	Transform newGoal;
-	    	if(!isFreaky && !noAction){
-	            newGoal = patrolArea.RequestWaypoint(curWaypointIndex);
-	        }
-	        else if(!noAction){
-	        	if(!wantsToEscape){
-	        	    // if ai wants to escape, pick a random waypoint where it should be going
-	        	    newGoal = patrolArea.RequestRandomWaypoint();
-	        	}
-	        	else{
-	        		// ai wants to escape from the map
-	        		newGoal = patrolArea.RequestEscapeWaypoint();
-	        	}
-	        }
-	        else{
-	        	// quit the function if player grabbed the npc
-	        	return;
-	        }
-
-	        if(newGoal != null){
-	        	curGoal = newGoal;
-	        	curWaypointIndex++;
-	        	BeginMovement();
-	        }
-	        else if(loop && patrolArea.GetWaypointCount() > 0){
-	        	curWaypointIndex = 0;
-	        	NextGoal();
-	        }
-	        else if(curWaypointIndex > 0 && pingPong){
-	            curWaypointIndex--;
-	            NextGoal();
-	        }
-	    }
-
-
-	    void Start()
-	    {
-	    	CivilianViewer.NoticedPlayer += BecomeScared;
-	    	waitTimer = WaitAndProceed();
-	        StartCoroutine(waitTimer);
-	    }
-	}
-
+        void Start()
+        {
+            playerFinder.NoticedPlayer += BecomeScared;
+            playerFinder.StopScarce += CalmDown;
+            navAgent = GetComponent<NavMeshAgent>();
+            isMoving = true;
+            NextGoal();
+        }
+    }
 }

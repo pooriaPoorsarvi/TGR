@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace JeffAI{
 
-	public class CivilianViewer : AbstractViewer
+	public abstract class CivilianViewer : AbstractViewer
 	{ 
 
 		public delegate void NoticedPlayerEventHandler();
@@ -23,8 +23,7 @@ namespace JeffAI{
             }           
 	    }
 
-	    protected override void CalmDown(GameObject player){
-	    }
+	    
 	}
 
 }

@@ -33,7 +33,7 @@ namespace JeffAI{
                 gravity += Physics.gravity * gravityFactor * Time.deltaTime;
                 move += gravity;
                 controller.Move(move);
-                Debug.Log("not ground");
+                // Debug.Log("not ground");
             }
             else {
                 gravity = Vector3.zero;

@@ -21,6 +21,30 @@
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2789408655" Name="basicImpact" ObjectPath="\Events\Default Work Unit\basicImpact" DurationType="OneShot" DurationMin="1.224667" DurationMax="1.224667">
+					<IncludedMemoryFiles>
+						<File Id="878778269" Language="SFX">
+							<ShortName>Boink.wav</ShortName>
+							<Path>SFX\Boink_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="48383104" Name="chair" ObjectPath="\Events\Default Work Unit\chair" DurationType="OneShot" DurationMin="0.871697" DurationMax="0.978447">
+					<IncludedMemoryFiles>
+						<File Id="831028345" Language="SFX">
+							<ShortName>chair.wav</ShortName>
+							<Path>SFX\chair_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2512384458" Name="fall" ObjectPath="\Events\Default Work Unit\fall" DurationType="OneShot" DurationMin="0.594626" DurationMax="0.594626">
+					<IncludedMemoryFiles>
+						<File Id="553365686" Language="SFX">
+							<ShortName>12. Ahhhh2_Low.wav</ShortName>
+							<Path>SFX\12. Ahhhh2_Low_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1866025847" Name="footstep" ObjectPath="\Events\Default Work Unit\footstep" DurationType="OneShot" DurationMin="0.233036" DurationMax="0.415223">
 					<IncludedMemoryFiles>
 						<File Id="866688018" Language="SFX">
@@ -29,7 +53,42 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3431057813" Name="trashCan" ObjectPath="\Events\Default Work Unit\trashCan" DurationType="OneShot" DurationMin="1.574863" DurationMax="1.668510">
+					<IncludedMemoryFiles>
+						<File Id="547845227" Language="SFX">
+							<ShortName>trashcan hit.wav</ShortName>
+							<Path>SFX\trashcan hit_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3322072369" Name="tree" ObjectPath="\Events\Default Work Unit\tree" DurationType="OneShot" DurationMin="0.330356" DurationMax="0.662176">
+					<IncludedMemoryFiles>
+						<File Id="18268718" Language="SFX">
+							<ShortName>tree 2.wav</ShortName>
+							<Path>SFX\tree 2_10C4C929.wem</Path>
+						</File>
+						<File Id="904281105" Language="SFX">
+							<ShortName>tree 3.wav</ShortName>
+							<Path>SFX\tree 3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="578603970" Name="waterTank" ObjectPath="\Events\Default Work Unit\waterTank" DurationType="OneShot" DurationMin="2.549479" DurationMax="2.549479">
+					<IncludedMemoryFiles>
+						<File Id="190556111" Language="SFX">
+							<ShortName>Watertank 0.wav</ShortName>
+							<Path>SFX\Watertank 0_10C4C929.wem</Path>
+						</File>
+						<File Id="259725984" Language="SFX">
+							<ShortName>Watertank 1.wav</ShortName>
+							<Path>SFX\Watertank 1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="640949982" Name="Speed" ObjectPath="\Game Parameters\Default Work Unit\Speed"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
