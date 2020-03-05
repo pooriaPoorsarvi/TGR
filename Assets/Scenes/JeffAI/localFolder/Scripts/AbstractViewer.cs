@@ -10,7 +10,6 @@ namespace JeffAI{
 
         public float visionRadius;
         public float forwardRadiusOffset;
-        public GameObject player;
         public String playerColliderTag;
 
         void Start(){
@@ -25,7 +24,9 @@ namespace JeffAI{
         protected abstract void CalmDown(GameObject player);
 
         void OnTriggerEnter(Collider col){
-            if(col.tag == playerColliderTag){
+            if(col.tag == playerColliderTag)
+            {
+	            Debug.Log("Entered");
                 FreakOut(col.gameObject);
             }
         }

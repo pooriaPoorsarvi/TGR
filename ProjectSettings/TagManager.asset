@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Grabable
   - LevelEnder
+  - GameOverScreen
   layers:
   - Default
   - TransparentFX
@@ -20,9 +21,9 @@ TagManager:
   - Player
   - Grabable
   - Grabber
-  - 
-  - 
-  - 
+  - Target
+  - Vision
+  - Skape
   - 
   - 
   - 

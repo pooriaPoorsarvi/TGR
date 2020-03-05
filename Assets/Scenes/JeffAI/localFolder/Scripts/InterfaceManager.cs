@@ -43,7 +43,7 @@ public class InterfaceManager : MonoBehaviour
         if(setup){
 	        for(int i = 0; i < npcs.Count; i++){
                 
-                if(npcs[i].GetComponent<BasicAI>().IsFreaky()){
+                if(npcs[i].GetComponent<BasicAI>().PlayerWantsToEscape()){
 
                     uiPanels[i].active = true;
 
