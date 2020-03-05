@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using System;
 using System.Linq;
+using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.Serialization;
 
 namespace JeffAI
@@ -12,7 +13,7 @@ namespace JeffAI
     {
         [Header("Setting Up Animation")] public bool animationBased = true;
         public Animator animator;
-        public float damping = 0.15f;
+        public float damping = 0.05f;
 
 
         [Header("Vision")] public PlayerFinder playerFinder;
@@ -103,6 +104,12 @@ namespace JeffAI
 
         void Update()
         {
+            
+        }
+
+        void FixedUpdate()
+        {
+            animator.speed = 80f * Time.deltaTime;
             navAgent.SetDestination(curGoal.transform.position);
             if (isMoving)
             {
@@ -240,7 +247,6 @@ namespace JeffAI
 
         void Start()
         {
-            animator.speed = 1.25f;
             playerFinder.NoticedPlayer += BecomeScared;
             playerFinder.StopScarce += CalmDown;
             navAgent = GetComponent<NavMeshAgent>();

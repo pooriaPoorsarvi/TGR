@@ -43,7 +43,7 @@ public class GameplayManager : MonoBehaviour
     public static void LoseGame(){
         
     	Debug.Log("game over");
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         // gameOverScreen.active = true;
     }
 

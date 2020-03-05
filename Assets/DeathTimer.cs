@@ -1,7 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using RootMotion.Dynamics;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class DeathTimer : MonoBehaviour
 {
@@ -9,6 +12,19 @@ public class DeathTimer : MonoBehaviour
     public PuppetMaster puppetMaster;
     public GameObject[] to_be_removed;
     public BehaviourPuppet behaviourPuppet;
+
+    private PlayerInputActions playerInputActions;
+
+    private void Awake()
+    {
+        playerInputActions = new PlayerInputActions();
+        playerInputActions.PlayerAction.KillSwitch.performed += evn=> Restart();
+    }
+
+    void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
     public float timeToWeightBeforeEndingGame = 3f;
 
@@ -43,5 +59,15 @@ public class DeathTimer : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToWeightBeforeEndingGame);
         GameplayManager.LoseGame();
+    }
+
+    private void OnEnable()
+    {
+        playerInputActions.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerInputActions.Disable();
     }
 }

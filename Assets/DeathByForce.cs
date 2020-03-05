@@ -6,8 +6,9 @@ using UnityEngine;
 public class DeathByForce : MonoBehaviour
 {
 
-    public GameObject objectToBeKilled; 
-    
+    public GameObject objectToBeKilled;
+
+    public float deathForceLimitBeingKilled = 15f;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class DeathByForce : MonoBehaviour
     {
         if (other.collider.CompareTag("Grabable"))
         {
-            if (other.relativeVelocity.magnitude > 10f)
+            if (other.relativeVelocity.magnitude > deathForceLimitBeingKilled)
             {
                 Destroy(objectToBeKilled);
             }
