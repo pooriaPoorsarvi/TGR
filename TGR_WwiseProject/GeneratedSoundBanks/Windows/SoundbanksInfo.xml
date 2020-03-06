@@ -29,6 +29,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="412724365" Name="bgm" ObjectPath="\Events\Default Work Unit\bgm" DurationType="OneShot" DurationMin="92.993065" DurationMax="92.993065">
+					<IncludedMemoryFiles>
+						<File Id="958415960" Language="SFX">
+							<ShortName>Office_bgm.wav</ShortName>
+							<Path>SFX\Office_bgm_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="48383104" Name="chair" ObjectPath="\Events\Default Work Unit\chair" DurationType="OneShot" DurationMin="0.871697" DurationMax="0.978447">
 					<IncludedMemoryFiles>
 						<File Id="831028345" Language="SFX">

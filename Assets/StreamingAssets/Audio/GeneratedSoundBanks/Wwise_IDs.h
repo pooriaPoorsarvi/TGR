@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID BASICIMPACT = 2789408655U;
+        static const AkUniqueID BGM = 412724365U;
         static const AkUniqueID CHAIR = 48383104U;
         static const AkUniqueID FALL = 2512384458U;
         static const AkUniqueID FOOTSTEP = 1866025847U;

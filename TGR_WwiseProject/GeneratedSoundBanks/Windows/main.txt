@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	48383104	chair			\Default Work Unit\chair	
+	412724365	bgm			\Default Work Unit\bgm	
 	578603970	waterTank			\Default Work Unit\waterTank	
 	1866025847	footstep			\Default Work Unit\footstep	
 	2512384458	fall			\Default Work Unit\fall	
@@ -20,4 +21,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	866688018	footstep_carpet	D:\TGR\TGR_WwiseProject\.cache\Windows\SFX\footstep_carpet_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\footstep_carpet		54936
 	878778269	Boink	D:\TGR\TGR_WwiseProject\.cache\Windows\SFX\Boink_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boink		235200
 	904281105	tree 3	D:\TGR\TGR_WwiseProject\.cache\Windows\SFX\tree 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\tree\tree 3		120064
+	958415960	Office_bgm	D:\TGR\TGR_WwiseProject\.cache\Windows\SFX\Office_bgm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Office_bgm		16404040
 
