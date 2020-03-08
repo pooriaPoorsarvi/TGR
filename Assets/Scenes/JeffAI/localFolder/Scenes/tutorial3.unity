@@ -4126,6 +4126,7 @@ MonoBehaviour:
   - {fileID: 1134699812}
   mainCanvas: {fileID: 972437336}
   sampleNpcUi: {fileID: 540157452}
+  yOffset: 150
 --- !u!1 &756671721
 GameObject:
   m_ObjectHideFlags: 0
@@ -4897,6 +4898,10 @@ PrefabInstance:
     - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: damping
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
+      propertyPath: scaredMinPeriod
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 1488806863, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: m_Enabled
@@ -5869,6 +5874,10 @@ PrefabInstance:
     - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: damping
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
+      propertyPath: scaredMinPeriod
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 1488806863, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: m_Enabled
@@ -7549,6 +7558,10 @@ PrefabInstance:
     - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: damping
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
+      propertyPath: scaredMinPeriod
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 1488806863, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: m_Enabled

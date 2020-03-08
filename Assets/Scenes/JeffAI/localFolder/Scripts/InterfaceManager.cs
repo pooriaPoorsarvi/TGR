@@ -15,6 +15,7 @@ public class InterfaceManager : MonoBehaviour
     public GameObject sampleNpcUi;
 
     private bool setup = false;
+    public float yOffset;
 
     void Start(){
      
@@ -43,12 +44,13 @@ public class InterfaceManager : MonoBehaviour
         if(setup){
 	        for(int i = 0; i < npcs.Count; i++){
                 
-                if(npcs[i].GetComponent<BasicAI>().PlayerWantsToEscape()){
+                if(npcs[i].GetComponent<BasicAI>().IsFreaky()){
 
                     uiPanels[i].active = true;
 
     	            uiPanels[i].GetComponent<RectTransform>().localPosition = 
-    	            GetCanvasPosition(mainCanvas.GetComponent<RectTransform>(), Camera.main, npcs[i].transform.position);
+    	            GetCanvasPosition(mainCanvas.GetComponent<RectTransform>(), Camera.main, npcs[i].transform.position) 
+                    + new Vector2(0f, yOffset);
 
                     foreach(Transform child in uiPanels[i].transform){
                         if(child.gameObject.name == "TimeText"){
