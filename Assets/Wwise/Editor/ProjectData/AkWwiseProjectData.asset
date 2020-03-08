@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f0839f3eaa4e8e47805e8f9d0c51be19
     GuidInternal: 
-    m_lastTime: -8586183189888580884
+    m_lastTime: -8586182163964209701
     List:
     - name: main
       guid: 8ea249e8d6b5e34abbcd45794a5b5bf4
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 5b25de65f729434faf75d6960b6cb617
     GuidInternal: 
-    m_lastTime: -8586183189888680603
+    m_lastTime: -8586182163964299739
     List:
     - name: basicImpact
       guid: 9ab13f8d0a6eb647948c242dee8ee4fb
@@ -70,6 +70,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.224667
       minDuration: 1.224667
+    - name: bgm
+      guid: f199406f2b0c8748b46b823d65d51997
+      id: 412724365
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: bgm
+        ObjectType: 3
+      Path: Default Work Unit\bgm
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: chair
       guid: 10f8d02f185d594aa9e113e3364024a6
       id: 48383104
