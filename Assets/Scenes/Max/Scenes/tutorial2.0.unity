@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 339359242}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!1 &176724576
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 0}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!1 &230364037
 GameObject:
   m_ObjectHideFlags: 0
@@ -2231,12 +2231,12 @@ PrefabInstance:
     - target: {fileID: 7769278041266435044, guid: f59948a8652ab6b40a5865f5e7e1bf0e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.45
+      value: 6.341
       objectReference: {fileID: 0}
     - target: {fileID: 7769278041266435044, guid: f59948a8652ab6b40a5865f5e7e1bf0e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.20850001
+      value: 0.33928406
       objectReference: {fileID: 0}
     - target: {fileID: 7028373692012436771, guid: f59948a8652ab6b40a5865f5e7e1bf0e,
         type: 3}
@@ -3328,6 +3328,31 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 0.000000009685755
       objectReference: {fileID: 0}
+    - target: {fileID: 1042913010960966400, guid: f59948a8652ab6b40a5865f5e7e1bf0e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042913011434323435, guid: f59948a8652ab6b40a5865f5e7e1bf0e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042913012417564319, guid: f59948a8652ab6b40a5865f5e7e1bf0e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191204759713157436, guid: f59948a8652ab6b40a5865f5e7e1bf0e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191204759900519650, guid: f59948a8652ab6b40a5865f5e7e1bf0e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f59948a8652ab6b40a5865f5e7e1bf0e, type: 3}
 --- !u!1 &287925932 stripped
@@ -3366,7 +3391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 339359242}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!1 &309745004 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1792282513, guid: 1d763d80109b8be4897ee1f8ecc10d0f,
@@ -4008,7 +4033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 339359242}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!4 &626375688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3655128400774478708, guid: f59948a8652ab6b40a5865f5e7e1bf0e,
@@ -4051,7 +4076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 339359242}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!1 &756671721
 GameObject:
   m_ObjectHideFlags: 0
@@ -4231,7 +4256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 339359242}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!1 &921583343
 GameObject:
   m_ObjectHideFlags: 0
@@ -4621,7 +4646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 339359242}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!1 &1035099876
 GameObject:
   m_ObjectHideFlags: 0
@@ -4946,7 +4971,7 @@ PrefabInstance:
       objectReference: {fileID: 944420243}
     - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: damping
-      value: 0.008
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1488806863, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: m_Enabled
@@ -5902,7 +5927,7 @@ PrefabInstance:
       objectReference: {fileID: 1134699767}
     - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: damping
-      value: 0.008
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1488806863, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: m_Enabled
@@ -6844,7 +6869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1134699785}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1134699787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6875,7 +6900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1134699785}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1134699789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6906,7 +6931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1134699785}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1134699791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6937,7 +6962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1134699785}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1134699793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6968,7 +6993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1134699785}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1134699795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6999,7 +7024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1134699785}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1134699797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7030,7 +7055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1134699785}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1134699799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7061,7 +7086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1134699785}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1134699801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7092,7 +7117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1134699785}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1134699803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7123,7 +7148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1134699785}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1134699805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7154,7 +7179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1134699785}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1134699807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7185,7 +7210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1134699785}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1134699809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7216,7 +7241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 0}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1134699811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7576,7 +7601,7 @@ PrefabInstance:
       objectReference: {fileID: 238137769}
     - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: damping
-      value: 0.01
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1488806863, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: m_Enabled
@@ -8486,7 +8511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1186693908}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1186693910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8517,7 +8542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1186693908}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1186693912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8548,7 +8573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1186693908}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1186693914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8579,7 +8604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1186693908}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1186693916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8610,7 +8635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1186693908}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1186693918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8641,7 +8666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1186693908}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1186693920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8672,7 +8697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1186693908}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1186693922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8703,7 +8728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1186693908}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1186693924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8734,7 +8759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1186693908}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1186693926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8765,7 +8790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1186693908}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1186693928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8796,7 +8821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1186693908}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1186693930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8827,7 +8852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 1186693908}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1186693932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8858,7 +8883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 0}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1186693934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8955,7 +8980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 339359242}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!114 &1264644006 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f,
@@ -9177,7 +9202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 339359242}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!1001 &1481131234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9412,7 +9437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 339359242}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!1001 &1557692039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9712,7 +9737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 339359242}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!1 &1744686408 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4798050179619859503, guid: 564927e116c753c42b32273447ad9f04,
@@ -10058,7 +10083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 339359242}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!1 &1882213151
 GameObject:
   m_ObjectHideFlags: 0
@@ -10171,7 +10196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToBeKilled: {fileID: 339359242}
-  deathForceLimitBeingKilled: 15
+  deathForceLimitBeingKilled: 8
 --- !u!1 &1903862478
 GameObject:
   m_ObjectHideFlags: 0

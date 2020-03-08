@@ -13,6 +13,7 @@
         <e p="NPCHandler.cs" t="Include" />
         <e p="PlayerFinder.cs" t="Include" />
         <e p="PlayerObserver.cs" t="Include" />
+        <e p="push.cs" t="Include" />
         <e p="Scenes" t="Include">
           <e p="JeffAI" t="Include">
             <e p="localFolder" t="Include">
