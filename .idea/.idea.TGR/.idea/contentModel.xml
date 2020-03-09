@@ -27,11 +27,16 @@
                 <e p="InteractableObject.cs" t="Include" />
                 <e p="InteractableObjectManager.cs" t="Include" />
                 <e p="InterfaceManager.cs" t="Include" />
+                <e p="LimbHealthManager.cs" t="Include" />
                 <e p="NavmeshWaypoint.cs" t="Include" />
                 <e p="PatrolArea.cs" t="Include" />
                 <e p="playerMovement.cs" t="Include" />
+                <e p="RTPCController.cs" t="Include" />
                 <e p="ScoringSystem.cs" t="Include" />
                 <e p="TimerSystem.cs" t="Include" />
+              </e>
+              <e p="VisionRadius" t="Include">
+                <e p="glassShader.shader" t="Include" />
               </e>
             </e>
           </e>
