@@ -147,6 +147,8 @@ public class Graber : MonoBehaviour
             }
 
             max_use -= 1;
+            // notify scoring system that object was used
+            ScoringSystem.ObjectWasUsed();
 
             currentJoint.connectedBody = rb;
             // currentJoint.breakForce = 1000;
