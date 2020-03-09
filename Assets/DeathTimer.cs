@@ -5,6 +5,8 @@ using RootMotion.Dynamics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+
 
 public class DeathTimer : MonoBehaviour
 {
@@ -14,6 +16,8 @@ public class DeathTimer : MonoBehaviour
     public BehaviourPuppet behaviourPuppet;
 
     private PlayerInputActions playerInputActions;
+
+    public Limb[] limbs;
 
     private void Awake()
     {
@@ -46,6 +50,12 @@ public class DeathTimer : MonoBehaviour
                 continue;
             }
 
+            for(int i = 0; i < limbs.Length; i++){
+                if( ((GameObject)obj).name == limbs[i].limbName){
+                    limbs[i].limbDeactivateAction.Invoke();
+                }
+            }
+
             to_remove.puppetMaster.DisconnectMuscleRecursive(to_remove.muscleIndex, MuscleDisconnectMode.Explode);
             to_remove.Hit(10f, to_remove.gameObject.transform.up * 10f, to_remove.gameObject.transform.position);
         }
@@ -70,4 +80,13 @@ public class DeathTimer : MonoBehaviour
     {
         playerInputActions.Disable();
     }
+}
+
+
+
+
+[System.Serializable]
+public struct Limb{
+    public UnityEvent limbDeactivateAction;
+    public String limbName;
 }
