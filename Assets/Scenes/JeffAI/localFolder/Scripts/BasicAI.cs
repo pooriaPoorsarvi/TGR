@@ -217,8 +217,14 @@ namespace JeffAI
         void Update()
         {
             if(visionSetup){
-                curVisionRadiusSphere.transform.position = new Vector3(npcModel.transform.position.x, transform.position.y + visionOffsetY, npcModel.transform.position.z);
-                curVisionRadiusSphere.transform.rotation = new Quaternion(1f, sampleVisionRadiusSphere.transform.rotation.x, npcModel.transform.rotation.y, sampleVisionRadiusSphere.transform.rotation.z);
+                if(!isFreaky){
+                    curVisionRadiusSphere.active = false;
+                }
+                else{
+                    curVisionRadiusSphere.active = true;
+                    curVisionRadiusSphere.transform.position = new Vector3(npcModel.transform.position.x, transform.position.y + visionOffsetY, npcModel.transform.position.z);
+                    curVisionRadiusSphere.transform.rotation = new Quaternion(1f, sampleVisionRadiusSphere.transform.rotation.x, npcModel.transform.rotation.y, sampleVisionRadiusSphere.transform.rotation.z);
+                }
             }
         }
 
