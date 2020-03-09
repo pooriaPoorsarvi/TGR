@@ -24,7 +24,7 @@ public class ScoringSystem : MonoBehaviour
 
     void Start(){
 
-        TimerSystem.TimerEnded += SaveScore;
+        //TimerSystem.TimerEnded += SaveScore;
 
     }
 
