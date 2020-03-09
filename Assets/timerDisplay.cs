@@ -31,6 +31,8 @@ public class timerDisplay : MonoBehaviour
             timeText.text = time.ToString("F2");
         } 
         else if(!gameOver){
+            time = 0;
+            timeText.text = time.ToString("F2");
             TimerEnded();
             gameOver = true;
         }
