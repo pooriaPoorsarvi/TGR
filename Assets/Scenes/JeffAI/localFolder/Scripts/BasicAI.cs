@@ -53,6 +53,35 @@ namespace JeffAI
         // variable that indicates whether npc wants to escape from the level
         private bool wantsToEscape = false;
 
+        
+        public float waitTime;
+        private IEnumerator waitTimer;
+        public float scaredMinPeriod;
+        private IEnumerator scaredTimer;
+        public bool isFreaky = false;
+
+        public GameObject sampleVisionRadiusSphere;
+        private GameObject curVisionRadiusSphere;
+        private bool visionSetup = false;
+        public GameObject npcModel;
+        public float visionOffsetY;
+
+        public GameObject player;
+        public float showVisionDistance;
+
+        void Awake(){
+            curVisionRadiusSphere = (GameObject)Instantiate(sampleVisionRadiusSphere,
+                                        npcModel.transform.position,
+                                        Quaternion.identity);
+            curVisionRadiusSphere.transform.parent = transform.parent;
+
+            curVisionRadiusSphere.transform.position = new Vector3(npcModel.transform.position.x, transform.position.y + visionOffsetY, npcModel.transform.position.z);
+            curVisionRadiusSphere.transform.localScale = sampleVisionRadiusSphere.transform.localScale;
+            curVisionRadiusSphere.transform.rotation = new Quaternion(1f, sampleVisionRadiusSphere.transform.rotation.x, npcModel.transform.rotation.y, sampleVisionRadiusSphere.transform.rotation.z);
+
+            visionSetup = true;
+        }
+
         public String GetTimerText()
         {
             return timerText;
@@ -70,10 +99,73 @@ namespace JeffAI
             noAction = true;
         }
 
+        IEnumerator WaitAndBecomeUnscared(float mins)
+        {
+            float counter = mins;
+
+            int hours = (int)(mins / 60);
+            int minutes = (int)(mins - hours * 60); 
+            float secs = (mins - (int)mins) * 60;
+
+            Debug.Log("hours " + hours);
+            Debug.Log("minutes " + minutes);
+            Debug.Log("secs " + secs);
+
+
+            String hourText = "";
+            String minText = "";
+            String secText = "";
+
+
+            while(true){
+                yield return new WaitForSeconds(1f);
+           
+                if(secs > 0){
+                    secs--;
+
+                }
+                else if(minutes > 0){
+                    secs = 59;
+                    minutes--;
+                }
+                else if(hours > 0){
+                    minutes += 59;
+                    hours--;
+                    secs = 59;
+                }
+
+                if(hours >= 10){
+                    hourText = hours.ToString();
+                }
+                else{
+                    hourText = "0" + hours.ToString();
+                }
+                if(minutes >= 10){
+                    minText = minutes.ToString();
+                }
+                else{
+                    minText = "0" + minutes.ToString();
+                }
+                if(secs >= 10){
+                    secText = secs.ToString();
+                }
+                else{
+                    secText = "0" + secs.ToString();
+                }   
+                //timerText = hourText + ":" + minText + ":" + secText; 
+                timerText = minText + ":" + secText;
+
+                if(hours == 0 && minutes == 0 && secs == 0){
+                    CalmDown();
+                    break;
+                }
+            }    
+        } 
 
         // transition back into normal routine after being scared
         private void CalmDown()
         {
+            isFreaky = false;
             wantsToEscape = false;
             scaredIndicator.active = false;
             NextGoal();
@@ -89,22 +181,54 @@ namespace JeffAI
             return wantsToEscape ? 1f : .707f;
         }
 
+
+
+       public bool IsFreaky(){
+           return isFreaky;
+       }
+
+
+
         public void BecomeScared()
         {
-            if (wantsToEscape)
-            {
+
+            if(isFreaky){
                 return;
             }
-            wantsToEscape = true;
+            isFreaky = true;
             scaredIndicator.active = true;
-            NextGoal();
+            gameObject.GetComponent<NavMeshAgent>().speed += speedBoost;
+ 
+            if(scaredTimer != null){
+                StopCoroutine(scaredTimer);
+            }
+
+            // start scared timer
+            scaredTimer = WaitAndBecomeUnscared(scaredMinPeriod);
+            StartCoroutine(scaredTimer);
+
+
+            if(waitTimer != null){
+                StopCoroutine(waitTimer);
+                NextGoal();
+            }
+
         }
 
         public Transform agent;
 
         void Update()
         {
-            
+            if(visionSetup){
+                if(!isFreaky || Vector3.Distance(transform.position, player.transform.position) > showVisionDistance){
+                    curVisionRadiusSphere.active = false;
+                }
+                else{
+                    curVisionRadiusSphere.active = true;
+                    curVisionRadiusSphere.transform.position = new Vector3(npcModel.transform.position.x, transform.position.y + visionOffsetY, npcModel.transform.position.z);
+                    curVisionRadiusSphere.transform.rotation = new Quaternion(1f, sampleVisionRadiusSphere.transform.rotation.x, npcModel.transform.rotation.y, sampleVisionRadiusSphere.transform.rotation.z);
+                }
+            }
         }
 
         void FixedUpdate()
