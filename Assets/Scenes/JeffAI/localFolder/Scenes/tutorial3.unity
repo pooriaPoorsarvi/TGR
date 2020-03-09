@@ -291,7 +291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &18786444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -622,6 +622,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 757662597607066120, guid: 564927e116c753c42b32273447ad9f04,
         type: 3}
+      propertyPath: limb.limbDeactivateAction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 757662597607066120, guid: 564927e116c753c42b32273447ad9f04,
+        type: 3}
       propertyPath: behaviourPuppet
       value: 
       objectReference: {fileID: 1318717352}
@@ -629,6 +634,36 @@ PrefabInstance:
         type: 3}
       propertyPath: max_use
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 757662597607066120, guid: 564927e116c753c42b32273447ad9f04,
+        type: 3}
+      propertyPath: limb.limbDeactivateAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 757662597607066120, guid: 564927e116c753c42b32273447ad9f04,
+        type: 3}
+      propertyPath: limb.limbDeactivateAction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 757662597607066120, guid: 564927e116c753c42b32273447ad9f04,
+        type: 3}
+      propertyPath: limb.limbDeactivateAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1258299306}
+    - target: {fileID: 757662597607066120, guid: 564927e116c753c42b32273447ad9f04,
+        type: 3}
+      propertyPath: limb.limbDeactivateAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SubLimbHealthAtIndex
+      objectReference: {fileID: 0}
+    - target: {fileID: 757662597607066120, guid: 564927e116c753c42b32273447ad9f04,
+        type: 3}
+      propertyPath: limb.limbDeactivateAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 757662597607066120, guid: 564927e116c753c42b32273447ad9f04,
+        type: 3}
+      propertyPath: limb.limbDeactivateAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 757662597607066121, guid: 564927e116c753c42b32273447ad9f04,
         type: 3}
@@ -657,6 +692,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2321795710058568209, guid: 564927e116c753c42b32273447ad9f04,
         type: 3}
+      propertyPath: limb.limbDeactivateAction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321795710058568209, guid: 564927e116c753c42b32273447ad9f04,
+        type: 3}
       propertyPath: behaviourPuppet
       value: 
       objectReference: {fileID: 1318717352}
@@ -664,6 +704,36 @@ PrefabInstance:
         type: 3}
       propertyPath: max_use
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321795710058568209, guid: 564927e116c753c42b32273447ad9f04,
+        type: 3}
+      propertyPath: limb.limbDeactivateAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321795710058568209, guid: 564927e116c753c42b32273447ad9f04,
+        type: 3}
+      propertyPath: limb.limbDeactivateAction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321795710058568209, guid: 564927e116c753c42b32273447ad9f04,
+        type: 3}
+      propertyPath: limb.limbDeactivateAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1258299306}
+    - target: {fileID: 2321795710058568209, guid: 564927e116c753c42b32273447ad9f04,
+        type: 3}
+      propertyPath: limb.limbDeactivateAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SubLimbHealthAtIndex
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321795710058568209, guid: 564927e116c753c42b32273447ad9f04,
+        type: 3}
+      propertyPath: limb.limbDeactivateAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321795710058568209, guid: 564927e116c753c42b32273447ad9f04,
+        type: 3}
+      propertyPath: limb.limbDeactivateAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2321795710058568210, guid: 564927e116c753c42b32273447ad9f04,
         type: 3}
@@ -1028,7 +1098,7 @@ PrefabInstance:
     - target: {fileID: 4798050181082901152, guid: 564927e116c753c42b32273447ad9f04,
         type: 3}
       propertyPath: limbs.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4798050181082901152, guid: 564927e116c753c42b32273447ad9f04,
         type: 3}
@@ -6192,7 +6262,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -503.77, y: -391.99997}
+  m_AnchoredPosition: {x: -710, y: -391.99997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &756671721
@@ -6590,7 +6660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &919666346
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12774,6 +12844,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db814630cd004d45b0d98a3c3707996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+  stats:
+  - limbIndex: 2
+    limbHealth: 100
+    healthInitial: 100
+    limbTick: {fileID: 1568468078}
+  - limbIndex: 3
+    limbHealth: 100
+    healthInitial: 100
+    limbTick: {fileID: 1128684849}
+  subAmount: 100
+  deadColor: {r: 1, g: 0, b: 0, a: 1}
+  aliveColor: {r: 0, g: 1, b: 0.052369595, a: 1}
+  crossIcon: {fileID: 21300000, guid: 55c790832a0006545bf433c5424dde64, type: 3}
+  tickIcon: {fileID: 21300000, guid: b4b5ab3587772994a9260f3582700c12, type: 3}
+>>>>>>> gameplay-mechanics-2.0
 --- !u!114 &1264644006 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f,
@@ -13669,7 +13756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1434488037
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14792,7 +14879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 1729824809}
-  timeAmt: 10
+  timeAmt: 100
 --- !u!222 &1722150427
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15258,7 +15345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -683.20996, y: -391.99997}
+  m_AnchoredPosition: {x: -889.43994, y: -391.99997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1793776870

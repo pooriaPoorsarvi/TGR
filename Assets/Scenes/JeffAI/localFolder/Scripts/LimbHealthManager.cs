@@ -10,8 +10,8 @@ public class LimbHealthManager : MonoBehaviour
     public enum Limbs{
     	Lthigh, // 0
     	Rthigh, // 1 
-    	Lleg, // 2
-    	Rleg // 3
+    	LArm, // 2
+    	RArm // 3
     }
 
     public LimbStats[] stats;
@@ -20,13 +20,18 @@ public class LimbHealthManager : MonoBehaviour
 
     public Color deadColor, aliveColor;
 
+    public Sprite crossIcon;
+    public Sprite tickIcon;
+
     void Awake(){
         for(int i = 0; i < stats.Length; i++){
 	        if(stats[i].limbHealth <= 0){
 	        	stats[i].limbTick.color = deadColor;
+	        	stats[i].limbTick.sprite = crossIcon;
 	        }
 	        else{
 	        	stats[i].limbTick.color = aliveColor;
+	        	stats[i].limbTick.sprite = tickIcon;
 	        }
         }    	
     }
@@ -43,9 +48,11 @@ public class LimbHealthManager : MonoBehaviour
     private void UpdateUI(LimbStats limbStats){
         if(limbStats.limbHealth <= 0){
         	limbStats.limbTick.color = deadColor;
+        	limbStats.limbTick.sprite = crossIcon;
         }
         else{
         	limbStats.limbTick.color = aliveColor;
+        	limbStats.limbTick.sprite = tickIcon;
         }
     }
 
