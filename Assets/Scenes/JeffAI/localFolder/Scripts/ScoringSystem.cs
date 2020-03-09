@@ -31,18 +31,22 @@ public class ScoringSystem : MonoBehaviour
     
     public Text killCountWidget;
 
+    // this one already called by limb health manager
     public static void LimbLost(){
         limbsLost++;
     }
 
+    // please call this
     public static void KillMade(){
         kills++;
     }
 
+    // please call this
     public static void ObjectWasUsed(){
         objectsUsed++;
     }
 
+    // please call this
     public static void FellDown(){
         timesFallen++;
     }
@@ -96,7 +100,7 @@ public class ScoringSystem : MonoBehaviour
 
     // Calculate and return score for the level
     private float CalculateScore(int timeElapsed, int timeUpperLimit){
-        return (limbsLost / (float)limbsUpperLimit + kills / (float)killsUpperLimit - 
+        return ( -limbsUpperLimit / (float)limbsLost + kills / (float)killsUpperLimit - 
              timeUpperLimit / (float)timeElapsed + objectsUsed / (float) objectsUsedUpperLimit + 
             timesFallen / (float)timesFallenUpperLimit);
     }

@@ -6505,7 +6505,7 @@ MonoBehaviour:
   timeElapsedText: {fileID: 866642409}
   objectsUsedText: {fileID: 5794914}
   timesFallenText: {fileID: 1567801169}
-  limbsUpperLimit: 10
+  limbsUpperLimit: 2
   killsUpperLimit: 5
   objectsUsedUpperLimit: 10
   timesFallenUpperLimit: 10

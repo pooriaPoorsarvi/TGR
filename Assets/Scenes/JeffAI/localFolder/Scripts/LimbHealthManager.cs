@@ -23,6 +23,7 @@ public class LimbHealthManager : MonoBehaviour
     public Sprite crossIcon;
     public Sprite tickIcon;
 
+
     void Awake(){
         for(int i = 0; i < stats.Length; i++){
 	        if(stats[i].limbHealth <= 0){
@@ -61,6 +62,9 @@ public class LimbHealthManager : MonoBehaviour
     	limbStats.limbHealth -= subAmount;
     	if(limbStats.limbHealth < 0){
     		limbStats.limbHealth = 0;
+    	}
+    	if(limbStats.limbHealth == 0){
+    		ScoringSystem.LimbLost();
     	}
     	UpdateUI(limbStats);
     }
