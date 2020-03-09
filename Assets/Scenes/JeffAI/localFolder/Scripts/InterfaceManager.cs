@@ -17,6 +17,8 @@ public class InterfaceManager : MonoBehaviour
     private bool setup = false;
     public float yOffset;
 
+    public Vector3 subScaleFactor;
+
     void Start(){
      
         for(int i = 0; i < npcs.Count; i++){
@@ -31,7 +33,7 @@ public class InterfaceManager : MonoBehaviour
             newPanel.transform.SetSiblingIndex(0);
 
             newPanel.transform.position = sampleNpcUi.transform.position;
-            newPanel.transform.localScale = sampleNpcUi.transform.localScale;
+            newPanel.transform.localScale = sampleNpcUi.transform.localScale - subScaleFactor;
             newPanel.transform.rotation = sampleNpcUi.transform.rotation;
 
             uiPanels.Add(newPanel);

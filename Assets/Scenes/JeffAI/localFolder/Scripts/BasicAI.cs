@@ -196,6 +196,7 @@ namespace JeffAI
             // start scared timer
             scaredTimer = WaitAndBecomeUnscared(scaredMinPeriod);
             StartCoroutine(scaredTimer);
+            
 
             if(waitTimer != null){
                 StopCoroutine(waitTimer);
