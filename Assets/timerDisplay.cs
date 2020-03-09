@@ -20,6 +20,17 @@ public class timerDisplay : MonoBehaviour
         time = timeAmt;
     }
 
+    public int GetTotalTime(){
+        Debug.Log("jk1 " + (int)timeAmt);
+        return (int)timeAmt;
+    }
+
+    public int GetTimeElapsed(){
+        int num = (int)timeAmt - (int)time;
+        Debug.Log("jk2 " + num);
+        return (int)timeAmt - (int)time;
+    }
+
     private bool gameOver = false;
 
     // Update is called once per frame
