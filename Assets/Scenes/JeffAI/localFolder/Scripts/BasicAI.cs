@@ -97,69 +97,6 @@ namespace JeffAI
         {
             bloodParticles.Play();
             noAction = true;
-        }
-
-        IEnumerator WaitAndBecomeUnscared(float mins)
-        {
-            float counter = mins;
-
-            int hours = (int)(mins / 60);
-            int minutes = (int)(mins - hours * 60); 
-            float secs = (mins - (int)mins) * 60;
-
-            Debug.Log("hours " + hours);
-            Debug.Log("minutes " + minutes);
-            Debug.Log("secs " + secs);
-
-
-            String hourText = "";
-            String minText = "";
-            String secText = "";
-
-
-            while(true){
-                yield return new WaitForSeconds(1f);
-           
-                if(secs > 0){
-                    secs--;
-
-                }
-                else if(minutes > 0){
-                    secs = 59;
-                    minutes--;
-                }
-                else if(hours > 0){
-                    minutes += 59;
-                    hours--;
-                    secs = 59;
-                }
-
-                if(hours >= 10){
-                    hourText = hours.ToString();
-                }
-                else{
-                    hourText = "0" + hours.ToString();
-                }
-                if(minutes >= 10){
-                    minText = minutes.ToString();
-                }
-                else{
-                    minText = "0" + minutes.ToString();
-                }
-                if(secs >= 10){
-                    secText = secs.ToString();
-                }
-                else{
-                    secText = "0" + secs.ToString();
-                }   
-                //timerText = hourText + ":" + minText + ":" + secText; 
-                timerText = minText + ":" + secText;
-
-                if(hours == 0 && minutes == 0 && secs == 0){
-                    CalmDown();
-                    break;
-                }
-            }    
         } 
 
         // transition back into normal routine after being scared
@@ -216,6 +153,72 @@ namespace JeffAI
         }
 
         public Transform agent;
+
+
+        IEnumerator WaitAndBecomeUnscared(float mins)
+        {
+            float counter = mins;
+
+            int hours = (int)(mins / 60);
+            int minutes = (int)(mins - hours * 60); 
+            float secs = (mins - (int)mins) * 60;
+
+            Debug.Log("hours " + hours);
+            Debug.Log("minutes " + minutes);
+            Debug.Log("secs " + secs);
+
+
+            String hourText = "";
+            String minText = "";
+            String secText = "";
+
+
+            while(true){
+
+                if(secs > 0){
+                    secs--;
+
+                }
+                else if(minutes > 0){
+                    secs = 59;
+                    minutes--;
+                }
+                else if(hours > 0){
+                    minutes += 59;
+                    hours--;
+                    secs = 59;
+                }
+
+                if(hours >= 10){
+                    hourText = hours.ToString();
+                }
+                else{
+                    hourText = "0" + hours.ToString();
+                }
+                if(minutes >= 10){
+                    minText = minutes.ToString();
+                }
+                else{
+                    minText = "0" + minutes.ToString();
+                }
+                if(secs >= 10){
+                    secText = secs.ToString();
+                }
+                else{
+                    secText = "0" + secs.ToString();
+                }   
+                //timerText = hourText + ":" + minText + ":" + secText; 
+                timerText = minText + ":" + secText;
+
+                yield return new WaitForSeconds(1f);
+
+                if(hours == 0 && minutes == 0 && secs == 0){
+                    CalmDown();
+                    break;
+                }
+            }    
+        }
+
 
         void Update()
         {
