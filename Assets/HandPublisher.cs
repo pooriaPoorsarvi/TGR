@@ -9,6 +9,7 @@ public class HandPublisher : MonoBehaviour
 
     public bool isBeingHeld(GameObject gameObject)
     {
-        return grabberL.getHoldingGameObject().Equals(gameObject) || grabberR.getHoldingGameObject().Equals(gameObject);
+        return (!grabberL.getHoldingGameObject() == null && grabberL.getHoldingGameObject().Equals(gameObject)) ||
+               (!grabberR.getHoldingGameObject() == null && grabberR.getHoldingGameObject().Equals(gameObject));
     }
 }
