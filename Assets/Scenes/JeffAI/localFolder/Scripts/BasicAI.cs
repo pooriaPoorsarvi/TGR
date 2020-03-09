@@ -66,6 +66,9 @@ namespace JeffAI
         public GameObject npcModel;
         public float visionOffsetY;
 
+        public GameObject player;
+        public float showVisionDistance;
+
         void Awake(){
             curVisionRadiusSphere = (GameObject)Instantiate(sampleVisionRadiusSphere,
                                         npcModel.transform.position,
@@ -217,7 +220,7 @@ namespace JeffAI
         void Update()
         {
             if(visionSetup){
-                if(!isFreaky){
+                if(!isFreaky || Vector3.Distance(transform.position, player.transform.position) > showVisionDistance){
                     curVisionRadiusSphere.active = false;
                 }
                 else{
