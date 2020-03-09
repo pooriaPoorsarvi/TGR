@@ -4380,6 +4380,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437851995}
   m_CullTransparentMesh: 0
+--- !u!1 &447718732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4798050179655774718, guid: 564927e116c753c42b32273447ad9f04,
+    type: 3}
+  m_PrefabInstance: {fileID: 245293717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &481253735 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1802941022605938819, guid: 1d763d80109b8be4897ee1f8ecc10d0f,
@@ -5968,6 +5974,14 @@ PrefabInstance:
       propertyPath: visionOffsetFactor
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 447718732}
+    - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
+      propertyPath: showVisionDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1488806863, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7061,6 +7075,14 @@ PrefabInstance:
     - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: visionOffsetFactor
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 447718732}
+    - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
+      propertyPath: showVisionDistance
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1488806863, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: m_Enabled
@@ -8785,6 +8807,14 @@ PrefabInstance:
     - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: visionOffsetFactor
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 447718732}
+    - target: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
+      propertyPath: showVisionDistance
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1488806863, guid: 1d763d80109b8be4897ee1f8ecc10d0f, type: 3}
       propertyPath: m_Enabled
