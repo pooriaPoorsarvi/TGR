@@ -8882,6 +8882,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128684847}
   m_CullTransparentMesh: 0
+--- !u!1 &1129169746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 131308175635254724, guid: f59948a8652ab6b40a5865f5e7e1bf0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 261789914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1129169752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129169746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4268cfb4b52cb394ebbc2ec8457a4cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  eventName:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8b34ae1142a226541a0374583d71a656,
+      type: 2}
+  canPlaySound: 1
+  waitTimer: 1
 --- !u!1001 &1134699765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12400,6 +12426,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240027287}
   m_CullTransparentMesh: 0
+--- !u!1 &1241883559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 131308176026216054, guid: f59948a8652ab6b40a5865f5e7e1bf0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 261789914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1241883565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241883559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4268cfb4b52cb394ebbc2ec8457a4cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  eventName:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8b34ae1142a226541a0374583d71a656,
+      type: 2}
+  canPlaySound: 1
+  waitTimer: 1
 --- !u!1 &1246139713
 GameObject:
   m_ObjectHideFlags: 0
@@ -12516,26 +12568,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db814630cd004d45b0d98a3c3707996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats:
-  - limbIndex: 0
-    limbHealth: 100
-    healthInitial: 100
-    limbTick: {fileID: 1568468078}
-  - limbIndex: 1
-    limbHealth: 100
-    healthInitial: 100
-    limbTick: {fileID: 1128684849}
-  - limbIndex: 2
-    limbHealth: 100
-    healthInitial: 100
-    limbTick: {fileID: 1286335339}
-  - limbIndex: 3
-    limbHealth: 100
-    healthInitial: 100
-    limbTick: {fileID: 709126179}
-  subAmount: 100
-  deadColor: {r: 1, g: 0, b: 0, a: 1}
-  aliveColor: {r: 0, g: 1, b: 0.052369595, a: 1}
 --- !u!114 &1264644006 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1488806861, guid: 1d763d80109b8be4897ee1f8ecc10d0f,

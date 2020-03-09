@@ -630,8 +630,8 @@
 									<Modifier Name="" ID="{BB4BFED1-A70F-4562-A876-02C7CA117477}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="100"/>
-											<Property Name="Min" Type="Real64" Value="-100"/>
+											<Property Name="Max" Type="Real64" Value="300"/>
+											<Property Name="Min" Type="Real64" Value="-300"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -664,13 +664,13 @@
 												<Flags>0</Flags>
 											</Point>
 											<Point>
-												<XPos>1.04575</XPos>
-												<YPos>-7.40893</YPos>
+												<XPos>1.55555</XPos>
+												<YPos>-200</YPos>
 												<Flags>0</Flags>
 											</Point>
 											<Point>
-												<XPos>2.184</XPos>
-												<YPos>-1.34613</YPos>
+												<XPos>4.99446</XPos>
+												<YPos>-4.95098</YPos>
 												<Flags>0</Flags>
 											</Point>
 											<Point>
@@ -706,6 +706,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Office_bgm" ID="{2132F1E4-B44E-4350-82A3-C28A8C2AC09C}" ShortID="446411091">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{73EE20B0-B0F9-40B5-9438-8581E4402E92}"/>
