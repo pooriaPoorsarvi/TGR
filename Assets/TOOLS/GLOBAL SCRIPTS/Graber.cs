@@ -32,6 +32,9 @@ public class Graber : MonoBehaviour
     // private NPCHandler npcHandler;
     private NPCGrabbed nPCGrabbed = null;
 
+    private GameObject holdingObject = null;
+    
+    
     private void Awake()
     {
         playerInputActions = new PlayerInputActions();
@@ -63,10 +66,7 @@ public class Graber : MonoBehaviour
         {
             Destroy(currentJoint);
             currentJoint = null;
-            // if (npcHandler != null)
-            // {
-            //     npcHandler.GetBack();
-            // }
+            holdingObject = null;
             if (nPCGrabbed != null)
             {
                 nPCGrabbed.Released();
@@ -75,8 +75,6 @@ public class Graber : MonoBehaviour
             
             if (hanging)
             {
-                // puppetMaster.pinWeight = prev_pin_weight;
-                // behaviourPuppet.enabled = true;
                 behaviourPuppet.unpinnedMuscleKnockout = true;
                 third_puppet_part.constraints = RigidbodyConstraints.FreezeRotation;
                 hanging = false;
@@ -130,11 +128,8 @@ public class Graber : MonoBehaviour
             {
                 nPCGrabbed.Grabed();
             }
-            // npcHandler  = other.GetComponent<NPCHandler>();
-            // if (npcHandler != null)
-            // {
-            //     npcHandler.LetGo();
-            // }
+
+            holdingObject = other.gameObject;
 
             if (other_rb.mass >= unmovable_limit || other_rb.isKinematic)
             {
@@ -159,9 +154,14 @@ public class Graber : MonoBehaviour
     {
         playerInputActions.Enable();
     }
-
+    
     private void OnDisable()
     {
         playerInputActions.Disable();
+    }
+
+    public GameObject getHoldingGameObject()
+    {
+        return holdingObject;
     }
 }
