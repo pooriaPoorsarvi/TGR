@@ -6285,7 +6285,7 @@ GameObject:
   - component: {fileID: 796567251}
   - component: {fileID: 796567252}
   m_Layer: 0
-  m_Name: GoalManager
+  m_Name: ScoreManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6318,6 +6318,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelIndex: 0
+  limbsLostText: {fileID: 1426988685}
+  killsText: {fileID: 1119452657}
+  timeElapsedText: {fileID: 866642409}
+  objectsUsedText: {fileID: 5794914}
+  timesFallenText: {fileID: 1567801169}
+  limbsUpperLimit: 10
+  killsUpperLimit: 10
+  objectsUsedUpperLimit: 10
+  timesFallenUpperLimit: 10
+  finalGrade: {fileID: 304289727}
 --- !u!4 &839814043 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7772361011502852161, guid: f59948a8652ab6b40a5865f5e7e1bf0e,
@@ -8792,7 +8802,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 5
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -8816,12 +8826,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1124613569}
-    characterCount: 5
+    characterCount: 13
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -14586,7 +14596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 1729824809}
-  timeAmt: 100
+  timeAmt: 10
 --- !u!222 &1722150427
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15143,6 +15153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1882213151}
   finalScoreScreen: {fileID: 1944487575}
+  scoringSystem: {fileID: 796567252}
+  td: {fileID: 1722150426}
 --- !u!1 &1821265132 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1802941023480957421, guid: 1d763d80109b8be4897ee1f8ecc10d0f,
