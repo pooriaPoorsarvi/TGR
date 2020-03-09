@@ -28,6 +28,8 @@ public class ScoringSystem : MonoBehaviour
     public int timesFallenUpperLimit;
 
     public GameObject finalGrade;
+    
+    public Text killCountWidget;
 
     public static void LimbLost(){
         limbsLost++;
@@ -106,9 +108,8 @@ public class ScoringSystem : MonoBehaviour
 
     }
 
-    void Start(){
-
-
+    void Update(){
+        killCountWidget.text = kills + "/" + killsUpperLimit;
     }
 
 

@@ -6324,10 +6324,11 @@ MonoBehaviour:
   objectsUsedText: {fileID: 5794914}
   timesFallenText: {fileID: 1567801169}
   limbsUpperLimit: 10
-  killsUpperLimit: 10
+  killsUpperLimit: 5
   objectsUsedUpperLimit: 10
   timesFallenUpperLimit: 10
   finalGrade: {fileID: 304289727}
+  killCountWidget: {fileID: 660641711}
 --- !u!4 &839814043 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7772361011502852161, guid: f59948a8652ab6b40a5865f5e7e1bf0e,
