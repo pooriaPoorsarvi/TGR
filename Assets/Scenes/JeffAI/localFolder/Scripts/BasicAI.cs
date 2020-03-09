@@ -60,6 +60,25 @@ namespace JeffAI
         private IEnumerator scaredTimer;
         public bool isFreaky = false;
 
+        public GameObject sampleVisionRadiusSphere;
+        private GameObject curVisionRadiusSphere;
+        private bool visionSetup = false;
+        public GameObject npcModel;
+        public float visionOffsetY;
+
+        void Awake(){
+            curVisionRadiusSphere = (GameObject)Instantiate(sampleVisionRadiusSphere,
+                                        npcModel.transform.position,
+                                        Quaternion.identity);
+            curVisionRadiusSphere.transform.parent = transform.parent;
+
+            curVisionRadiusSphere.transform.position = new Vector3(npcModel.transform.position.x, transform.position.y + visionOffsetY, npcModel.transform.position.z);
+            curVisionRadiusSphere.transform.localScale = sampleVisionRadiusSphere.transform.localScale;
+            curVisionRadiusSphere.transform.rotation = new Quaternion(1f, sampleVisionRadiusSphere.transform.rotation.x, npcModel.transform.rotation.y, sampleVisionRadiusSphere.transform.rotation.z);
+
+            visionSetup = true;
+        }
+
         public String GetTimerText()
         {
             return timerText;
@@ -76,14 +95,6 @@ namespace JeffAI
             bloodParticles.Play();
             noAction = true;
         }
-
-
-
-
-
-
-  
-
 
         IEnumerator WaitAndBecomeUnscared(float mins)
         {
@@ -148,11 +159,6 @@ namespace JeffAI
             }    
         } 
 
-
-
-
-
-
         // transition back into normal routine after being scared
         private void CalmDown()
         {
@@ -206,17 +212,14 @@ namespace JeffAI
 
         }
 
-
-
-
-
-
-
         public Transform agent;
 
         void Update()
         {
-            
+            if(visionSetup){
+                curVisionRadiusSphere.transform.position = new Vector3(npcModel.transform.position.x, transform.position.y + visionOffsetY, npcModel.transform.position.z);
+                curVisionRadiusSphere.transform.rotation = new Quaternion(1f, sampleVisionRadiusSphere.transform.rotation.x, npcModel.transform.rotation.y, sampleVisionRadiusSphere.transform.rotation.z);
+            }
         }
 
         void FixedUpdate()
