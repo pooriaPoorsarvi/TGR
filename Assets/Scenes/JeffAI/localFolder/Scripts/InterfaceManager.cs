@@ -17,6 +17,8 @@ public class InterfaceManager : MonoBehaviour
     private bool setup = false;
     public float yOffset;
 
+    public Vector3 subScaleFactor;
+
     void Start(){
      
         for(int i = 0; i < npcs.Count; i++){
@@ -31,7 +33,7 @@ public class InterfaceManager : MonoBehaviour
             newPanel.transform.SetSiblingIndex(0);
 
             newPanel.transform.position = sampleNpcUi.transform.position;
-            newPanel.transform.localScale = sampleNpcUi.transform.localScale;
+            newPanel.transform.localScale = sampleNpcUi.transform.localScale - subScaleFactor;
             newPanel.transform.rotation = sampleNpcUi.transform.rotation;
 
             uiPanels.Add(newPanel);
@@ -44,17 +46,19 @@ public class InterfaceManager : MonoBehaviour
         if(setup){
 	        for(int i = 0; i < npcs.Count; i++){
                 
-                if(npcs[i].GetComponent<BasicAI>().IsFreaky()){
+                if(npcs[i] != null && npcs[i].GetComponent<BasicAI>().IsFreaky()){
 
                     uiPanels[i].active = true;
 
     	            uiPanels[i].GetComponent<RectTransform>().localPosition = 
-    	            GetCanvasPosition(mainCanvas.GetComponent<RectTransform>(), Camera.main, npcs[i].transform.position) 
+    	            GetCanvasPosition(mainCanvas.GetComponent<RectTransform>(), Camera.main, npcs[i]) 
                     + new Vector2(0f, yOffset);
 
                     foreach(Transform child in uiPanels[i].transform){
                         if(child.gameObject.name == "TimeText"){
-                            child.gameObject.GetComponent<Text>().text = npcs[i].GetComponent<BasicAI>().GetTimerText();
+                            if(npcs[i] != null){
+                                child.gameObject.GetComponent<Text>().text = npcs[i].GetComponent<BasicAI>().GetTimerText();
+                            }
                         }
                     }
 
@@ -71,9 +75,15 @@ public class InterfaceManager : MonoBehaviour
     }
 
     // Get canvas position of Vector3, which is the world position
-    private Vector2 GetCanvasPosition(RectTransform canvas, Camera camera, Vector3 position) {
-         Vector2 temp = camera.WorldToViewportPoint(position);
- 
+    private Vector2 GetCanvasPosition(RectTransform canvas, Camera camera, GameObject npc) {
+         Vector2 temp = new Vector2(0f, 0f);
+         if(npc != null){
+             temp = camera.WorldToViewportPoint(npc.transform.position);
+         }
+         else{
+            return new Vector2(-1000f, -1000f);
+         }
+
          temp.x *= canvas.sizeDelta.x;
          temp.y *= canvas.sizeDelta.y;
  

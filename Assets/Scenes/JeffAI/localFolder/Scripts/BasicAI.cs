@@ -138,7 +138,8 @@ namespace JeffAI
                 else{
                     secText = "0" + secs.ToString();
                 }   
-                timerText = hourText + ":" + minText + ":" + secText; 
+                //timerText = hourText + ":" + minText + ":" + secText; 
+                timerText = minText + ":" + secText;
 
                 if(hours == 0 && minutes == 0 && secs == 0){
                     CalmDown();
@@ -196,6 +197,7 @@ namespace JeffAI
             // start scared timer
             scaredTimer = WaitAndBecomeUnscared(scaredMinPeriod);
             StartCoroutine(scaredTimer);
+
 
             if(waitTimer != null){
                 StopCoroutine(waitTimer);
