@@ -36,7 +36,7 @@ public class ScoringSystem : MonoBehaviour
         limbsLost++;
     }
 
-    // please call this
+    // I am calling this from DeathByForce
     public static void KillMade(){
         kills++;
     }

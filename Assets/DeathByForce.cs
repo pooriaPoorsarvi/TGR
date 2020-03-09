@@ -27,6 +27,8 @@ public class DeathByForce : MonoBehaviour
         {
             if (other.relativeVelocity.magnitude > deathForceLimitBeingKilled)
             {
+                // notify scoring system that kill was made
+                ScoringSystem.KillMade();
                 Destroy(objectToBeKilled);
             }
         }
