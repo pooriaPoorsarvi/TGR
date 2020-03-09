@@ -41,7 +41,7 @@ public class ScoringSystem : MonoBehaviour
         kills++;
     }
 
-    // please call this
+    // I am calling this from Graber
     public static void ObjectWasUsed(){
         objectsUsed++;
     }
