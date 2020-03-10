@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: 3db814630cd004d45b0d98a3c3707996
 =======
 guid: 874db750c237be641a0819ad73f22bc5
 >>>>>>> 2289c36055b222a1643199dd9e94cd725e7b41b6
+=======
+guid: 3db814630cd004d45b0d98a3c3707996
+>>>>>>> gameplay-mechanics-2.0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
