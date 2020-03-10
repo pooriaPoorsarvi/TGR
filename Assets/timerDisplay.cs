@@ -9,12 +9,29 @@ public class timerDisplay : MonoBehaviour
     public TextMeshProUGUI timeText;
     public float timeAmt=90;
     float time;
+
+    public delegate void TimerEndedEventHandler();
+    public static event TimerEndedEventHandler TimerEnded;
+
     // Start is called before the first frame update
     void Start()
     {
         fillImg = GetComponent<Image>();
         time = timeAmt;
     }
+
+    public int GetTotalTime(){
+        Debug.Log("jk1 " + (int)timeAmt);
+        return (int)timeAmt;
+    }
+
+    public int GetTimeElapsed(){
+        int num = (int)timeAmt - (int)time;
+        Debug.Log("jk2 " + num);
+        return (int)timeAmt - (int)time;
+    }
+
+    private bool gameOver = false;
 
     // Update is called once per frame
     void Update()
@@ -24,5 +41,11 @@ public class timerDisplay : MonoBehaviour
             fillImg.fillAmount = time / timeAmt;
             timeText.text = time.ToString("F2");
         } 
+        else if(!gameOver){
+            time = 0;
+            timeText.text = time.ToString("F2");
+            TimerEnded();
+            gameOver = true;
+        }
     }
 }

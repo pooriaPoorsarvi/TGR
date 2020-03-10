@@ -33,6 +33,9 @@ public class Graber : MonoBehaviour
     private NPCGrabbed nPCGrabbed = null;
 
     private GameObject holdingObject = null;
+
+
+    public Limb limb;
     
     
     private void Awake()
@@ -100,6 +103,7 @@ public class Graber : MonoBehaviour
                 CheckJointAndExit();
                 muscle.puppetMaster.DisconnectMuscleRecursive(muscle.muscleIndex, MuscleDisconnectMode.Explode);
                 muscle.Hit(10f, muscle.gameObject.transform.up * 10f, muscle.gameObject.transform.position);
+                limb.limbDeactivateAction.Invoke();
             }
         }
     }
@@ -143,6 +147,8 @@ public class Graber : MonoBehaviour
             }
 
             max_use -= 1;
+            // notify scoring system that object was used
+            ScoringSystem.ObjectWasUsed();
 
             currentJoint.connectedBody = rb;
             // currentJoint.breakForce = 1000;

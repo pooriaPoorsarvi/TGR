@@ -15,6 +15,12 @@ public class GameplayManager : MonoBehaviour
 
     public GameObject pauseMenu;
 
+    public GameObject finalScoreScreen;
+
+    public ScoringSystem scoringSystem;
+
+    public timerDisplay td;
+
     // restart the game after player has lost
     public void Retry(){
         Application.LoadLevel(Application.loadedLevel);
@@ -36,15 +42,23 @@ public class GameplayManager : MonoBehaviour
     }
 
     void Start(){
-        gameOverScreen = GameObject.FindGameObjectWithTag("GameOverScreen");
-        gameOverScreen.active = false;
+        //gameOverScreen = GameObject.FindGameObjectWithTag("GameOverScreen");
+        //gameOverScreen.active = false;
+
+        // calculate final score when the timer ends
+        timerDisplay.TimerEnded += LevelComplete;
+    }
+
+    public void LevelComplete(){
+        Debug.Log("Level complete");
+        finalScoreScreen.active = true;
+        scoringSystem.UpdateScore(td.GetTimeElapsed(), td.GetTotalTime());
     }
 
     public static void LoseGame(){
         
-    	Debug.Log("game over");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        // gameOverScreen.active = true;
+        //gameOverScreen.active = true;
     }
 
 }
