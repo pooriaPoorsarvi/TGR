@@ -517,18 +517,16 @@ ModelImporter:
       curves: []
       events:
       - time: 0.5005415
-        functionName: callEvent
-        data: footstep
-        objectReferenceParameter: {fileID: 11500000, guid: 652d4204a2438f048ae249cdf02ead16,
-          type: 3}
+        functionName: 
+        data: 
+        objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.9878334
-        functionName: callEvent
-        data: footstep
-        objectReferenceParameter: {fileID: 11500000, guid: 652d4204a2438f048ae249cdf02ead16,
-          type: 3}
+        functionName: 
+        data: 
+        objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
@@ -562,18 +560,16 @@ ModelImporter:
       curves: []
       events:
       - time: 0.47711405
-        functionName: callEvent
-        data: footstep
-        objectReferenceParameter: {fileID: 11500000, guid: 652d4204a2438f048ae249cdf02ead16,
-          type: 3}
+        functionName: 
+        data: 
+        objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.018760798
-        functionName: callEvent
-        data: footstep
-        objectReferenceParameter: {fileID: 11500000, guid: 652d4204a2438f048ae249cdf02ead16,
-          type: 3}
+        functionName: 
+        data: 
+        objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
@@ -607,10 +603,9 @@ ModelImporter:
       curves: []
       events:
       - time: 0
-        functionName: callEvent
-        data: footstep
-        objectReferenceParameter: {fileID: -927199367670048503, guid: 6a5bf283e14c01e41821b579fc8693ec,
-          type: 3}
+        functionName: 
+        data: 
+        objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
@@ -623,18 +618,16 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0.50321907
-        functionName: callEvent
-        data: footstep
-        objectReferenceParameter: {fileID: 11500000, guid: 652d4204a2438f048ae249cdf02ead16,
-          type: 3}
+        functionName: 
+        data: 
+        objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.0058326237
-        functionName: callEvent
-        data: footstep
-        objectReferenceParameter: {fileID: 11500000, guid: 652d4204a2438f048ae249cdf02ead16,
-          type: 3}
+        functionName: 
+        data: 
+        objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
@@ -676,18 +669,16 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0.47610062
-        functionName: callEvent
-        data: footstep
-        objectReferenceParameter: {fileID: 11500000, guid: 652d4204a2438f048ae249cdf02ead16,
-          type: 3}
+        functionName: 
+        data: 
+        objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.0033576323
-        functionName: callEvent
-        data: footstep
-        objectReferenceParameter: {fileID: -927199367670048503, guid: 6a5bf283e14c01e41821b579fc8693ec,
-          type: 3}
+        functionName: 
+        data: 
+        objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
