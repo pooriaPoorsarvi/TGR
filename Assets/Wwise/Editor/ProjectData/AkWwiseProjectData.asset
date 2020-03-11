@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f0839f3eaa4e8e47805e8f9d0c51be19
     GuidInternal: 
-    m_lastTime: -8586176864704608649
+    m_lastTime: -8586176837789067026
     List:
     - name: main
       guid: 8ea249e8d6b5e34abbcd45794a5b5bf4
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 5b25de65f729434faf75d6960b6cb617
     GuidInternal: 
-    m_lastTime: -8586176864704698422
+    m_lastTime: -8586176837789805273
     List:
     - name: basicImpact
       guid: 9ab13f8d0a6eb647948c242dee8ee4fb
@@ -212,8 +212,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Typing_2
       maxAttenuation: 30
-      maxDuration: 7.47864
-      minDuration: 7.47864
+      maxDuration: -1
+      minDuration: -1
     - name: waterTank
       guid: 1e678fe0b01b3848bbb07a97f1135905
       id: 578603970
