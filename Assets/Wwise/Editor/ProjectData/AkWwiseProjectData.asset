@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f0839f3eaa4e8e47805e8f9d0c51be19
     GuidInternal: 
-    m_lastTime: -8586177086500742990
+    m_lastTime: -8586176864704608649
     List:
     - name: main
       guid: 8ea249e8d6b5e34abbcd45794a5b5bf4
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 5b25de65f729434faf75d6960b6cb617
     GuidInternal: 
-    m_lastTime: -8586177088627737855
+    m_lastTime: -8586176864704698422
     List:
     - name: basicImpact
       guid: 9ab13f8d0a6eb647948c242dee8ee4fb
@@ -91,9 +91,21 @@ MonoBehaviour:
       - ElementName: chair
         ObjectType: 3
       Path: Default Work Unit\chair
-      maxAttenuation: 0
+      maxAttenuation: 15
       maxDuration: 1.09827
       minDuration: 0.776594
+    - name: Cups
+      guid: 00490d2db364b34fae081968b9937318
+      id: 3817145194
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Cups
+        ObjectType: 3
+      Path: Default Work Unit\Cups
+      maxAttenuation: 0
+      maxDuration: 0.927008
+      minDuration: 0.82587
     - name: fall
       guid: c71e7c6629177242bd6ccaf10d8bc3e5
       id: 2512384458
@@ -118,6 +130,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.415223
       minDuration: 0.233036
+    - name: Table
+      guid: 09552336a429914194a1e49f86a64d7a
+      id: 2048817515
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Table
+        ObjectType: 3
+      Path: Default Work Unit\Table
+      maxAttenuation: 15
+      maxDuration: 1.124356
+      minDuration: 0.892402
+    - name: Table_2
+      guid: fead2da8b45ace44a351a20be6ebbbea
+      id: 775053656
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Table_2
+        ObjectType: 3
+      Path: Default Work Unit\Table_2
+      maxAttenuation: 15
+      maxDuration: 1.124356
+      minDuration: 0.892402
     - name: trashCan
       guid: 4bfc84e810a53145a86b2282c4150cec
       id: 3431057813
@@ -127,7 +163,7 @@ MonoBehaviour:
       - ElementName: trashCan
         ObjectType: 3
       Path: Default Work Unit\trashCan
-      maxAttenuation: 0
+      maxAttenuation: 25
       maxDuration: 1.66851
       minDuration: 1.574863
     - name: trashCan_small
@@ -139,7 +175,7 @@ MonoBehaviour:
       - ElementName: trashCan_small
         ObjectType: 3
       Path: Default Work Unit\trashCan_small
-      maxAttenuation: 0
+      maxAttenuation: 25
       maxDuration: 1.852277
       minDuration: 1.748317
     - name: tree
@@ -151,9 +187,33 @@ MonoBehaviour:
       - ElementName: tree
         ObjectType: 3
       Path: Default Work Unit\tree
-      maxAttenuation: 0
+      maxAttenuation: 20
       maxDuration: 0.662176
       minDuration: 0.330356
+    - name: Typing
+      guid: 722a7336b1a4ab41ad5772404c5814ec
+      id: 1599183472
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Typing
+        ObjectType: 3
+      Path: Default Work Unit\Typing
+      maxAttenuation: 25
+      maxDuration: 1.66851
+      minDuration: 1.574863
+    - name: Typing_2
+      guid: 3e2405cd50c53a4fa7910f29653c3bdf
+      id: 2414956975
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Typing_2
+        ObjectType: 3
+      Path: Default Work Unit\Typing_2
+      maxAttenuation: 30
+      maxDuration: 7.47864
+      minDuration: 7.47864
     - name: waterTank
       guid: 1e678fe0b01b3848bbb07a97f1135905
       id: 578603970
@@ -163,7 +223,7 @@ MonoBehaviour:
       - ElementName: waterTank
         ObjectType: 3
       Path: Default Work Unit\waterTank
-      maxAttenuation: 0
+      maxAttenuation: 25
       maxDuration: 2.549479
       minDuration: 2.549479
   RtpcWwu:

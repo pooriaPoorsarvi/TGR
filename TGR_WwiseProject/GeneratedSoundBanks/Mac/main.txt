@@ -2,12 +2,17 @@ Event	ID	Name			Wwise Object Path	Notes
 	48383104	chair			\Default Work Unit\chair	
 	412724365	bgm			\Default Work Unit\bgm	
 	578603970	waterTank			\Default Work Unit\waterTank	
+	775053656	Table_2			\Default Work Unit\Table_2	
+	1599183472	Typing			\Default Work Unit\Typing	
 	1866025847	footstep			\Default Work Unit\footstep	
+	2048817515	Table			\Default Work Unit\Table	
+	2414956975	Typing_2			\Default Work Unit\Typing_2	
 	2512384458	fall			\Default Work Unit\fall	
 	2789408655	basicImpact			\Default Work Unit\basicImpact	
 	3095220925	trashCan_small			\Default Work Unit\trashCan_small	
 	3322072369	tree			\Default Work Unit\tree	
 	3431057813	trashCan			\Default Work Unit\trashCan	
+	3817145194	Cups			\Default Work Unit\Cups	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	640949982	Speed			\Default Work Unit\Speed	
@@ -16,10 +21,20 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	18268718	tree 2	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\tree 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\tree\tree 2		67264
 	129552176	trashcan	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\trashcan_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\trashcan		317504
 	190556111	Watertank 0	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\Watertank 0_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Watertank 0		360064
+	233029624	1	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cups\1		168060
 	259725984	Watertank 1	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\Watertank 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Watertank 1		112496
+	278671301	4	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cups\4		168060
+	356246040	6	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cups\6		168060
+	412031163	Table 2	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\Table 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Table 2		192388
+	516458410	5	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cups\5		168060
 	547845227	trashcan hit	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\trashcan hit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\trashcan hit		311296
 	553365686	fall	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\12. Ahhhh2_Low_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\fall		52510
+	584982237	Typing 2	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\Typewriter-SoundBible.com-285954942_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Typing 2		659680
+	687862934	2	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cups\2		168060
+	698934675	7	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cups\7		168060
+	759511242	8	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\8_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cups\8		168060
 	831028345	chair	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\chair_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\chair		177380
+	858630531	3	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cups\3		168060
 	866688018	footstep_carpet	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\footstep_carpet_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\footstep_carpet		54936
 	878778269	Boink	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\Boink_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boink		235200
 	904281105	tree 3	D:\TGR\TGR_WwiseProject\.cache\Mac\SFX\tree 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\tree\tree 3		120064

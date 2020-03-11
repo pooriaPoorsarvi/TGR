@@ -16,11 +16,16 @@ namespace AK
         static const AkUniqueID BASICIMPACT = 2789408655U;
         static const AkUniqueID BGM = 412724365U;
         static const AkUniqueID CHAIR = 48383104U;
+        static const AkUniqueID CUPS = 3817145194U;
         static const AkUniqueID FALL = 2512384458U;
         static const AkUniqueID FOOTSTEP = 1866025847U;
+        static const AkUniqueID TABLE = 2048817515U;
+        static const AkUniqueID TABLE_2 = 775053656U;
         static const AkUniqueID TRASHCAN = 3431057813U;
         static const AkUniqueID TRASHCAN_SMALL = 3095220925U;
         static const AkUniqueID TREE = 3322072369U;
+        static const AkUniqueID TYPING = 1599183472U;
+        static const AkUniqueID TYPING_2 = 2414956975U;
         static const AkUniqueID WATERTANK = 578603970U;
     } // namespace EVENTS
 

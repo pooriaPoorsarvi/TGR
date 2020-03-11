@@ -109,6 +109,61 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Table" ID="{36235509-29A4-4191-94A1-E49F86A64D7A}">
+					<ChildrenList>
+						<Action Name="" ID="{9FE6C6B2-CB9E-411E-A6FE-5FB520BF7EEF}" ShortID="574903035">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Table 2" ID="{6B0840AC-F794-4953-AC83-27001A80EFCA}" WorkUnitID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Table_2" ID="{A82DADFE-5AB4-44CE-A351-A20BE6EBBBEA}">
+					<ChildrenList>
+						<Action Name="" ID="{06568F99-F63B-4FB0-B21B-F56D192BF102}" ShortID="228413734">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Table 2" ID="{6B0840AC-F794-4953-AC83-27001A80EFCA}" WorkUnitID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cups" ID="{2D0D4900-64B3-4FB3-AE08-1968B9937318}">
+					<ChildrenList>
+						<Action Name="" ID="{88B84D21-0FD5-4264-AFED-F1785C0C1191}" ShortID="548322617">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cups" ID="{0ED836A7-50A0-4876-848B-898F6BB9F90B}" WorkUnitID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Typing" ID="{36732A72-A4B1-41AB-AD57-72404C5814EC}">
+					<ChildrenList>
+						<Action Name="" ID="{ED5B5516-6889-48BF-BB4D-5AC23A7CB3A4}" ShortID="627767253">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="trashcan hit" ID="{03A05723-1515-4445-92C4-261E4F2CEBD6}" WorkUnitID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Typing_2" ID="{CD05243E-C550-4F3A-A791-0F29653C3BDF}">
+					<ChildrenList>
+						<Action Name="" ID="{AB605427-582C-4B0C-98F8-8D6F6BDE19CC}" ShortID="601697980">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Typing 2" ID="{B9832BE7-5117-4498-8493-081D89FCA646}" WorkUnitID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
