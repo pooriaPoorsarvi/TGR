@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID FALL = 2512384458U;
         static const AkUniqueID FOOTSTEP = 1866025847U;
         static const AkUniqueID TRASHCAN = 3431057813U;
+        static const AkUniqueID TRASHCAN_SMALL = 3095220925U;
         static const AkUniqueID TREE = 3322072369U;
         static const AkUniqueID WATERTANK = 578603970U;
     } // namespace EVENTS

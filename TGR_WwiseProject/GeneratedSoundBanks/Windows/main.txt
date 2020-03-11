@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1866025847	footstep			\Default Work Unit\footstep	
 	2512384458	fall			\Default Work Unit\fall	
 	2789408655	basicImpact			\Default Work Unit\basicImpact	
+	3095220925	trashCan_small			\Default Work Unit\trashCan_small	
 	3322072369	tree			\Default Work Unit\tree	
 	3431057813	trashCan			\Default Work Unit\trashCan	
 
@@ -13,6 +14,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	18268718	tree 2	D:\TGR\TGR_WwiseProject\.cache\Windows\SFX\tree 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\tree\tree 2		67264
+	129552176	trashcan	D:\TGR\TGR_WwiseProject\.cache\Windows\SFX\trashcan_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\trashcan		317504
 	190556111	Watertank 0	D:\TGR\TGR_WwiseProject\.cache\Windows\SFX\Watertank 0_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Watertank 0		360064
 	259725984	Watertank 1	D:\TGR\TGR_WwiseProject\.cache\Windows\SFX\Watertank 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Watertank 1		112496
 	547845227	trashcan hit	D:\TGR\TGR_WwiseProject\.cache\Windows\SFX\trashcan hit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\trashcan hit		311296

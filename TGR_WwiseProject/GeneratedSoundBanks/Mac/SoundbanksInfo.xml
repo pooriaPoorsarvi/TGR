@@ -69,6 +69,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3095220925" Name="trashCan_small" ObjectPath="\Events\Default Work Unit\trashCan_small" DurationType="OneShot" DurationMin="1.748317" DurationMax="1.852277">
+					<IncludedMemoryFiles>
+						<File Id="129552176" Language="SFX">
+							<ShortName>trashcan.wav</ShortName>
+							<Path>SFX\trashcan_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3322072369" Name="tree" ObjectPath="\Events\Default Work Unit\tree" DurationType="OneShot" DurationMin="0.330356" DurationMax="0.662176">
 					<IncludedMemoryFiles>
 						<File Id="18268718" Language="SFX">

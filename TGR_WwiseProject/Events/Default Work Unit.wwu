@@ -98,6 +98,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="trashCan_small" ID="{FA6DD246-B584-44F5-B380-2D40ACA31C45}">
+					<ChildrenList>
+						<Action Name="" ID="{D1EE6FAF-C474-498A-BDD2-4BEF62D3B199}" ShortID="308773313">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="trashcan" ID="{2E550983-CA69-4728-952B-9DDBC0E14D31}" WorkUnitID="{7BAF78C5-12AE-49AB-AA30-974A5440D034}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

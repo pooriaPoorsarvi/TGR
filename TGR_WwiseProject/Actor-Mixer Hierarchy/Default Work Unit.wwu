@@ -35,7 +35,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>4</Value>
+								<Value>-3</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -95,7 +95,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-4</Value>
+								<Value>-8</Value>
 							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{819321A7-3760-4287-B645-7BDE6A43EE2E}" ShortID="379464530">
@@ -120,13 +120,13 @@
 												<Flags>0</Flags>
 											</Point>
 											<Point>
-												<XPos>0.65459</XPos>
-												<YPos>-8.95711</YPos>
+												<XPos>2.71995</XPos>
+												<YPos>-14.29185</YPos>
 												<Flags>0</Flags>
 											</Point>
 											<Point>
-												<XPos>3.88236</XPos>
-												<YPos>-5.85074</YPos>
+												<XPos>6.87583</XPos>
+												<YPos>-12.49965</YPos>
 												<Flags>0</Flags>
 											</Point>
 											<Point>
@@ -315,6 +315,9 @@
 							</ModifierList>
 						</Property>
 						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{2773BB4D-848C-450D-8AB3-1783F54174ED}" ShortID="775853156">
 									<ReferenceList>
@@ -333,18 +336,18 @@
 												<Flags>5</Flags>
 											</Point>
 											<Point>
-												<XPos>0.65359</XPos>
+												<XPos>1.17646</XPos>
 												<YPos>-200</YPos>
 												<Flags>0</Flags>
 											</Point>
 											<Point>
-												<XPos>0.65459</XPos>
-												<YPos>-8.95711</YPos>
+												<XPos>1.84414</XPos>
+												<YPos>-200</YPos>
 												<Flags>0</Flags>
 											</Point>
 											<Point>
-												<XPos>3.88236</XPos>
-												<YPos>-5.85074</YPos>
+												<XPos>3.25491</XPos>
+												<YPos>-8.76797</YPos>
 												<Flags>0</Flags>
 											</Point>
 											<Point>

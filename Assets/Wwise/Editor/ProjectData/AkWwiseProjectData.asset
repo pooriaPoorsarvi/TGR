@@ -17,14 +17,14 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: dd44b7a84c10bc4fabc2b86bffa4a0c3
     GuidInternal: 
-    m_lastTime: -8586178817666064935
+    m_lastTime: -8586178061644027230
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: e73d8a6673896b448999bf9aede40ba8
     GuidInternal: 
-    m_lastTime: -8586178817667311595
+    m_lastTime: -8586178061645224025
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f0839f3eaa4e8e47805e8f9d0c51be19
     GuidInternal: 
-    m_lastTime: -8586178817666154694
+    m_lastTime: -8586177086500742990
     List:
     - name: main
       guid: 8ea249e8d6b5e34abbcd45794a5b5bf4
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 5b25de65f729434faf75d6960b6cb617
     GuidInternal: 
-    m_lastTime: -8586178817667541305
+    m_lastTime: -8586177088627737855
     List:
     - name: basicImpact
       guid: 9ab13f8d0a6eb647948c242dee8ee4fb
@@ -130,6 +130,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.66851
       minDuration: 1.574863
+    - name: trashCan_small
+      guid: 46d26dfa84b5f544b3802d40aca31c45
+      id: 3095220925
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: trashCan_small
+        ObjectType: 3
+      Path: Default Work Unit\trashCan_small
+      maxAttenuation: 0
+      maxDuration: 1.852277
+      minDuration: 1.748317
     - name: tree
       guid: b8d4ea08182dc249aecdaab94d5c2007
       id: 3322072369
@@ -159,7 +171,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f98f3f8ac27e6344bb50b1ad108251f4
     GuidInternal: 
-    m_lastTime: -8586178817667541305
+    m_lastTime: -8586178061645343703
     List:
     - name: Speed
       guid: 771b3b6f9b3ab24c8c7bdf3c1a1354d3
@@ -175,21 +187,21 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 2db9b5c0b5453c42a6edd03708caa95b
     GuidInternal: 
-    m_lastTime: -8586178817666134742
+    m_lastTime: -8586178061644146902
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 5df3cd2344dd2d4e8ced9857a21d5c21
     GuidInternal: 
-    m_lastTime: -8586178817666114793
+    m_lastTime: -8586178061644116988
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 6232553a26ae8a4a84c19dc0bb594e5e
     GuidInternal: 
-    m_lastTime: -8586178817666064935
+    m_lastTime: -8586178061644067124
     List: []
   ExpandedItems:
   - /TGR_WwiseProject
