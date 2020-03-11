@@ -11,7 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Max/Scenes/mainMenu.unity
     guid: bb2c1d3b4553b9b418315b14da42006e
-  - enabled: 1
+  - enabled: 0
+    path: Assets/Scenes/JeffAI/localFolder/Scenes/tutorial4x.unity
+    guid: d80c6fec53db2894fbee74aa1904c9a6
+  - enabled: 0
     path: Assets/Scenes/JeffAI/localFolder/Scenes/tutorial3.unity
     guid: 65d68a74bd2b9914cb8b4528d413ed3e
+  - enabled: 1
+    path: Assets/Scenes/Max/Scenes/tut4UItests.unity
+    guid: 0139942140b949548a2ef588c898a0d1
   m_configObjects: {}
