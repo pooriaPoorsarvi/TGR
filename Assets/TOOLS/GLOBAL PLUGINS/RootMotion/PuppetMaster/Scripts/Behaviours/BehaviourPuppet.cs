@@ -820,7 +820,7 @@ namespace RootMotion.Dynamics {
 		void OnDrawGizmosSelected() {
 			for (int g = 0; g < groupOverrides.Length; g++) {
 				groupOverrides[g].name = string.Empty;
-
+			
 				if (groupOverrides[g].groups.Length > 0) {
 					for (int i = 0; i < groupOverrides[g].groups.Length; i++) {
 						if (i > 0) groupOverrides[g].name += ", ";

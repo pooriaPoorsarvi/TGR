@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections;
 using System.Collections.Generic;
 using RootMotion.Dynamics;
@@ -34,14 +34,19 @@ public class Graber : MonoBehaviour
 
     private GameObject holdingObject = null;
 
+    private bool isHandActive = true;
+    public float secondsInActive = 1f;
 
     public Limb limb;
-    
+    public float pushForce = 10f;
+    public float additionalNPCPush = 10f;
     
     private void Awake()
     {
         playerInputActions = new PlayerInputActions();
-
+    
+        
+        playerInputActions.PlayerAction.Push.performed += ctx => Push();
 
         if (!is_left_hand)
         {
@@ -56,6 +61,33 @@ public class Graber : MonoBehaviour
         }
     }
 
+    void Push()
+    {
+        if (holding==null)
+        {
+            return;
+        }
+        NPCGrabbed temp = nPCGrabbed;
+        Rigidbody rb = holdingObject.GetComponent<Rigidbody>();
+        holding = false;
+        StartCoroutine(inactivateHand());
+        CheckJointAndExit();
+        if (temp!=null)
+        {
+            rb.AddForce(rb.transform.forward* additionalNPCPush  * pushForce, ForceMode.VelocityChange);
+        }
+        if (rb!=null)
+        {
+            rb.AddForce(rb.transform.forward * pushForce, ForceMode.VelocityChange);
+        }
+    }
+
+    IEnumerator inactivateHand()
+    {
+        isHandActive = false;
+        yield return new WaitForSeconds(secondsInActive);
+        isHandActive = true;
+    }
 
     private void UpdateHandState(bool holding)
     {
@@ -116,7 +148,7 @@ public class Graber : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (holding == false || currentJoint != null || max_use < 0)
+        if (holding == false || currentJoint != null || max_use < 0 || isHandActive == false )
         {
             return;
         }

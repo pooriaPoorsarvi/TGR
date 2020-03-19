@@ -22,6 +22,8 @@ public class NPCGrabbed : MonoBehaviour
     private bool hasNoAnimation = false;
     private readonly int m_hor = Animator.StringToHash("Horizontal");
     private readonly int m_ver = Animator.StringToHash("Vertical");
+
+    public Rigidbody CharWholeRB; 
     
     public void Start()
     {
@@ -54,6 +56,11 @@ public class NPCGrabbed : MonoBehaviour
         behaviourPuppet.canGetUp = true;
         puppetMaster.pinWeight = 1;
         StartCoroutine(WaitAndWakeUpAI());
+    }
+
+    public void Push(float force)
+    {
+        CharWholeRB.AddForce(CharWholeRB.transform.forward * force, ForceMode.VelocityChange);
     }
 
 

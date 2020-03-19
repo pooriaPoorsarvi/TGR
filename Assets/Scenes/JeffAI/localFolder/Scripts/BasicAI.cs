@@ -53,7 +53,7 @@ namespace JeffAI
         // variable that indicates whether npc wants to escape from the level
         private bool wantsToEscape = false;
 
-        
+
         public float waitTime;
         private IEnumerator waitTimer;
         public float scaredMinPeriod;
@@ -69,15 +69,18 @@ namespace JeffAI
         public GameObject player;
         public float showVisionDistance;
 
-        void Awake(){
-            curVisionRadiusSphere = (GameObject)Instantiate(sampleVisionRadiusSphere,
-                                        npcModel.transform.position,
-                                        Quaternion.identity);
+        void Awake()
+        {
+            curVisionRadiusSphere = (GameObject) Instantiate(sampleVisionRadiusSphere,
+                npcModel.transform.position,
+                Quaternion.identity);
             curVisionRadiusSphere.transform.parent = transform.parent;
 
-            curVisionRadiusSphere.transform.position = new Vector3(npcModel.transform.position.x, transform.position.y + visionOffsetY, npcModel.transform.position.z);
+            curVisionRadiusSphere.transform.position = new Vector3(npcModel.transform.position.x,
+                transform.position.y + visionOffsetY, npcModel.transform.position.z);
             curVisionRadiusSphere.transform.localScale = sampleVisionRadiusSphere.transform.localScale;
-            curVisionRadiusSphere.transform.rotation = new Quaternion(1f, sampleVisionRadiusSphere.transform.rotation.x, npcModel.transform.rotation.y, sampleVisionRadiusSphere.transform.rotation.z);
+            curVisionRadiusSphere.transform.rotation = new Quaternion(1f, sampleVisionRadiusSphere.transform.rotation.x,
+                npcModel.transform.rotation.y, sampleVisionRadiusSphere.transform.rotation.z);
 
             visionSetup = true;
         }
@@ -97,7 +100,7 @@ namespace JeffAI
         {
             bloodParticles.Play();
             noAction = true;
-        } 
+        }
 
         // transition back into normal routine after being scared
         private void CalmDown()
@@ -119,38 +122,52 @@ namespace JeffAI
         }
 
 
-
-       public bool IsFreaky(){
-           return isFreaky;
-       }
-
+        public bool IsFreaky()
+        {
+            return isFreaky;
+        }
 
 
         public void BecomeScared()
         {
-
-            if(isFreaky){
+            if (wantsToEscape)
+            {
                 return;
             }
-            isFreaky = true;
+            wantsToEscape = true;
             scaredIndicator.active = true;
-            gameObject.GetComponent<NavMeshAgent>().speed += speedBoost;
- 
-            if(scaredTimer != null){
-                StopCoroutine(scaredTimer);
-            }
-
-            // start scared timer
-            scaredTimer = WaitAndBecomeUnscared(scaredMinPeriod);
-            StartCoroutine(scaredTimer);
-
-
-            if(waitTimer != null){
-                StopCoroutine(waitTimer);
-                NextGoal();
-            }
-
+            NextGoal();
         }
+        
+        // public void BecomeScared()
+        // {
+        //     if (isFreaky)
+        //     {
+        //         return;
+        //     }
+        //
+        //     isFreaky = true;
+        //     scaredIndicator.active = true;
+        //     NextGoal();
+        //     
+        //     
+        //     // gameObject.GetComponent<NavMeshAgent>().speed += speedBoost;
+        //     // if (scaredTimer != null)
+        //     // {
+        //     //     StopCoroutine(scaredTimer);
+        //     // }
+        //     //
+        //     // // start scared timer
+        //     // scaredTimer = WaitAndBecomeUnscared(scaredMinPeriod);
+        //     // StartCoroutine(scaredTimer);
+        //     //
+        //     //
+        //     // if (waitTimer != null)
+        //     // {
+        //     //     StopCoroutine(waitTimer);
+        //     //     NextGoal();
+        //     // }
+        // }
 
         public Transform agent;
 
@@ -159,9 +176,9 @@ namespace JeffAI
         {
             float counter = mins;
 
-            int hours = (int)(mins / 60);
-            int minutes = (int)(mins - hours * 60); 
-            float secs = (mins - (int)mins) * 60;
+            int hours = (int) (mins / 60);
+            int minutes = (int) (mins - hours * 60);
+            float secs = (mins - (int) mins) * 60;
 
             Debug.Log("hours " + hours);
             Debug.Log("minutes " + minutes);
@@ -173,63 +190,81 @@ namespace JeffAI
             String secText = "";
 
 
-            while(true){
-
-                if(secs > 0){
+            while (true)
+            {
+                if (secs > 0)
+                {
                     secs--;
-
                 }
-                else if(minutes > 0){
+                else if (minutes > 0)
+                {
                     secs = 59;
                     minutes--;
                 }
-                else if(hours > 0){
+                else if (hours > 0)
+                {
                     minutes += 59;
                     hours--;
                     secs = 59;
                 }
 
-                if(hours >= 10){
+                if (hours >= 10)
+                {
                     hourText = hours.ToString();
                 }
-                else{
+                else
+                {
                     hourText = "0" + hours.ToString();
                 }
-                if(minutes >= 10){
+
+                if (minutes >= 10)
+                {
                     minText = minutes.ToString();
                 }
-                else{
+                else
+                {
                     minText = "0" + minutes.ToString();
                 }
-                if(secs >= 10){
+
+                if (secs >= 10)
+                {
                     secText = secs.ToString();
                 }
-                else{
+                else
+                {
                     secText = "0" + secs.ToString();
-                }   
+                }
+
                 //timerText = hourText + ":" + minText + ":" + secText; 
                 timerText = minText + ":" + secText;
 
                 yield return new WaitForSeconds(1f);
 
-                if(hours == 0 && minutes == 0 && secs == 0){
+                if (hours == 0 && minutes == 0 && secs == 0)
+                {
                     CalmDown();
                     break;
                 }
-            }    
+            }
         }
 
 
         void Update()
         {
-            if(visionSetup){
-                if(!isFreaky || Vector3.Distance(transform.position, player.transform.position) > showVisionDistance){
+            if (visionSetup)
+            {
+                if (!isFreaky || Vector3.Distance(transform.position, player.transform.position) > showVisionDistance)
+                {
                     curVisionRadiusSphere.active = false;
                 }
-                else{
+                else
+                {
                     curVisionRadiusSphere.active = true;
-                    curVisionRadiusSphere.transform.position = new Vector3(npcModel.transform.position.x, transform.position.y + visionOffsetY, npcModel.transform.position.z);
-                    curVisionRadiusSphere.transform.rotation = new Quaternion(1f, sampleVisionRadiusSphere.transform.rotation.x, npcModel.transform.rotation.y, sampleVisionRadiusSphere.transform.rotation.z);
+                    curVisionRadiusSphere.transform.position = new Vector3(npcModel.transform.position.x,
+                        transform.position.y + visionOffsetY, npcModel.transform.position.z);
+                    curVisionRadiusSphere.transform.rotation = new Quaternion(1f,
+                        sampleVisionRadiusSphere.transform.rotation.x, npcModel.transform.rotation.y,
+                        sampleVisionRadiusSphere.transform.rotation.z);
                 }
             }
         }
@@ -237,7 +272,6 @@ namespace JeffAI
         void FixedUpdate()
         {
             animator.speed = 80f * Time.deltaTime;
-            navAgent.SetDestination(curGoal.transform.position);
             if (isMoving)
             {
                 float dist = Vector3.Distance(transform.position, curGoal.position);
@@ -265,12 +299,25 @@ namespace JeffAI
             }
         }
 
+        private NavMeshPath path;
+        IEnumerator tempDisableNavMesh(float secondsOff, float secondsOn)
+        {
+            navAgent.SetDestination(curGoal.transform.position);
+            path = navAgent.path;
+            yield return new WaitForSeconds(secondsOn);
+            navAgent.enabled = false;
+            yield return new WaitForSeconds(secondsOff);
+            navAgent.enabled = true;
+        }
 
         private void Move()
         {
             if (curGoal != null)
             {
-                NavMeshPath path = navAgent.path;
+                if (navAgent.enabled)
+                {
+                    StartCoroutine(tempDisableNavMesh(1f*Time.deltaTime * 60, .002f*Time.deltaTime * 60));
+                }
                 if (path.corners.Length < 2)
                 {
                     return;
@@ -307,7 +354,7 @@ namespace JeffAI
                 return;
             }
 
-            NavMeshPath path = navAgent.path;
+            // NavMeshPath path = navAgent.path;
             for (int z = 0; z < path.corners.Length - 1; z++)
                 Gizmos.DrawLine(path.corners[z], path.corners[z + 1]);
         }
@@ -330,8 +377,42 @@ namespace JeffAI
 
         public bool SetNoAction(bool noAction)
         {
-           return this.noAction = noAction;
+            return this.noAction = noAction;
         }
+
+        // private void NextGoal()
+        // {
+        //     Transform newGoal;
+        //     if (!wantsToEscape && !noAction)
+        //     {
+        //         newGoal = patrolArea.RequestWaypoint(curWaypointIndex);
+        //     }
+        //     else if (!noAction)
+        //     {
+        //         newGoal = patrolArea.RequestEscapeWaypoint();
+        //     }
+        //     else
+        //     {
+        //         // quit the function if player grabbed the npc
+        //         return;
+        //     }
+        //
+        //     if (newGoal != null)
+        //     {
+        //         curGoal = newGoal;
+        //         curWaypointIndex++;
+        //     }
+        //     else if (doesLoopBeetweenWayPoints && patrolArea.GetWaypointCount() > 0)
+        //     {
+        //         curWaypointIndex = 0;
+        //         NextGoal();
+        //     }
+        //     else if (curWaypointIndex > 0 && loopBackInWayPoints)
+        //     {
+        //         curWaypointIndex--;
+        //         NextGoal();
+        //     }
+        // }
         private void NextGoal()
         {
             Transform newGoal;

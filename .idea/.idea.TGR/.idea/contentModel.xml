@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Code\Unity\TGR" t="IncludeRecursive">
+    <e p="C:\Users\poori\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\poori\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_TGR.-1867689946.00" t="ExcludeRecursive" />
+    <e p="D:\Code\Unity\TGR" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="_tmp_move.cs" t="Include" />
+        <e p="AutoTransparent.cs" t="Include" />
         <e p="collision.cs" t="Include" />
         <e p="DeathByForce.cs" t="Include" />
         <e p="DeathTimer.cs" t="Include" />
@@ -55,11 +58,7 @@
               <e p="MainMenu.cs" t="Include" />
             </e>
           </e>
-          <e p="SCENES BEFORE GDD DEMO" t="Include">
-            <e p="Camera Movement" t="Include">
-              <e p="PlayerInputActions.cs" t="Include" />
-            </e>
-          </e>
+          <e p="PlayerInputActions.cs" t="Include" />
           <e p="Tommy" t="Include">
             <e p="CallEvent.cs" t="Include" />
             <e p="RTPCController.cs" t="Include" />
@@ -685,7 +684,5 @@
       <e p="Temp\bin" t="ExcludeRecursive" />
       <e p="TGR.sln" t="IncludeFlat" />
     </e>
-    <e p="C:\Users\poori\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\poori\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_TGR.209519397.00" t="ExcludeRecursive" />
   </component>
 </project>

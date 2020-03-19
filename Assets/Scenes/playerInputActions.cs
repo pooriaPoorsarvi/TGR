@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Scenes/SCENES BEFORE GDD DEMO/Camera Movement/PlayerInputActions.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scenes/playerInputActions.inputactions'
 
 using System;
 using System.Collections;
@@ -12,40 +12,16 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     public @PlayerInputActions()
     {
         asset = InputActionAsset.FromJson(@"{
-    ""name"": ""PlayerInputActions"",
+    ""name"": ""playerInputActions"",
     ""maps"": [
         {
             ""name"": ""PlayerAction"",
-            ""id"": ""c7c08b07-5cba-4b50-abb5-5c01afc3d36b"",
+            ""id"": ""7201d14a-819f-44ff-bb49-fa24cfd8056f"",
             ""actions"": [
-                {
-                    ""name"": ""RS"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""64714f2c-f5c8-482b-b966-62bddcae8836"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""LB"",
-                    ""type"": ""Button"",
-                    ""id"": ""e63b093f-9726-4b85-bb74-3de509865ba9"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""RB"",
-                    ""type"": ""Button"",
-                    ""id"": ""6813115e-cb58-447f-b5be-f4fdd08e7e01"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
                 {
                     ""name"": ""LT"",
                     ""type"": ""Button"",
-                    ""id"": ""b3a198d6-6078-4cff-84b1-2771c1500724"",
+                    ""id"": ""cbc537b3-15c4-408f-94e1-7e34a6b1c388"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
@@ -53,31 +29,23 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": ""RT"",
                     ""type"": ""Button"",
-                    ""id"": ""98fb1fef-d7ee-4668-8473-f775b070582d"",
+                    ""id"": ""541af20f-f12b-4de7-abb0-0837e09a679c"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""LS"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""10c2b811-a958-4c75-9fd8-b0e4d9a4b98d"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""name"": ""LB"",
+                    ""type"": ""Button"",
+                    ""id"": ""3c159f25-bc5f-4b35-b704-8cd9a31fe36a"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""UpButton"",
+                    ""name"": ""RB"",
                     ""type"": ""Button"",
-                    ""id"": ""c653716d-f9be-4951-a012-f7bcbb634aa7"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""DownButton"",
-                    ""type"": ""Button"",
-                    ""id"": ""a5521bbb-8480-4c96-97cb-90b398f50e83"",
+                    ""id"": ""7492bc77-827d-4bdf-bd7d-307f390bbd48"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
@@ -85,7 +53,47 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": ""KillSwitch"",
                     ""type"": ""Button"",
-                    ""id"": ""2264b1a1-ca38-4bc0-9aa0-a0fed590ea4d"",
+                    ""id"": ""9bc42a4b-a7d0-428a-b9a6-f22511f2f0da"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""UpButton"",
+                    ""type"": ""Button"",
+                    ""id"": ""d22f6bf8-9339-4c34-ac22-23257f2be700"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""DownButton"",
+                    ""type"": ""Button"",
+                    ""id"": ""b78cc51b-ab05-49e2-8f96-86402b758f69"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""LS"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""89da7412-4f38-44c9-9091-33b139e9559a"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""RS"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""542ea600-3a09-432f-bbd5-d0fff6a33804"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Push"",
+                    ""type"": ""Button"",
+                    ""id"": ""c71adbe7-ca12-449f-a399-6b52bac6f16b"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
@@ -94,40 +102,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""593ce459-c488-4dfe-b843-1de4daa19427"",
-                    ""path"": ""<Gamepad>/rightStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""RS"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f7045cf9-4e42-4fa6-a235-40e10f7579db"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""RB"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""1806688f-bd52-49b7-8f7a-5e3e9b127cfd"",
-                    ""path"": ""<Gamepad>/leftShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""LB"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3cb15f41-2fff-4b71-9ce2-834c8f6bece7"",
+                    ""id"": ""ccc282b0-e900-4bba-8b6b-14bf5ae0c493"",
                     ""path"": ""<Gamepad>/leftTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -138,7 +113,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""62fa33ff-5bca-47a5-a1ce-b00846525775"",
+                    ""id"": ""fdb63209-63c2-4995-9321-b9372fc34aa9"",
                     ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -149,7 +124,62 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""54051cfd-8f0b-4bc9-a7d4-c07b2c0d76d6"",
+                    ""id"": ""2325711d-c0f4-4cf7-bde1-407f060f17e5"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c933f321-68f8-4228-95ea-77bef1b6b6a5"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""814ec6bf-b567-4450-b9ab-29a19928c14b"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KillSwitch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5ea96c94-68b7-41d0-b66f-8730dad14a35"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UpButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2a9b303a-a618-4524-8bbe-396f99a4852a"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DownButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0381ddaa-dbc3-44fc-a801-37be83d41672"",
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -160,34 +190,23 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""74a73afe-392f-4a95-b1a1-13886fe11b13"",
-                    ""path"": ""<XInputController>/dpad/up"",
+                    ""id"": ""98abdf15-29fc-4c14-b59f-f9e71cd52f2e"",
+                    ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""UpButton"",
+                    ""action"": ""RS"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3f344573-6fd9-4ef0-8b18-bf66f418fe82"",
-                    ""path"": ""<XInputController>/dpad/down"",
+                    ""id"": ""1d799b68-91d4-42da-85ee-1527f8304d47"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""DownButton"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e3f26c49-69e7-4a1a-b59e-d99ffa23ea30"",
-                    ""path"": ""<XInputController>/buttonWest"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""KillSwitch"",
+                    ""action"": ""Push"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -198,15 +217,16 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
 }");
         // PlayerAction
         m_PlayerAction = asset.FindActionMap("PlayerAction", throwIfNotFound: true);
-        m_PlayerAction_RS = m_PlayerAction.FindAction("RS", throwIfNotFound: true);
-        m_PlayerAction_LB = m_PlayerAction.FindAction("LB", throwIfNotFound: true);
-        m_PlayerAction_RB = m_PlayerAction.FindAction("RB", throwIfNotFound: true);
         m_PlayerAction_LT = m_PlayerAction.FindAction("LT", throwIfNotFound: true);
         m_PlayerAction_RT = m_PlayerAction.FindAction("RT", throwIfNotFound: true);
-        m_PlayerAction_LS = m_PlayerAction.FindAction("LS", throwIfNotFound: true);
+        m_PlayerAction_LB = m_PlayerAction.FindAction("LB", throwIfNotFound: true);
+        m_PlayerAction_RB = m_PlayerAction.FindAction("RB", throwIfNotFound: true);
+        m_PlayerAction_KillSwitch = m_PlayerAction.FindAction("KillSwitch", throwIfNotFound: true);
         m_PlayerAction_UpButton = m_PlayerAction.FindAction("UpButton", throwIfNotFound: true);
         m_PlayerAction_DownButton = m_PlayerAction.FindAction("DownButton", throwIfNotFound: true);
-        m_PlayerAction_KillSwitch = m_PlayerAction.FindAction("KillSwitch", throwIfNotFound: true);
+        m_PlayerAction_LS = m_PlayerAction.FindAction("LS", throwIfNotFound: true);
+        m_PlayerAction_RS = m_PlayerAction.FindAction("RS", throwIfNotFound: true);
+        m_PlayerAction_Push = m_PlayerAction.FindAction("Push", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -256,28 +276,30 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     // PlayerAction
     private readonly InputActionMap m_PlayerAction;
     private IPlayerActionActions m_PlayerActionActionsCallbackInterface;
-    private readonly InputAction m_PlayerAction_RS;
-    private readonly InputAction m_PlayerAction_LB;
-    private readonly InputAction m_PlayerAction_RB;
     private readonly InputAction m_PlayerAction_LT;
     private readonly InputAction m_PlayerAction_RT;
-    private readonly InputAction m_PlayerAction_LS;
+    private readonly InputAction m_PlayerAction_LB;
+    private readonly InputAction m_PlayerAction_RB;
+    private readonly InputAction m_PlayerAction_KillSwitch;
     private readonly InputAction m_PlayerAction_UpButton;
     private readonly InputAction m_PlayerAction_DownButton;
-    private readonly InputAction m_PlayerAction_KillSwitch;
+    private readonly InputAction m_PlayerAction_LS;
+    private readonly InputAction m_PlayerAction_RS;
+    private readonly InputAction m_PlayerAction_Push;
     public struct PlayerActionActions
     {
         private @PlayerInputActions m_Wrapper;
         public PlayerActionActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @RS => m_Wrapper.m_PlayerAction_RS;
-        public InputAction @LB => m_Wrapper.m_PlayerAction_LB;
-        public InputAction @RB => m_Wrapper.m_PlayerAction_RB;
         public InputAction @LT => m_Wrapper.m_PlayerAction_LT;
         public InputAction @RT => m_Wrapper.m_PlayerAction_RT;
-        public InputAction @LS => m_Wrapper.m_PlayerAction_LS;
+        public InputAction @LB => m_Wrapper.m_PlayerAction_LB;
+        public InputAction @RB => m_Wrapper.m_PlayerAction_RB;
+        public InputAction @KillSwitch => m_Wrapper.m_PlayerAction_KillSwitch;
         public InputAction @UpButton => m_Wrapper.m_PlayerAction_UpButton;
         public InputAction @DownButton => m_Wrapper.m_PlayerAction_DownButton;
-        public InputAction @KillSwitch => m_Wrapper.m_PlayerAction_KillSwitch;
+        public InputAction @LS => m_Wrapper.m_PlayerAction_LS;
+        public InputAction @RS => m_Wrapper.m_PlayerAction_RS;
+        public InputAction @Push => m_Wrapper.m_PlayerAction_Push;
         public InputActionMap Get() { return m_Wrapper.m_PlayerAction; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -287,78 +309,85 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_PlayerActionActionsCallbackInterface != null)
             {
-                @RS.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnRS;
-                @RS.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnRS;
-                @RS.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnRS;
-                @LB.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnLB;
-                @LB.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnLB;
-                @LB.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnLB;
-                @RB.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnRB;
-                @RB.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnRB;
-                @RB.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnRB;
                 @LT.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnLT;
                 @LT.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnLT;
                 @LT.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnLT;
                 @RT.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnRT;
                 @RT.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnRT;
                 @RT.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnRT;
-                @LS.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnLS;
-                @LS.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnLS;
-                @LS.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnLS;
+                @LB.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnLB;
+                @LB.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnLB;
+                @LB.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnLB;
+                @RB.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnRB;
+                @RB.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnRB;
+                @RB.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnRB;
+                @KillSwitch.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnKillSwitch;
+                @KillSwitch.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnKillSwitch;
+                @KillSwitch.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnKillSwitch;
                 @UpButton.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnUpButton;
                 @UpButton.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnUpButton;
                 @UpButton.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnUpButton;
                 @DownButton.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnDownButton;
                 @DownButton.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnDownButton;
                 @DownButton.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnDownButton;
-                @KillSwitch.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnKillSwitch;
-                @KillSwitch.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnKillSwitch;
-                @KillSwitch.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnKillSwitch;
+                @LS.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnLS;
+                @LS.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnLS;
+                @LS.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnLS;
+                @RS.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnRS;
+                @RS.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnRS;
+                @RS.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnRS;
+                @Push.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnPush;
+                @Push.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnPush;
+                @Push.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnPush;
             }
             m_Wrapper.m_PlayerActionActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @RS.started += instance.OnRS;
-                @RS.performed += instance.OnRS;
-                @RS.canceled += instance.OnRS;
-                @LB.started += instance.OnLB;
-                @LB.performed += instance.OnLB;
-                @LB.canceled += instance.OnLB;
-                @RB.started += instance.OnRB;
-                @RB.performed += instance.OnRB;
-                @RB.canceled += instance.OnRB;
                 @LT.started += instance.OnLT;
                 @LT.performed += instance.OnLT;
                 @LT.canceled += instance.OnLT;
                 @RT.started += instance.OnRT;
                 @RT.performed += instance.OnRT;
                 @RT.canceled += instance.OnRT;
-                @LS.started += instance.OnLS;
-                @LS.performed += instance.OnLS;
-                @LS.canceled += instance.OnLS;
+                @LB.started += instance.OnLB;
+                @LB.performed += instance.OnLB;
+                @LB.canceled += instance.OnLB;
+                @RB.started += instance.OnRB;
+                @RB.performed += instance.OnRB;
+                @RB.canceled += instance.OnRB;
+                @KillSwitch.started += instance.OnKillSwitch;
+                @KillSwitch.performed += instance.OnKillSwitch;
+                @KillSwitch.canceled += instance.OnKillSwitch;
                 @UpButton.started += instance.OnUpButton;
                 @UpButton.performed += instance.OnUpButton;
                 @UpButton.canceled += instance.OnUpButton;
                 @DownButton.started += instance.OnDownButton;
                 @DownButton.performed += instance.OnDownButton;
                 @DownButton.canceled += instance.OnDownButton;
-                @KillSwitch.started += instance.OnKillSwitch;
-                @KillSwitch.performed += instance.OnKillSwitch;
-                @KillSwitch.canceled += instance.OnKillSwitch;
+                @LS.started += instance.OnLS;
+                @LS.performed += instance.OnLS;
+                @LS.canceled += instance.OnLS;
+                @RS.started += instance.OnRS;
+                @RS.performed += instance.OnRS;
+                @RS.canceled += instance.OnRS;
+                @Push.started += instance.OnPush;
+                @Push.performed += instance.OnPush;
+                @Push.canceled += instance.OnPush;
             }
         }
     }
     public PlayerActionActions @PlayerAction => new PlayerActionActions(this);
     public interface IPlayerActionActions
     {
-        void OnRS(InputAction.CallbackContext context);
-        void OnLB(InputAction.CallbackContext context);
-        void OnRB(InputAction.CallbackContext context);
         void OnLT(InputAction.CallbackContext context);
         void OnRT(InputAction.CallbackContext context);
-        void OnLS(InputAction.CallbackContext context);
+        void OnLB(InputAction.CallbackContext context);
+        void OnRB(InputAction.CallbackContext context);
+        void OnKillSwitch(InputAction.CallbackContext context);
         void OnUpButton(InputAction.CallbackContext context);
         void OnDownButton(InputAction.CallbackContext context);
-        void OnKillSwitch(InputAction.CallbackContext context);
+        void OnLS(InputAction.CallbackContext context);
+        void OnRS(InputAction.CallbackContext context);
+        void OnPush(InputAction.CallbackContext context);
     }
 }
