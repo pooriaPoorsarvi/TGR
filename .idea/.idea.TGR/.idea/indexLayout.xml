@@ -22,7 +22,6 @@
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>TGR_WwiseProject</Path>
-      <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>
