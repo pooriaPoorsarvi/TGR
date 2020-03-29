@@ -39,11 +39,11 @@ public class timerDisplay : MonoBehaviour
         if (time > 0) {
             time -= Time.deltaTime;
             fillImg.fillAmount = time / timeAmt;
-            timeText.text = time.ToString("F2");
+            timeText.text = time.ToString("F0");
         } 
         else if(!gameOver){
             time = 0;
-            timeText.text = time.ToString("F2");
+            timeText.text = time.ToString("F0");
             TimerEnded();
             gameOver = true;
         }
