@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Graber : MonoBehaviour
 {
+    public GameObject handTick;
     public bool is_left_hand;
     public float unmovable_limit = 1000f;
     public PuppetMaster puppetMaster;
@@ -136,6 +137,7 @@ public class Graber : MonoBehaviour
                 muscle.puppetMaster.DisconnectMuscleRecursive(muscle.muscleIndex, MuscleDisconnectMode.Explode);
                 muscle.Hit(10f, muscle.gameObject.transform.up * 10f, muscle.gameObject.transform.position);
                 limb.limbDeactivateAction.Invoke();
+                Destroy(handTick);
             }
         }
     }

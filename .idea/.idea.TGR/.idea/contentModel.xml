@@ -12,9 +12,12 @@
         <e p="collision.cs" t="Include" />
         <e p="DeathByForce.cs" t="Include" />
         <e p="DeathTimer.cs" t="Include" />
+        <e p="GameExiter.cs" t="Include" />
         <e p="HandPublisher.cs" t="Include" />
+        <e p="LevelFinisher.cs" t="Include" />
         <e p="NPCGrabbed.cs" t="Include" />
         <e p="NPCHandler.cs" t="Include" />
+        <e p="NPCManager.cs" t="Include" />
         <e p="PlayerFinder.cs" t="Include" />
         <e p="PlayerObserver.cs" t="Include" />
         <e p="push.cs" t="Include" />

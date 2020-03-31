@@ -8,7 +8,9 @@ public class CameraLooker : MonoBehaviour
     public Transform lookAt;
 
     public float height; 
-    public float radius; 
+    public float radius;
+
+    public Material transperentMaterial;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,7 @@ public class CameraLooker : MonoBehaviour
             if (AT == null) // if no script is attached, attach one
             {
                 AT = R.gameObject.AddComponent<AutoTransparent>();
+                AT.transparentMaterial = transperentMaterial;
             }
             AT.BeTransparent(); // get called every frame to reset the falloff
         }

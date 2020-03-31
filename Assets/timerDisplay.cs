@@ -7,7 +7,7 @@ public class timerDisplay : MonoBehaviour
 {
     Image fillImg;
     public TextMeshProUGUI timeText;
-    public float timeAmt=90;
+    public DeathTimer DeathTimer;
     float time;
 
     public delegate void TimerEndedEventHandler();
@@ -17,18 +17,16 @@ public class timerDisplay : MonoBehaviour
     void Start()
     {
         fillImg = GetComponent<Image>();
-        time = timeAmt;
+        time = DeathTimer.time;
     }
 
     public int GetTotalTime(){
-        Debug.Log("jk1 " + (int)timeAmt);
-        return (int)timeAmt;
+        return (int)DeathTimer.time;
     }
 
     public int GetTimeElapsed(){
-        int num = (int)timeAmt - (int)time;
-        Debug.Log("jk2 " + num);
-        return (int)timeAmt - (int)time;
+        int num = GetTotalTime() - (int)time;
+        return GetTotalTime() - (int)time;
     }
 
     private bool gameOver = false;
@@ -38,7 +36,7 @@ public class timerDisplay : MonoBehaviour
     {
         if (time > 0) {
             time -= Time.deltaTime;
-            fillImg.fillAmount = time / timeAmt;
+            fillImg.fillAmount = time / (float)GetTotalTime();
             timeText.text = time.ToString("F0");
         } 
         else if(!gameOver){

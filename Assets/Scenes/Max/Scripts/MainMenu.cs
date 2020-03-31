@@ -31,6 +31,7 @@ public class MainMenu : MonoBehaviour
     private bool ok = false;
 
     void SelectDown(){
+        Debug.Log("Setting Ok");
         ok = true;
     }
 
@@ -58,7 +59,6 @@ public class MainMenu : MonoBehaviour
     public void ProcessMovement(Vector2 currMovement)
     {
         move = new Vector3(currMovement.x * speedX, currMovement.y * speedY, 0);
-        Debug.Log("curMovement is " + currMovement);
     }
 
     void Update()
@@ -66,21 +66,6 @@ public class MainMenu : MonoBehaviour
         mousePointer.transform.position += move;
         //mousePointer.transform.Translate(move);
 
-        if(Input.GetKeyDown(KeyCode.W)){
-        	mousePointer.transform.position += new Vector3(0f, 20f, 0f);
-        }
-
-        if(Input.GetKeyDown(KeyCode.S)){
-        	mousePointer.transform.position += new Vector3(0f, -20f, 0f);
-        }
-
-        if(Input.GetKeyDown(KeyCode.A)){
-        	mousePointer.transform.position += new Vector3(-20f, 0f, 0f);
-        }
-
-        if(Input.GetKeyDown(KeyCode.D)){
-        	mousePointer.transform.position += new Vector3(20f, 0f, 0f);
-        }        
 
         for(int i = 0; i < buttonActions.Length; i++){
         	if(Overlaps(buttonActions[i].button, mousePointer)){

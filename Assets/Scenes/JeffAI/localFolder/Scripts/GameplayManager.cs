@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameplayManager : MonoBehaviour
 {
 
+    public LevelFinisher levelFinisher;
+
     // event that will be raised when game ends due to any reason except time out.
     public delegate void GameOverEventHandler();
     public static event GameOverEventHandler GameOver;
@@ -55,10 +57,10 @@ public class GameplayManager : MonoBehaviour
         scoringSystem.UpdateScore(td.GetTimeElapsed(), td.GetTotalTime());
     }
 
-    public static void LoseGame(){
-        
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //gameOverScreen.active = true;
-    }
+    // public void LoseGame(){
+    //     
+    //     levelFinisher.FinishGame(false);
+    //     //gameOverScreen.active = true;
+    // }
 
 }

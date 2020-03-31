@@ -10,6 +10,9 @@ namespace JeffAI
 {
     public class BasicAI : MonoBehaviour
     {
+
+        public LevelFinisher levelFinisher;
+        
         [Header("Setting Up Animation")] public bool animationBased = true;
         public Animator animator;
         public float damping = 0.05f;
@@ -293,7 +296,7 @@ namespace JeffAI
                 else
                 {
                     // npc that was trying to escape the map has reached its goal, make player lose the game
-                    GameplayManager.LoseGame();
+                    levelFinisher.FinishGame(false);
                 }
             }
         }
@@ -315,7 +318,7 @@ namespace JeffAI
             {
                 if (navAgent.enabled)
                 {
-                    StartCoroutine(tempDisableNavMesh(1f*Time.deltaTime * 60, .002f*Time.deltaTime * 60));
+                    StartCoroutine(tempDisableNavMesh(.5f*Time.deltaTime * 60, .02f*Time.deltaTime * 60));
                 }
                 if (path.corners.Length < 2)
                 {

@@ -10,6 +10,7 @@ using UnityEngine.Events;
 
 public class DeathTimer : MonoBehaviour
 {
+    public LevelFinisher levelFinisher;
     public float time;
     public PuppetMaster puppetMaster;
     public GameObject[] to_be_removed;
@@ -27,7 +28,7 @@ public class DeathTimer : MonoBehaviour
 
     void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        levelFinisher.FinishGame(false, false);
     }
 
     public float timeToWeightBeforeEndingGame = 3f;
@@ -68,7 +69,7 @@ public class DeathTimer : MonoBehaviour
     IEnumerator EndGameAfterDeathEffect()
     {
         yield return new WaitForSeconds(timeToWeightBeforeEndingGame);
-        GameplayManager.LoseGame();
+        levelFinisher.FinishGame(false);
     }
 
     private void OnEnable()
