@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 8abb62a0b215d694ebec2b92ef44bff6
 ModelImporter:
-  serializedVersion: 26
+  serializedVersion: 19300
   internalIDToNameTable:
   - first:
       1: 100000
@@ -425,7 +425,7 @@ ModelImporter:
     second: forward_sprint
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -444,9 +444,9 @@ ModelImporter:
       be discarded.\n\t'B-shin_L' has scale animation that will be discarded.\n\t'B-foot_L'
       has scale animation that will be discarded.\n\t'B-shin_R' has scale animation
       that will be discarded.\n\t'B-foot_R' has scale animation that will be discarded.\n\nClip
-      'BasicMotions@Run01 [RootMotion]' has import animation warnings that might lower
-      retargeting quality:\nNote: Activate translation DOF on avatar to improve retargeting
-      quality.\n\t'B-thigh_L' has scale animation that will be discarded.\n\t'B-shin_L'
+      'BasicMotions@Run01 [RootMotion]' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'B-thigh_L' has scale animation that will be discarded.\n\t'B-shin_L'
       has scale animation that will be discarded.\n\t'B-foot_L' has scale animation
       that will be discarded.\n\t'B-shin_R' has scale animation that will be discarded.\n\t'B-foot_R'
       has scale animation that will be discarded.\n"
@@ -519,7 +519,7 @@ ModelImporter:
       - time: 0.5005415
         functionName: callEvent
         data: footstep
-        objectReferenceParameter: {fileID: 11500000, guid: 652d4204a2438f048ae249cdf02ead16,
+        objectReferenceParameter: {fileID: -927199367670048503, guid: f03fac0335c120243a24b8fcacd533cd,
           type: 3}
         floatParameter: 0
         intParameter: 0
@@ -527,7 +527,7 @@ ModelImporter:
       - time: 0.9878334
         functionName: callEvent
         data: footstep
-        objectReferenceParameter: {fileID: 11500000, guid: 652d4204a2438f048ae249cdf02ead16,
+        objectReferenceParameter: {fileID: -927199367670048503, guid: f03fac0335c120243a24b8fcacd533cd,
           type: 3}
         floatParameter: 0
         intParameter: 0
@@ -564,7 +564,7 @@ ModelImporter:
       - time: 0.47711405
         functionName: callEvent
         data: footstep
-        objectReferenceParameter: {fileID: 11500000, guid: 652d4204a2438f048ae249cdf02ead16,
+        objectReferenceParameter: {fileID: -927199367670048503, guid: f03fac0335c120243a24b8fcacd533cd,
           type: 3}
         floatParameter: 0
         intParameter: 0
@@ -572,7 +572,7 @@ ModelImporter:
       - time: 0.018760798
         functionName: callEvent
         data: footstep
-        objectReferenceParameter: {fileID: 11500000, guid: 652d4204a2438f048ae249cdf02ead16,
+        objectReferenceParameter: {fileID: -927199367670048503, guid: f03fac0335c120243a24b8fcacd533cd,
           type: 3}
         floatParameter: 0
         intParameter: 0
@@ -625,7 +625,7 @@ ModelImporter:
       - time: 0.50321907
         functionName: callEvent
         data: footstep
-        objectReferenceParameter: {fileID: 11500000, guid: 652d4204a2438f048ae249cdf02ead16,
+        objectReferenceParameter: {fileID: -927199367670048503, guid: f03fac0335c120243a24b8fcacd533cd,
           type: 3}
         floatParameter: 0
         intParameter: 0
@@ -633,7 +633,7 @@ ModelImporter:
       - time: 0.0058326237
         functionName: callEvent
         data: footstep
-        objectReferenceParameter: {fileID: 11500000, guid: 652d4204a2438f048ae249cdf02ead16,
+        objectReferenceParameter: {fileID: -927199367670048503, guid: f03fac0335c120243a24b8fcacd533cd,
           type: 3}
         floatParameter: 0
         intParameter: 0
@@ -678,7 +678,7 @@ ModelImporter:
       - time: 0.47610062
         functionName: callEvent
         data: footstep
-        objectReferenceParameter: {fileID: 11500000, guid: 652d4204a2438f048ae249cdf02ead16,
+        objectReferenceParameter: {fileID: -927199367670048503, guid: f03fac0335c120243a24b8fcacd533cd,
           type: 3}
         floatParameter: 0
         intParameter: 0
@@ -686,7 +686,7 @@ ModelImporter:
       - time: 0.0033576323
         functionName: callEvent
         data: footstep
-        objectReferenceParameter: {fileID: -927199367670048503, guid: 6a5bf283e14c01e41821b579fc8693ec,
+        objectReferenceParameter: {fileID: -927199367670048503, guid: f03fac0335c120243a24b8fcacd533cd,
           type: 3}
         floatParameter: 0
         intParameter: 0
@@ -849,7 +849,6 @@ ModelImporter:
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
-  copyAvatar: 1
   humanDescription:
     serializedVersion: 3
     human:
@@ -3560,8 +3559,10 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 5917c0e93d180a842b61d1ebc62a195c,
     type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 2
   additionalBone: 0
   userData: 
   assetBundleName: 
